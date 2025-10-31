@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
     <meta name="description" content="Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
     <title>Zincafé Zweeloo - Gesprekken die ertoe doen</title>
     <style>
@@ -686,6 +687,169 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Enhanced facilitator photos */
+        .facilitator-photo {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facilitator-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Enhanced button interactions */
+        .btn, .btn-reserve, .btn-primary-large {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before, .btn-reserve::before, .btn-primary-large::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:active::before, .btn-reserve:active::before, .btn-primary-large:active::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* FAQ accordion styling */
+        .faq-question {
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-red);
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--soft-ochre);
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 0.5rem;
+        }
+
+        /* Map loading animation */
+        .map-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            background: var(--warm-beige);
+            color: var(--text-light);
+        }
+
+        .map-loading::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border: 3px solid var(--soft-ochre);
+            border-top: 3px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Social sharing buttons */
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--warm-beige);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Newsletter form feedback */
+        .form-feedback {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .form-feedback.success {
+            background: rgba(156, 169, 134, 0.2);
+            color: var(--sage);
+            border: 1px solid var(--sage);
+        }
+
+        .form-feedback.error {
+            background: rgba(212, 117, 110, 0.2);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+        }
     </style>
 </head>
 <body>
@@ -705,16 +869,6 @@
             <strong>🗓️ Eerstvolgende bijeenkomst: 26 november 2025</strong>
             <p class="countdown">Nog beperkt aantal plaatsen beschikbaar</p>
         </div>
-
-        <!-- Social Proof -->
-        <section class="social-proof">
-            <div class="social-proof-stat">25+</div>
-            <p class="social-proof-text">Deelnemers hebben zich aangemeld voor de eerste bijeenkomst</p>
-            <div class="testimonial">
-                <p class="testimonial-text">"Een verfrissende manier om met dorpsgenoten over betekenisvolle onderwerpen te praten. De sfeer is open en nieuwsgierig, precies wat ik zocht."</p>
-                <p class="testimonial-author">— Maria, deelnemer pilot</p>
-            </div>
-        </section>
 
         <!-- Intro Section -->
         <section class="intro">
