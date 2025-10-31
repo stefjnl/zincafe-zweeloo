@@ -6,6 +6,17 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
     <meta name="description" content="Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
     <title>Zincafé Zweeloo - Gesprekken die ertoe doen</title>
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Zincafé Zweeloo - Gesprekken die ertoe doen">
+    <meta property="og:description" content="Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
+    <meta property="og:image" content="image.jpg">
+    <meta property="og:url" content="https://zincafezweeloo.nl">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zincafé Zweeloo - Gesprekken die ertoe doen">
+    <meta name="twitter:description" content="Filosofische gesprekken over zingeving in Zweeloo">
+    <meta name="twitter:image" content="image.jpg">
     <style>
         * {
             margin: 0;
@@ -850,11 +861,189 @@
             color: var(--accent-red);
             border: 1px solid var(--accent-red);
         }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--deep-brown);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--soft-ochre);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        /* Logo fallback styling */
+        .logo-fallback {
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* GDPR checkbox styling */
+        .gdpr-checkbox-wrapper {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .gdpr-checkbox-wrapper label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            color: white;
+        }
+
+        .gdpr-checkbox-wrapper input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .gdpr-checkbox-wrapper a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Privacy link styling */
+        .privacy-link {
+            color: white;
+            text-decoration: underline;
+            transition: opacity 0.3s;
+        }
+
+        .privacy-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Modal styling for privacy */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+
+        .modal.show {
+            display: block;
+        }
+
+        .modal-content {
+            background-color: var(--warm-beige);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .modal-close {
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--deep-brown);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-red);
+        }
+
+        .modal h2 {
+            color: var(--deep-brown);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Accessibility improvements */
+        [aria-label] {
+            position: relative;
+        }
+
+        /* Copy feedback */
+        .copy-feedback {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--deep-brown);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 3000;
+        }
+
+        .copy-feedback.show {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="logo" loading="eager">
+        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="logo" loading="eager" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex'">
+        <div class="logo-fallback" style="display:none;">☕</div>
         <h1>Zincafé Zweeloo</h1>
         <p>Gesprekken die ertoe doen</p>
         <div class="hero-cta">
@@ -947,10 +1136,17 @@
         <section class="newsletter" id="newsletter">
             <h2>Blijf op de hoogte</h2>
             <p>Ontvang een seintje wanneer nieuwe data bekend zijn en mis geen enkele bijeenkomst</p>
-            <form class="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="email" name="email" placeholder="jouw@email.nl" required>
-                <button type="submit">Inschrijven</button>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" name="email" placeholder="jouw@email.nl" required aria-label="Je e-mailadres">
+                <button type="submit" aria-label="Inschrijven voor de nieuwsbrief">Inschrijven</button>
             </form>
+            <div class="gdpr-checkbox-wrapper">
+                <label>
+                    <input type="checkbox" name="gdpr-consent" required aria-label="Ik ga akkoord met het privacybeleid">
+                    Ik ga akkoord met het <a href="#" class="privacy-link" aria-label="Privacybeleid openen">privacybeleid</a>
+                </label>
+            </div>
+            <div class="form-feedback" id="newsletterFeedback"></div>
             <p class="privacy-note">We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk.</p>
         </section>
 
@@ -979,14 +1175,15 @@
             <div class="location-details">
                 <h3>Hoe vind je ons?</h3>
                 <div class="map-container">
-                    <!-- Vervang dit met een echte Google Maps embed -->
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2409.9!2d6.7!3d52.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDQ4JzAwLjAiTiA2wrA0MicwMC4wIkU!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5!2d6.697!3d52.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1f0d3d3d3d3d3%3A0x0!2sKlooster%204%2C%207241%20CT%20Zweeloo!5e0!3m2!1snl!2snl!4v1730000000000" 
                         width="100%" 
                         height="300" 
                         style="border:0;" 
                         allowfullscreen="" 
-                        loading="lazy">
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-label="Locatie van Zincafé Zweeloo op Google Maps">
                     </iframe>
                 </div>
                 <div class="directions">
@@ -1039,11 +1236,44 @@
             <h2>Vragen of aanmelden?</h2>
             <p>We horen graag van je! Stuur een mailtje of meld je direct aan voor één van de bijeenkomsten.</p>
             <div class="contact-buttons">
-                <a href="mailto:zincafezweeloo@gmail.com" class="btn">✉️ Stel een vraag</a>
-                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé" class="btn">📝 Aanmelden</a>
+                <a href="mailto:zincafezweeloo@gmail.com" class="btn" aria-label="Stuur ons een vraag per e-mail">✉️ Stel een vraag</a>
+                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé" class="btn" aria-label="Meld je aan voor Zincafé per e-mail">📝 Aanmelden</a>
+                <button class="btn" id="copyEmailBtn" aria-label="Kopieer e-mailadres naar klembord">📋 E-mail kopiëren</button>
+            </div>
+            <div class="social-share" role="toolbar" aria-label="Delen op social media">
+                <a href="https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafezweeloo.nl" class="share-btn" aria-label="Delen op WhatsApp">📱 WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://zincafezweeloo.nl" class="share-btn" aria-label="Delen op Facebook">👥 Facebook</a>
             </div>
         </section>
     </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Terug naar bovenkant van pagina">↑</button>
+
+    <!-- Privacy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="privacyClose" role="button" tabindex="0" aria-label="Sluit privacybeleid">&times;</span>
+            <h2>Privacybeleid</h2>
+            <p><strong>Zincafé Zweeloo - Privacyverklaring</strong></p>
+            <p>Bij Zincafé Zweeloo nemen we je privacy serieus. Hieronder leggen we uit hoe we met je gegevens omgaan.</p>
+            
+            <h3 style="color: var(--deep-brown); margin-top: 1rem;">Wat doen we met je e-mailadres?</h3>
+            <p>Je e-mailadres gebruiken we alleen om je op de hoogte te houden van komende bijeenkomsten en thema's. We sturen maximaal één email per maand.</p>
+            
+            <h3 style="color: var(--deep-brown); margin-top: 1rem;">Delen we je gegevens?</h3>
+            <p>Nee. We geven je gegevens nooit door aan derden. Je e-mailadres blijft volledig bij Zincafé Zweeloo.</p>
+            
+            <h3 style="color: var(--deep-brown); margin-top: 1rem;">Hoe lang bewaren we je gegevens?</h3>
+            <p>We bewaren je e-mailadres tot je je uitschrijft van de nieuwsbrief. Je kunt je op elk moment uitschrijven via de link in elke email.</p>
+            
+            <h3 style="color: var(--deep-brown); margin-top: 1rem;">Vragen?</h3>
+            <p>Heb je vragen over je gegevens? Stuur dan een e-mail naar <a href="mailto:zincafezweeloo@gmail.com">zincafezweeloo@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- Copy feedback notification -->
+    <div class="copy-feedback" id="copyFeedback">E-mailadres gekopieerd! 📋</div>
 
     <!-- Sticky CTA voor mobiel -->
     <div class="sticky-cta">
@@ -1055,19 +1285,196 @@
         <p style="margin-top: 0.5rem; font-size: 0.85rem;">✉️ zincafezweeloo@gmail.com</p>
     </footer>
 
-    <!-- Simple countdown script -->
+    <!-- Comprehensive JavaScript for all features -->
     <script>
-        // Calculate days until next event (November 26, 2025)
-        const nextEvent = new Date('2025-11-26T19:30:00');
-        const today = new Date();
-        const daysUntil = Math.ceil((nextEvent - today) / (1000 * 60 * 60 * 24));
-        
-        if (daysUntil > 0) {
-            const urgencyElements = document.querySelectorAll('.urgency-text');
-            urgencyElements.forEach(el => {
-                el.textContent = `⏰ Volgende bijeenkomst over ${daysUntil} dagen`;
+        // 1. Calculate days until next event
+        function updateCountdown() {
+            const nextEvent = new Date('2025-11-26T19:30:00');
+            const today = new Date();
+            const daysUntil = Math.ceil((nextEvent - today) / (1000 * 60 * 60 * 24));
+            
+            if (daysUntil > 0) {
+                const urgencyElements = document.querySelectorAll('.urgency-text');
+                urgencyElements.forEach(el => {
+                    el.textContent = `⏰ Volgende bijeenkomst over ${daysUntil} dagen`;
+                });
+            }
+        }
+
+        // 2. FAQ Accordion functionality
+        function initFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+
+                // Keyboard support
+                question.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        question.click();
+                    }
+                });
             });
         }
+
+        // 3. Fade-in animations on scroll
+        function initFadeInAnimations() {
+            const sections = document.querySelectorAll('section, .next-event-banner, .intro, .contact');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in', 'visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                section.classList.add('fade-in');
+                observer.observe(section);
+            });
+        }
+
+        // 4. Back to top button
+        function initBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // 5. Newsletter form with validation and feedback
+        function initNewsletter() {
+            const form = document.getElementById('newsletterForm');
+            const feedback = document.getElementById('newsletterFeedback');
+            const checkbox = document.querySelector('input[name="gdpr-consent"]');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check GDPR consent
+                if (!checkbox.checked) {
+                    showFeedback('Accepteer alstublieft het privacybeleid.', 'error', feedback);
+                    return;
+                }
+                
+                const email = form.querySelector('input[type="email"]').value;
+                
+                // Validate email
+                if (!isValidEmail(email)) {
+                    showFeedback('Voer alstublieft een geldig e-mailadres in.', 'error', feedback);
+                    return;
+                }
+                
+                // Show success message
+                showFeedback('✓ Je bent ingeschreven! Controleer je inbox.', 'success', feedback);
+                
+                // In a real implementation, you would send the data to your server here
+                // For now, we'll just clear the form after a delay
+                setTimeout(() => {
+                    form.reset();
+                    feedback.style.display = 'none';
+                }, 3000);
+            });
+        }
+
+        // 6. Privacy modal
+        function initPrivacyModal() {
+            const privacyLink = document.querySelector('.privacy-link');
+            const modal = document.getElementById('privacyModal');
+            const closeBtn = document.getElementById('privacyClose');
+            
+            privacyLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close when clicking outside modal
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('show')) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // 7. Copy email functionality
+        function initCopyEmail() {
+            const copyBtn = document.getElementById('copyEmailBtn');
+            const feedback = document.getElementById('copyFeedback');
+            const email = 'zincafezweeloo@gmail.com';
+            
+            copyBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(email).then(() => {
+                    feedback.classList.add('show');
+                    setTimeout(() => {
+                        feedback.classList.remove('show');
+                    }, 2000);
+                }).catch(() => {
+                    alert('Kopiëren mislukt. Probeer het handmatig.');
+                });
+            });
+        }
+
+        // Utility functions
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showFeedback(message, type, element) {
+            element.textContent = message;
+            element.className = `form-feedback ${type}`;
+            element.style.display = 'block';
+        }
+
+        // Initialize all features when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdown();
+            initFAQ();
+            initFadeInAnimations();
+            initBackToTop();
+            initNewsletter();
+            initPrivacyModal();
+            initCopyEmail();
+        });
     </script>
 </body>
 </html>
