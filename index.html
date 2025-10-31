@@ -1024,6 +1024,284 @@
             opacity: 1;
         }
 
+        /* ===== NEW ENHANCEMENTS ===== */
+
+        /* 1. Animated Section Dividers */
+        .section-divider {
+            position: relative;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            opacity: 0.6;
+        }
+
+        .divider-line {
+            position: absolute;
+            width: 80%;
+            max-width: 500px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--soft-ochre) 20%, var(--soft-ochre) 80%, transparent 100%);
+            animation: expandLine 1.5s ease-out forwards;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 80%;
+                opacity: 0.6;
+            }
+        }
+
+        .divider-icon {
+            position: absolute;
+            font-size: 1.2rem;
+            background: var(--warm-beige);
+            padding: 0 1rem;
+            animation: fadeIn 0.8s ease-out 0.3s both;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        .divider-icon:hover {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 2. Enhanced Card Hover Effects */
+        
+        /* Event Cards (bijeenkomst-card) */
+        .bijeenkomst-card {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-left: 4px solid var(--soft-ochre);
+            overflow: hidden;
+        }
+
+        .bijeenkomst-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--soft-ochre), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .bijeenkomst-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(200, 155, 95, 0.15);
+            border-left-color: var(--soft-ochre);
+        }
+
+        .bijeenkomst-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .bijeenkomst-card.featured {
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .bijeenkomst-card.featured::before {
+            background: linear-gradient(90deg, var(--accent-red), transparent);
+        }
+
+        .bijeenkomst-card.featured:hover {
+            box-shadow: 0 8px 24px rgba(212, 117, 110, 0.2);
+            border-left-color: var(--accent-red);
+        }
+
+        /* Facilitator Cards */
+        .facilitator {
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .facilitator:hover {
+            transform: translateY(-6px);
+        }
+
+        .facilitator::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--soft-ochre);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .facilitator:hover::after {
+            width: 60%;
+        }
+
+        /* Practical Info Cards */
+        .praktisch-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .praktisch-item:hover {
+            background: linear-gradient(135deg, var(--warm-beige) 0%, rgba(200, 155, 95, 0.08) 100%);
+            border-left-color: var(--soft-ochre);
+            transform: translateX(4px);
+        }
+
+        /* 3. Parallax Scrolling Effects */
+        
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(200, 155, 95, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .next-event-banner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-event-banner::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: moveBackground 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(20px, 20px);
+            }
+        }
+
+        /* Parallax effect for sections */
+        .parallax-bg {
+            position: relative;
+            will-change: transform;
+        }
+
+        /* Subtle background shift on sections */
+        .intro,
+        .facilitators,
+        .bijeenkomsten,
+        .praktisch,
+        .faq {
+            position: relative;
+        }
+
+        .intro::before,
+        .facilitators::before,
+        .bijeenkomsten::before,
+        .praktisch::before,
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(ellipse at top left, rgba(156, 169, 134, 0.02) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Smooth transition for hero */
+        .hero-cta {
+            perspective: 1000px;
+        }
+
+        .btn-primary-large {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .btn-primary-large:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        /* Enhanced button hover with glow effect */
+        .btn, .btn-reserve, .btn-primary-large {
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .btn-primary-large:hover,
+        .btn-reserve:hover,
+        .btn:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Add smooth scroll offset for sticky header */
+        .sticky-cta {
+            transition: all 0.3s ease;
+        }
+
+        /* Section entrance animation with stagger */
+        .intro,
+        .facilitators,
+        .bijeenkomsten,
+        .praktisch,
+        .faq,
+        .newsletter,
+        .contact {
+            animation: sectionSlideIn 0.6s ease-out both;
+        }
+
+        @keyframes sectionSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro { animation-delay: 0.1s; }
+        .facilitators { animation-delay: 0.2s; }
+        .bijeenkomsten { animation-delay: 0.3s; }
+        .praktisch { animation-delay: 0.4s; }
+        .faq { animation-delay: 0.5s; }
+        .newsletter { animation-delay: 0.3s; }
+        .contact { animation-delay: 0.4s; }
+
         @media (max-width: 768px) {
             .back-to-top {
                 bottom: 1rem;
@@ -1036,6 +1314,18 @@
             .modal-content {
                 width: 95%;
                 margin: 20% auto;
+            }
+
+            .bijeenkomst-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .facilitator:hover {
+                transform: translateY(-3px);
+            }
+
+            .divider-line {
+                width: 90%;
             }
         }
     </style>
@@ -1073,6 +1363,12 @@
             <p style="margin-top: 1.5rem;">Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt.</p>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">✦</div>
+        </div>
+
         <!-- Facilitators -->
         <section class="facilitators">
             <h2>Jouw begeleiders</h2>
@@ -1091,6 +1387,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">•</div>
+        </div>
 
         <!-- Bijeenkomsten -->
         <section class="bijeenkomsten">
@@ -1132,6 +1434,12 @@
             </div>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">☕</div>
+        </div>
+
         <!-- Newsletter -->
         <section class="newsletter" id="newsletter">
             <h2>Blijf op de hoogte</h2>
@@ -1149,6 +1457,12 @@
             <div class="form-feedback" id="newsletterFeedback"></div>
             <p class="privacy-note">We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk.</p>
         </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">✦</div>
+        </div>
 
         <!-- Praktisch met locatie details -->
         <section class="praktisch">
@@ -1195,6 +1509,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">•</div>
+        </div>
 
         <!-- FAQ -->
         <section class="faq">
@@ -1453,6 +1773,43 @@
             });
         }
 
+        // 8. Parallax scrolling effect
+        function initParallax() {
+            const header = document.querySelector('header');
+            const nextEventBanner = document.querySelector('.next-event-banner');
+            
+            window.addEventListener('scroll', () => {
+                const scrollY = window.pageYOffset;
+                
+                // Subtle parallax for header (slower scroll)
+                if (header) {
+                    header.style.transform = `translateY(${scrollY * 0.3}px)`;
+                }
+                
+                // Subtle parallax for event banner
+                if (nextEventBanner && scrollY < 1000) {
+                    nextEventBanner.style.transform = `translateY(${scrollY * 0.15}px)`;
+                }
+            }, { passive: true });
+        }
+
+        // 9. Animate section dividers on scroll
+        function initDividerAnimations() {
+            const dividers = document.querySelectorAll('.section-divider');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            dividers.forEach(divider => {
+                observer.observe(divider);
+            });
+        }
+
         // Utility functions
         function isValidEmail(email) {
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1474,6 +1831,8 @@
             initNewsletter();
             initPrivacyModal();
             initCopyEmail();
+            initParallax();
+            initDividerAnimations();
         });
     </script>
 </body>
