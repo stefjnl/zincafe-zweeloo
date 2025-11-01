@@ -1,21 +1,171 @@
 {
   "metadata": {
-    "title": "Test Site",
-    "description": "Test description",
-    "lastModified": "2025-11-01T07:09:25.135Z"
+    "title": "Zincafé Zweeloo - Gesprekken die ertoe doen",
+    "description": "Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.",
+    "lastModified": "2025-11-01T08:10:19.785Z"
   },
-  "sections": {
-    "hero": {
-      "label": "Hero",
-      "type": "content",
+  "sections": [
+    {
+      "id": "section-1",
+      "label": "section-1",
+      "type": "hero",
       "content": {
-        "title": "Test Title",
-        "subtitle": "Test Subtitle"
-      }
+        "heading": "Waarom een Zincafé?",
+        "paragraphs": [
+          "In een wereld die steeds sneller lijkt te draaien, is het waardevol om stil te staan bij vragen die er echt toe doen. Wat betekent het om 'goed' te leven? Hoe verhoud je je tot anderen, tot de tijd, tot jezelf?",
+          "Met dat idee starten we in Zweeloo het Zincafé – een reeks toegankelijke bijeenkomsten waarin we als dorpsgenoten in gesprek gaan over zingeving in de brede zin van het woord. Denk aan thema's als zingeving, vergankelijkheid, levenslust of zinvol werk. Geen debat of discussie, maar een open en respectvol gesprek waarin luisteren, denken en delen centraal staan.",
+          "\"Bij onze aanvraag voor het dorpsbudget kregen we dertien stemmen. Dat is een prachtige basis. Met vier tot zes mensen heb je al een waardevol gesprek.\" — Nathalie",
+          "\"Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen.\" — Sjoerd",
+          "Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt."
+        ]
+      },
+      "selector": "section.intro"
+    },
+    {
+      "id": "section-2",
+      "label": "section-2",
+      "type": "hero",
+      "content": {
+        "heading": "Jouw begeleiders",
+        "paragraphs": [
+          "Filosoof & Gespreksbegeleider",
+          "Sjoerd begeleidt al jaren filosofische dialogen en helpt groepen om samen na te denken over de grote vragen. Zijn aanpak is wars van jargon en nodigt iedereen uit om mee te denken, ongeacht achtergrond.",
+          "Filosoof & Gespreksbegeleider",
+          "Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken en samen ontdekken wat er echt toe doet in het leven."
+        ]
+      },
+      "selector": "section.facilitators"
+    },
+    {
+      "id": "section-3",
+      "label": "section-3",
+      "type": "hero",
+      "content": {
+        "heading": "Vijf eerstvolgende bijeenkomsten",
+        "links": [
+          {
+            "text": "Reserveer je plek →",
+            "href": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een goed leven"
+          },
+          {
+            "text": "Reserveer je plek →",
+            "href": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid"
+          }
+        ]
+      },
+      "selector": "section.bijeenkomsten"
+    },
+    {
+      "id": "newsletter",
+      "label": "newsletter",
+      "type": "contact",
+      "content": {
+        "heading": "Blijf op de hoogte",
+        "paragraphs": [
+          "Ontvang een seintje wanneer nieuwe data bekend zijn en mis geen enkele bijeenkomst",
+          "We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk."
+        ],
+        "links": [
+          {
+            "text": "privacybeleid",
+            "href": "#"
+          }
+        ]
+      },
+      "selector": "#newsletter"
+    },
+    {
+      "id": "section-5",
+      "label": "section-5",
+      "type": "hero",
+      "content": {
+        "heading": "Praktische informatie",
+        "paragraphs": [
+          "Klooster 4De Kapschuur, Zweeloo",
+          "19:30 – 21:30 uurInloop vanaf 19:15",
+          "Koffie, thee en water staan klaar",
+          "Vrij(Vrije gift welkom)"
+        ]
+      },
+      "selector": "section.praktisch"
+    },
+    {
+      "id": "section-6",
+      "label": "section-6",
+      "type": "hero",
+      "content": {
+        "heading": "Veelgestelde vragen"
+      },
+      "selector": "section.faq"
+    },
+    {
+      "id": "section-7",
+      "label": "section-7",
+      "type": "hero",
+      "content": {
+        "heading": "Vragen of aanmelden?",
+        "paragraphs": [
+          "We horen graag van je! Stuur een mailtje of meld je direct aan voor één van de bijeenkomsten."
+        ],
+        "links": [
+          {
+            "text": "✉️ Stel een vraag",
+            "href": "mailto:zincafezweeloo@gmail.com"
+          },
+          {
+            "text": "📝 Aanmelden",
+            "href": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé"
+          },
+          {
+            "text": "📱 WhatsApp",
+            "href": "https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafezweeloo.nl"
+          }
+        ]
+      },
+      "selector": "section.contact"
     }
-  },
+  ],
   "assets": {
-    "images": [],
-    "links": []
+    "images": [
+      "image.jpg"
+    ],
+    "links": [
+      {
+        "text": "Blijf op de hoogte",
+        "url": "#newsletter"
+      },
+      {
+        "text": "Reserveer je plek →",
+        "url": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een goed leven"
+      },
+      {
+        "text": "Reserveer je plek →",
+        "url": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid"
+      },
+      {
+        "text": "privacybeleid",
+        "url": "#"
+      },
+      {
+        "text": "✉️ Stel een vraag",
+        "url": "mailto:zincafezweeloo@gmail.com"
+      },
+      {
+        "text": "📝 Aanmelden",
+        "url": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé"
+      },
+      {
+        "text": "📱 WhatsApp",
+        "url": "https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafezweeloo.nl"
+      },
+      {
+        "text": "zincafezweeloo@gmail.com",
+        "url": "mailto:zincafezweeloo@gmail.com"
+      },
+      {
+        "text": "📬 Blijf op de hoogte",
+        "url": "#newsletter"
+      }
+    ]
   }
 }
