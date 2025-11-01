@@ -58,7 +58,7 @@
             max-width: 200px;
             height: auto;
             margin: 0 auto 1.5rem;
-            display: block;
+            display: flex;
             border-radius: 8px;
         }
 
@@ -128,7 +128,7 @@
 
         .next-event-banner strong {
             font-size: 1.3rem;
-            display: block;
+            display: flex;
             margin-bottom: 0.5rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
@@ -239,6 +239,7 @@
             justify-content: center;
             font-size: 3rem;
             color: var(--deep-brown);
+            object-fit: cover;
             border: 3px solid var(--soft-ochre);
         }
 
@@ -457,7 +458,7 @@
         }
 
         .praktisch-item strong {
-            display: block;
+            display: flex;
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -506,7 +507,7 @@
 
         .directions strong {
             color: var(--deep-brown);
-            display: block;
+            display: flex;
             margin-bottom: 0.5rem;
         }
 
@@ -611,7 +612,7 @@
         }
 
         .sticky-cta a {
-            display: block;
+            display: flex;
             text-align: center;
             color: white;
             text-decoration: none;
@@ -675,7 +676,7 @@
             }
 
             .sticky-cta {
-                display: block;
+                display: flex;
             }
 
             body {
@@ -957,7 +958,7 @@
         }
 
         .modal.show {
-            display: block;
+            display: flex;
         }
 
         .modal-content {
@@ -1408,13 +1409,13 @@
             <h2>Jouw begeleiders</h2>
             <div class="facilitator-grid">
                 <div class="facilitator">
-                    <div class="facilitator-photo">S</div>
+                    <img src="sjoerd.jpg" alt="Sjoerd Slagter" class="facilitator-photo" loading="lazy">
                     <h3>Sjoerd Slagter</h3>
                     <p class="facilitator-role">Filosoof &amp; Gespreksbegeleider</p>
                     <p class="facilitator-bio">Sjoerd begeleidt al jaren filosofische dialogen en helpt groepen om samen na te denken over de grote vragen. Zijn aanpak is wars van jargon en nodigt iedereen uit om mee te denken, ongeacht achtergrond.</p>
                 </div>
                 <div class="facilitator">
-                    <div class="facilitator-photo">N</div>
+                    <img src="nathalie.jpg" alt="Nathalie van Hooff" class="facilitator-photo" loading="lazy">
                     <h3>Nathalie van Hooff</h3>
                     <p class="facilitator-role">Trainer &amp; Gespreksbegeleider</p>
                     <p class="facilitator-bio">Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken en samen ontdekken wat er echt toe doet in het leven.</p>
@@ -1521,6 +1522,7 @@
             </div>
 
             <div class="location-details">
+                <img src="kapschuur.jpg" alt="De Kapschuur in Zweeloo" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
                 <h3>Hoe vind je ons?</h3>
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5!2d6.697!3d52.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1f0d3d3d3d3d3%3A0x0!2sKlooster%204%2C%207241%20CT%20Zweeloo!5e0!3m2!1snl!2snl!4v1730000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Locatie van Zincafé Zweeloo op Google Maps">
@@ -1528,10 +1530,7 @@
                 </div>
                 <div class="directions">
                     <strong>🚗 Parkeren:</strong>
-                    Gratis parkeren mogelijk bij het Klooster. Vanaf de parkeerplaats is het een korte wandeling naar de Kapschuur.
-                    <br><br>
-                    <strong>🚶 Te voet:</strong>
-                    De Kapschuur ligt in het centrum van Zweeloo, gemakkelijk bereikbaar vanaf de dorpskern.
+                    Je kunt parkeren voor de deur, maar op de fiets of lopend is eenvoudiger.
                 </div>
             </div>
         </section>
