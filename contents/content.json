@@ -2,13 +2,39 @@
   "metadata": {
     "title": "Zincafé Zweeloo - Gesprekken die ertoe doen",
     "description": "Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.",
-    "lastModified": "2025-11-01T09:53:02.447Z"
+    "keywords": "zincafé, filosofie, zingeving, Zweeloo, gesprekken",
+    "lastModified": "2025-11-08"
   },
   "sections": [
     {
-      "id": "section-1",
-      "label": "section-1",
+      "id": "hero",
+      "label": "Header & Hero",
       "type": "hero",
+      "selector": "header",
+      "content": {
+        "heading": "Zincafé Zweeloo",
+        "subheading": "Gesprekken die ertoe doen",
+        "ctaText": "Blijf op de hoogte",
+        "ctaUrl": "#newsletter",
+        "urgencyText": "⏰ Volgende bijeenkomst over 17 dagen",
+        "logoAlt": "Zincafé Zweeloo - Filosofische Gesprekken Logo"
+      }
+    },
+    {
+      "id": "next-event",
+      "label": "Next Event Banner",
+      "type": "banner",
+      "selector": ".next-event-banner",
+      "content": {
+        "heading": "🗓️ Eerstvolgende bijeenkomst: 27 november 2025",
+        "subtitle": "Nog beperkt aantal plaatsen beschikbaar"
+      }
+    },
+    {
+      "id": "intro",
+      "label": "Introduction",
+      "type": "content",
+      "selector": ".intro",
       "content": {
         "heading": "Waarom een Zincafé?",
         "paragraphs": [
@@ -18,153 +44,218 @@
           "\"Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen.\" — Sjoerd",
           "Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt."
         ]
-      },
-      "selector": "section.intro"
+      }
     },
     {
-      "id": "section-2",
-      "label": "section-2",
-      "type": "hero",
+      "id": "facilitators",
+      "label": "Facilitators",
+      "type": "team",
+      "selector": ".facilitators",
       "content": {
         "heading": "Jouw begeleiders",
-        "paragraphs": [
-          "Filosoof & Gespreksbegeleider",
-          "Sjoerd begeleidt al jaren filosofische dialogen en helpt groepen om samen na te denken over de grote vragen. Zijn aanpak is wars van jargon en nodigt iedereen uit om mee te denken, ongeacht achtergrond.",
-          "Trainer & Gespreksbegeleider",
-          "Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken en samen ontdekken wat er echt toe doet in het leven."
-        ]
-      },
-      "selector": "section.facilitators"
-    },
-    {
-      "id": "section-3",
-      "label": "section-3",
-      "type": "hero",
-      "content": {
-        "heading": "Vijf bijeenkomsten",
-        "links": [
+        "members": [
           {
-            "text": "Reserveer je plek →",
-            "href": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een goed leven"
+            "name": "Sjoerd Slagter",
+            "role": "Filosoof & Gespreksbegeleider",
+            "bio": "Sjoerd doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) en begeleidt al jaren filosofische dialogen. Hij helpt groepen om samen na te denken over de grote vragen en nodigt iedereen uit om mee te denken, ongeacht achtergrond.",
+            "photo": "sjoerd.jpg",
+            "photoAlt": "Sjoerd Slagter - Filosoof en Gespreksbegeleider bij Zincafé Zweeloo"
           },
           {
-            "text": "Reserveer je plek →",
-            "href": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid"
+            "name": "Nathalie van Hooff",
+            "role": "Trainer & Gespreksbegeleider",
+            "bio": "Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken en samen ontdekken wat er echt toe doet in het leven.",
+            "photo": "nathalie.jpg",
+            "photoAlt": "Nathalie van Hooff - Trainer en Gespreksbegeleider bij Zincafé Zweeloo"
           }
         ]
-      },
-      "selector": "section.bijeenkomsten"
+      }
+    },
+    {
+      "id": "bijeenkomsten",
+      "label": "Events/Meetings",
+      "type": "events",
+      "selector": ".bijeenkomsten",
+      "content": {
+        "heading": "Vijf bijeenkomsten",
+        "events": [
+          {
+            "id": "event-1",
+            "title": "1. Wat is een zinvol leven?",
+            "date": "Donderdag 27 november 2025, 19:30",
+            "dateRaw": "2025-11-27T19:30",
+            "availability": "🔥 Nog 7 plaatsen beschikbaar",
+            "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven",
+            "featured": true
+          },
+          {
+            "id": "event-2",
+            "title": "2. Vrijheid & verantwoordelijkheid",
+            "date": "Donderdag 18 december 2025, 19:30",
+            "dateRaw": "2025-12-18T19:30",
+            "availability": "✓ Plaatsen beschikbaar",
+            "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid",
+            "featured": false
+          },
+          {
+            "id": "event-3",
+            "title": "3. Kwetsbaarheid & veerkracht",
+            "date": "Datum 2026 nog bekend te maken",
+            "dateRaw": null,
+            "availability": "Binnenkort beschikbaar",
+            "reserveLink": null,
+            "featured": false
+          },
+          {
+            "id": "event-4",
+            "title": "4. Zinvol werk & samen leven",
+            "date": "Datum 2026 nog bekend te maken",
+            "dateRaw": null,
+            "availability": "Binnenkort beschikbaar",
+            "reserveLink": null,
+            "featured": false
+          },
+          {
+            "id": "event-5",
+            "title": "5. Vergankelijkheid & herinnering",
+            "date": "Datum 2026 nog bekend te maken",
+            "dateRaw": null,
+            "availability": "Binnenkort beschikbaar",
+            "reserveLink": null,
+            "featured": false
+          }
+        ]
+      }
     },
     {
       "id": "newsletter",
-      "label": "newsletter",
-      "type": "contact",
+      "label": "Newsletter Signup",
+      "type": "form",
+      "selector": ".newsletter",
       "content": {
         "heading": "Blijf op de hoogte via onze nieuwsbrief",
-        "paragraphs": [
-          "Ontvang een seintje wanneer nieuwe data bekend zijn en mis geen enkele bijeenkomst",
-          "We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk."
-        ],
-        "links": [
-          {
-            "text": "privacybeleid",
-            "href": "#"
-          }
-        ]
-      },
-      "selector": "#newsletter"
+        "description": "Ontvang een seintje wanneer nieuwe data bekend zijn en mis geen enkele bijeenkomst",
+        "buttonText": "Inschrijven",
+        "privacyNote": "We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk."
+      }
     },
     {
-      "id": "section-5",
-      "label": "section-5",
-      "type": "hero",
+      "id": "praktisch",
+      "label": "Practical Information",
+      "type": "info",
+      "selector": ".praktisch",
       "content": {
         "heading": "Praktische informatie",
-        "paragraphs": [
-          "Klooster 4De Kapschuur, Zweeloo",
-          "19:30 – 21:30 uurInloop vanaf 19:15",
-          "Koffie, thee en water staan klaar",
-          "Vrij(Vrije gift welkom)"
-        ]
-      },
-      "selector": "section.praktisch"
+        "infoItems": [
+          {
+            "icon": "📍",
+            "label": "Locatie",
+            "value": "Klooster 4\nDe Kapschuur, Zweeloo"
+          },
+          {
+            "icon": "🕐",
+            "label": "Tijd",
+            "value": "19:30 – 21:30 uur\nInloop vanaf 19:15"
+          },
+          {
+            "icon": "☕",
+            "label": "Voorzieningen",
+            "value": "Koffie, thee en water staan klaar"
+          },
+          {
+            "icon": "💶",
+            "label": "Toegang",
+            "value": "Vrij\n(Vrije gift welkom)"
+          }
+        ],
+        "locationHeading": "Hoe vind je ons?",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5!2d6.697!3d52.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1f0d3d3d3d3d3%3A0x0!2sKlooster%204%2C%207241%20CT%20Zweeloo!5e0!3m2!1snl!2snl!4v1730000000000",
+        "directionsLabel": "🚗 Parkeren:",
+        "directionsText": "Je kunt parkeren voor de deur, maar op de fiets of lopend is eenvoudiger."
+      }
     },
     {
-      "id": "section-6",
-      "label": "section-6",
-      "type": "hero",
+      "id": "faq",
+      "label": "FAQ",
+      "type": "faq",
+      "selector": ".faq",
       "content": {
-        "heading": "Veelgestelde vragen"
-      },
-      "selector": "section.faq"
+        "heading": "Veelgestelde vragen",
+        "items": [
+          {
+            "question": "Moet ik filosofie kennen om mee te doen?",
+            "answer": "Absoluut niet! Het Zincafé is juist bedoeld voor iedereen. Je hoeft geen voorkennis te hebben. We praten over thema's die ons allemaal aangaan, in gewone mensentaal."
+          },
+          {
+            "question": "Hoeveel mensen nemen er deel?",
+            "answer": "We streven naar een intieme setting met zo rond de tien deelnemers per avond. Zo blijft er ruimte voor iedereen om zijn of haar gedachten te delen en krijgen gesprekken de diepgang die we zoeken."
+          },
+          {
+            "question": "Moet ik de hele avond praten?",
+            "answer": "Nee hoor! Luisteren is net zo waardevol als spreken. Je bepaalt zelf wanneer en hoeveel je deelt. Sommige mensen vinden het prettig om veel te zeggen, anderen luisteren vooral. Beide zijn prima."
+          },
+          {
+            "question": "Wat als ik een bijeenkomst mis?",
+            "answer": "Geen probleem. Elke bijeenkomst staat op zichzelf met een eigen thema. Je kunt dus gewoon bij de volgende aansluiten. Wel leuk om te weten: veel deelnemers komen vaker, wat de verbinding tussen mensen versterkt."
+          },
+          {
+            "question": "Is aanmelden verplicht?",
+            "answer": "Vrije inloop is mogelijk, maar aanmelden helpt ons om goed voorbereid te zijn met genoeg stoelen, koffie en thee. Ook kunnen we je dan op de hoogte houden van eventuele wijzigingen."
+          },
+          {
+            "question": "Kan ik iemand meenemen?",
+            "answer": "Jazeker! Vrienden, partners of familieleden zijn van harte welkom. Hoe meer zielen, hoe meer vreugd. Wel fijn als je even doorgeeft dat je iemand meeneemt."
+          }
+        ]
+      }
     },
     {
-      "id": "section-7",
-      "label": "section-7",
-      "type": "hero",
+      "id": "contact",
+      "label": "Contact",
+      "type": "contact",
+      "selector": ".contact",
       "content": {
         "heading": "Vragen of aanmelden?",
-        "paragraphs": [
-          "We horen graag van je! Stuur een mailtje of meld je direct aan voor één van de bijeenkomsten."
-        ],
-        "links": [
+        "description": "We horen graag van je! Stuur een mailtje of meld je direct aan voor één van de bijeenkomsten.",
+        "email": "zincafezweeloo@gmail.com",
+        "buttons": [
           {
             "text": "✉️ Stel een vraag",
-            "href": "mailto:zincafezweeloo@gmail.com"
+            "link": "mailto:zincafezweeloo@gmail.com"
           },
           {
             "text": "📝 Aanmelden",
-            "href": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé"
-          },
-          {
-            "text": "📱 WhatsApp",
-            "href": "https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafezweeloo.nl"
+            "link": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé"
           }
         ]
-      },
-      "selector": "section.contact"
+      }
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "type": "footer",
+      "selector": "footer",
+      "content": {
+        "text": "Zincafé Zweeloo – Gesprekken over zingeving in Zweeloo",
+        "email": "✉️ zincafezweeloo@gmail.com"
+      }
     }
   ],
   "assets": {
     "images": [
-      "image.jpg"
+      "image.jpg",
+      "sjoerd.jpg",
+      "nathalie.jpg",
+      "kapschuur.jpg"
     ],
     "links": [
       {
-        "text": "Blijf op de hoogte",
+        "text": "Newsletter",
         "url": "#newsletter"
       },
       {
-        "text": "Reserveer je plek →",
-        "url": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een goed leven"
-      },
-      {
-        "text": "Reserveer je plek →",
-        "url": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid"
-      },
-      {
-        "text": "privacybeleid",
-        "url": "#"
-      },
-      {
-        "text": "✉️ Stel een vraag",
-        "url": "mailto:zincafezweeloo@gmail.com"
-      },
-      {
-        "text": "📝 Aanmelden",
-        "url": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé"
-      },
-      {
-        "text": "📱 WhatsApp",
-        "url": "https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafezweeloo.nl"
-      },
-      {
-        "text": "zincafezweeloo@gmail.com",
-        "url": "mailto:zincafezweeloo@gmail.com"
-      },
-      {
-        "text": "📬 Blijf op de hoogte",
-        "url": "#newsletter"
+        "text": "WhatsApp Share",
+        "url": "https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafe-zweeloo.nl"
       }
     ]
   }
