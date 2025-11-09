@@ -77,7 +77,7 @@
       "type": "events",
       "selector": ".bijeenkomsten",
       "content": {
-        "heading": "Vijf bijeenkomsten",
+        "heading": "Vijf bijeenkomsten in de herfst en winter",
         "events": [
           {
             "id": "event-1",
