@@ -52,7 +52,7 @@
       "type": "team",
       "selector": ".facilitators",
       "content": {
-        "heading": "Jouw begeleiders",
+        "heading": "De begeleiders",
         "members": [
           {
             "name": "Sjoerd Slagter",
