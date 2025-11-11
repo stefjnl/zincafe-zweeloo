@@ -934,24 +934,45 @@
 
         /* Newsletter form feedback */
         .form-feedback {
-            margin-top: 1rem;
-            padding: 0.8rem;
-            border-radius: 6px;
+            margin-top: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 500;
             display: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
 
         .form-feedback.success {
-            background: rgba(156, 169, 134, 0.2);
+            background: linear-gradient(135deg, rgba(156, 169, 134, 0.15) 0%, rgba(156, 169, 134, 0.25) 100%);
             color: var(--sage);
-            border: 1px solid var(--sage);
+            border-color: var(--sage);
+            box-shadow: 0 4px 15px rgba(156, 169, 134, 0.3);
         }
 
         .form-feedback.error {
-            background: rgba(212, 117, 110, 0.2);
+            background: linear-gradient(135deg, rgba(212, 117, 110, 0.15) 0%, rgba(212, 117, 110, 0.25) 100%);
             color: var(--accent-red);
-            border: 1px solid var(--accent-red);
+            border-color: var(--accent-red);
+            box-shadow: 0 4px 15px rgba(212, 117, 110, 0.3);
+        }
+
+        .form-feedback.show {
+            animation: feedbackSlideIn 0.4s ease-out;
+        }
+
+        @keyframes feedbackSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         /* Back to top button */
@@ -1574,18 +1595,22 @@
         <section class="newsletter" id="newsletter">
             <h2>Blijf op de hoogte</h2>
             <p>Ontvang een seintje wanneer we nieuws hebben!</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" name="email" placeholder="jouw@email.nl" required="" aria-label="Je e-mailadres">
+            <form action="https://formspree.io/f/mwpakbbq" method="POST" class="newsletter-form" id="newsletterForm">
+                <input type="email" name="email" placeholder="zincafezweeloo@gmail.com" required aria-label="Je e-mailadres">
                 <button type="submit" aria-label="Inschrijven voor de nieuwsbrief">Inschrijven</button>
+                
+                <!-- Hidden fields for Formspree -->
+                <input type="hidden" name="_subject" value="Nieuwe nieuwsbrief inschrijving">
+                <input type="hidden" name="_replyto" value="zincafezweeloo@gmail.com">
             </form>
             <div class="gdpr-checkbox-wrapper">
                 <label>
-                    <input type="checkbox" name="gdpr-consent" required="" aria-label="Ik ga akkoord met het privacybeleid">
+                    <input type="checkbox" name="gdpr-consent" required aria-label="Ik ga akkoord met het privacybeleid">
                     Ik ga akkoord met het <a href="#" class="privacy-link" aria-label="Privacybeleid openen">privacybeleid</a>
                 </label>
             </div>
-            <div class="form-feedback" id="newsletterFeedback"></div>
             <p class="privacy-note">We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk.</p>
+            <div id="newsletterFeedback" class="form-feedback"></div>
         </section>
 
         <!-- Section Divider -->
@@ -1939,6 +1964,11 @@
             element.textContent = message;
             element.className = `form-feedback ${type}`;
             element.style.display = 'block';
+            
+            // Add show class for animation
+            setTimeout(() => {
+                element.classList.add('show');
+            }, 10);
         }
 
         // Initialize all features when DOM is loaded
