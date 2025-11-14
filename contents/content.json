@@ -133,8 +133,8 @@
       "type": "form",
       "selector": ".newsletter",
       "content": {
-        "heading": "Blijf op de hoogte",
-        "description": "Ontvang een seintje wanneer we nieuws hebben!",
+        "heading": "Zodra we een nieuwsbrief hebben kun je je hier aanmelden. ",
+        "description": "Nog even geduld a.u.b.! Nog niet invullen, want je bericht komt niet bij ons aan.",
         "buttonText": "Inschrijven",
         "privacyNote": "We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk."
       }
