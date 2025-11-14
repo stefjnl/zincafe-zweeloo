@@ -133,8 +133,8 @@
       "type": "form",
       "selector": ".newsletter",
       "content": {
-        "heading": "Zodra we een nieuwsbrief hebben kun je je hier aanmelden. ",
-        "description": "Nog even geduld a.u.b.! Nog niet invullen, want je bericht komt niet bij ons aan.",
+        "heading": "Onder constructie!",
+        "description": "Nog even geduld a.u.b.! Nog niet invullen, want je bericht komt niet bij ons aan. Je kan verderop wel ons een vraag stellen of je aanmelden.",
         "buttonText": "Inschrijven",
         "privacyNote": "We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk."
       }
