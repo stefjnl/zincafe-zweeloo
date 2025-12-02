@@ -150,12 +150,12 @@
           {
             "icon": "📍",
             "label": "Locatie",
-            "value": "Klooster 4\nDe Kapschuur, Zweeloo"
+            "value": "De bijeenkomsten vinden plaats in De Kapschuur. Deze vind je op Klooster 4 in Zweelool"
           },
           {
             "icon": "🕐",
             "label": "Tijd",
-            "value": "19:30 – 21:30 uur\nInloop vanaf 19:15"
+            "value": "Elke bijeenkomst duurt van 19.30 tot 21.30 uur.\nInloop vanaf 19:15 uur."
           },
           {
             "icon": "☕",
@@ -164,8 +164,8 @@
           },
           {
             "icon": "💶",
-            "label": "Toegang",
-            "value": "Aanmelden noodzakelijk.\nVrije gift welkom\n"
+            "label": "Groepsgrootte en kosten",
+            "value": "We werken bewust in kleine groepen van maximaal 10 deelnemers, zodat er ruimte is voor aandacht, rust en echte gesprekken.\n\nDeelname is gratis.\nEen vrijwillige bijdrage voor koffie/thee is welkom, maar niet nodig.\n"
           }
         ],
         "locationHeading": "Hoe vind je ons?",
