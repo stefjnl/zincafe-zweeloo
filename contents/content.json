@@ -72,6 +72,15 @@
       }
     },
     {
+      "id": "featured-quote",
+      "label": "Featured Quote",
+      "type": "quote",
+      "selector": ".container > p[style*=\"font-style: italic\"][style*=\"text-align: center\"]",
+      "content": {
+        "text": "Ieder mens wil ervaren dat zijn leven zinvol is, dat hij met zijn handelen iets bereikt of dat zijn handelen bijdraagt aan iets dat nastrevenswaardig is"
+      }
+    },
+    {
       "id": "bijeenkomsten",
       "label": "Events/Meetings",
       "type": "events",
