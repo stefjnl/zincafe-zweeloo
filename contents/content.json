@@ -3,7 +3,7 @@
     "title": "Zincafé Zweeloo - Gesprekken die ertoe doen",
     "description": "Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.",
     "keywords": "zincafé, filosofie, zingeving, Zweeloo, gesprekken",
-    "lastModified": "2025-11-08"
+    "lastModified": "2025-12-02"
   },
   "sections": [
     {
@@ -34,7 +34,7 @@
       "id": "intro",
       "label": "Introduction",
       "type": "content",
-      "selector": ".intro",
+      "selector": "section.intro",
       "content": {
         "heading": "Waarom een Zincafé in Zweeloo?",
         "paragraphs": [
@@ -42,7 +42,7 @@
           "Met dat idee starten we in Zweeloo het Zincafé – een reeks toegankelijke bijeenkomsten waarin we als dorpsgenoten in gesprek gaan over zingeving in de brede zin van het woord. Denk aan thema's als zingeving, vergankelijkheid, levenslust of zinvol werk. Geen debat of discussie, maar een open en respectvol gesprek waarin luisteren, denken en delen centraal staan.",
           "\"Bij onze aanvraag voor het dorpsbudget kregen we dertien stemmen. Dat is een prachtige basis. Met vier tot zes mensen heb je al een waardevol gesprek.\" — Nathalie",
           "\"Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen.\" — Sjoerd",
-          "Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt.\n\nIn verband met de grote belangstelling starten we een extra groep op. Deze start op 18 december en loopt parallel aan de eerste groep. \n"
+          "Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt.\n\nIn verband met de grote belangstelling starten we een extra groep op. Deze start op 18 december en loopt parallel aan de eerste groep."
         ]
       }
     },
@@ -50,7 +50,7 @@
       "id": "facilitators",
       "label": "Facilitators",
       "type": "team",
-      "selector": ".facilitators",
+      "selector": "section.facilitators",
       "content": {
         "heading": "De begeleiders",
         "members": [
@@ -75,7 +75,7 @@
       "id": "bijeenkomsten",
       "label": "Events/Meetings",
       "type": "events",
-      "selector": ".bijeenkomsten",
+      "selector": "section.bijeenkomsten",
       "content": {
         "heading": "Vijf bijeenkomsten in de herfst en winter",
         "events": [
@@ -83,7 +83,7 @@
             "id": "event-1",
             "title": "Extra bijeenkomst voor groep 1",
             "date": "Donderdag 15 december 2025, 19:30",
-            "dateRaw": "2025-11-27T19:30",
+            "dateRaw": "2025-12-15T19:30",
             "availability": "🔥 VOL! Aanmelden NIET meer mogelijk.",
             "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven",
             "featured": true
@@ -128,22 +128,10 @@
       }
     },
     {
-      "id": "newsletter",
-      "label": "Newsletter Signup",
-      "type": "form",
-      "selector": ".newsletter",
-      "content": {
-        "heading": "🚧 Onder constructie! 🚧",
-        "description": "Nog even geduld a.u.b.! Nog niet invullen, want je bericht komt niet bij ons aan. Je kan verderop wel ons een vraag stellen of je aanmelden.",
-        "buttonText": "Inschrijven",
-        "privacyNote": "We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk."
-      }
-    },
-    {
       "id": "praktisch",
       "label": "Practical Information",
       "type": "info",
-      "selector": ".praktisch",
+      "selector": "section.praktisch",
       "content": {
         "heading": "Praktische informatie",
         "infoItems": [
@@ -165,7 +153,7 @@
           {
             "icon": "💶",
             "label": "Groepsgrootte en kosten",
-            "value": "We werken bewust in kleine groepen van maximaal 10 deelnemers, zodat er ruimte is voor aandacht, rust en echte gesprekken.\n\nDeelname is gratis.\nEen vrijwillige bijdrage voor koffie/thee is welkom, maar niet nodig.\n"
+            "value": "We werken bewust in kleine groepen van maximaal 10 deelnemers, zodat er ruimte is voor aandacht, rust en echte gesprekken.\n\nDeelname is gratis.\nEen vrijwillige bijdrage voor koffie/thee is welkom, maar niet nodig."
           }
         ],
         "locationHeading": "Hoe vind je ons?",
@@ -178,17 +166,17 @@
       "id": "faq",
       "label": "FAQ",
       "type": "faq",
-      "selector": ".faq",
+      "selector": "section.faq",
       "content": {
         "heading": "Veelgestelde vragen",
         "items": [
           {
             "question": "Wat is het Zincafé Zweeloo precies?",
-            "answer": "Het Zincafé is een kleinschalige ontmoetingsplek waar we samen vertragen en de tijd nemen voor vragen die ertoe doen. In een open gesprek onderzoeken we ervaringen, overtuigingen en thema’s die raken aan de zin van het leven. Geen debat, maar dialoog — met aandacht voor elkaar."
+            "answer": "Het Zincafé is een kleinschalige ontmoetingsplek waar we samen vertragen en de tijd nemen voor vragen die ertoe doen. In een open gesprek onderzoeken we ervaringen, overtuigingen en thema's die raken aan de zin van het leven. Geen debat, maar dialoog — met aandacht voor elkaar."
           },
           {
             "question": "Voor wie zijn de bijeenkomsten bedoeld – en moet ik veel van filosofie weten?",
-            "answer": "Iedereen uit Zweeloo en omgeving is welkom. Je hoeft geen filosofische achtergrond te hebben; nieuwsgierigheid is genoeg. Je hoeft niets “te kunnen” of “te weten” voordat je komt – bereidheid om te luisteren, te onderzoeken en in gesprek te gaan is het belangrijkste."
+            "answer": "Iedereen uit Zweeloo en omgeving is welkom. Je hoeft geen filosofische achtergrond te hebben; nieuwsgierigheid is genoeg. Je hoeft niets \"te kunnen\" of \"te weten\" voordat je komt – bereidheid om te luisteren, te onderzoeken en in gesprek te gaan is het belangrijkste."
           },
           {
             "question": "Hoe verloopt een bijeenkomst – hoeveel mensen zijn er en moet ik de hele avond praten?",
@@ -213,7 +201,7 @@
       "id": "contact",
       "label": "Contact",
       "type": "contact",
-      "selector": ".contact",
+      "selector": "section.contact",
       "content": {
         "heading": "Vragen of aanmelden?",
         "description": "We horen graag van je! Stuur een mailtje of meld je direct aan voor één van de bijeenkomsten.",
@@ -249,10 +237,6 @@
       "kapschuur.jpg"
     ],
     "links": [
-      {
-        "text": "Newsletter",
-        "url": "#newsletter"
-      },
       {
         "text": "WhatsApp Share",
         "url": "https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafe-zweeloo.nl"
