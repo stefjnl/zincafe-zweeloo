@@ -1457,6 +1457,42 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+  </style><style data-cognicms-highlight="true">
+    .cognicms-changed {
+      outline: 3px solid #16a34a !important;
+      outline-offset: 2px;
+      background-color: rgba(34, 197, 94, 0.1) !important;
+      position: relative;
+      animation: cognicms-pulse 2s ease-in-out 3;
+    }
+
+    @keyframes cognicms-pulse {
+      0%, 100% {
+        outline-color: #16a34a;
+        background-color: rgba(34, 197, 94, 0.1);
+      }
+      50% {
+        outline-color: #22c55e;
+        background-color: rgba(34, 197, 94, 0.2);
+      }
+    }
+
+    .cognicms-changed::after {
+      content: "✏️ Modified";
+      position: absolute;
+      top: -24px;
+      left: 0;
+      background-color: #16a34a;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: system-ui, -apple-system, sans-serif;
+      white-space: nowrap;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
   </style></head>
 <body>
     <header data-section-id="header-1">
@@ -1720,7 +1756,7 @@
     </div>
 
     <footer data-section-id="footer-1" class="">
-        <p>Zincafé Zweeloo – Gesprekken over zingeving in Zweeloo en omgevingg</p>
+        <p>Zincafé Zweeloo – Gesprekken over zingeving in Zweeloo en omgeving</p>
         <p style="margin-top: 0.5rem; font-size: 0.85rem;">✉️ zincafezweeloo@gmail.com</p>
     </footer>
 
