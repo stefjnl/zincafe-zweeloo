@@ -1501,15 +1501,14 @@
         <h1 data-field="heading">Zincafé Zweeloo</h1>
         <p data-field="subtitle">Gesprekken die ertoe doen</p>
         <div class="hero-cta">
-            <a href="#newsletter" class="btn-primary-large">Blijf op de hoogte</a>
-            <p class="urgency-text">⏰ Volgende bijeenkomst over 17 dagen</p>
+            <p class="urgency-text" id="urgencyText">⏰ Volgende bijeenkomst wordt berekend...</p>
         </div>
     </header>
 
     <div class="container">
         <!-- Next Event Banner -->
         <div class="next-event-banner">
-            <strong>🗓️ Eerstvolgende bijeenkomst: 27 november 2025</strong>
+            <strong id="nextEventDate">🗓️ Eerstvolgende bijeenkomst wordt geladen...</strong>
             <p class="countdown">Nog beperkt aantal plaatsen beschikbaar</p>
         </div>
 
@@ -1564,7 +1563,7 @@
         <section class="bijeenkomsten">
             <h2>Vijf Vijf bijeenkomsten in de herfst en winter</h2>
             
-            <div class="bijeenkomst-card featured">
+            <div class="bijeenkomst-card featured" data-date="2025-12-18T19:30:00" data-title="Start nieuwe groep: wat is een zinvol leven?">
                 <span class="featured-badge">Volgende</span>
                 <h3>Start nieuwe groep: wat is een zinvol leven?</h3>
                 <div class="bijeenkomst-datum">📅 Donderdag 18 december 2025, 19:30</div>
@@ -1573,7 +1572,7 @@
                 <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een goed leven" class="btn-reserve">Reserveer je plek →</a>
             </div>
 
-            <div class="bijeenkomst-card">
+            <div class="bijeenkomst-card" data-date="2025-12-19T19:30:00" data-title="Bijeenkomst 2 van groep 1: de vrije wil">
                 <h3>Bijeenkomst 2 van groep 1: de vrije wil</h3>
                 <div class="bijeenkomst-datum">📅 Vrijdag 19 december 2025, 19:30</div>
                 <span class="availability">🔥 VOL! Aanmelden NIET meer mogelijk.</span>
@@ -1742,17 +1741,53 @@
 
     <!-- Comprehensive JavaScript for all features -->
     <script>
-        // 1. Calculate days until next event
+        // 1. Calculate days until next event - dynamically from meeting cards
         function updateCountdown() {
-            const nextEvent = new Date('2025-11-26T19:30:00');
             const today = new Date();
-            const daysUntil = Math.ceil((nextEvent - today) / (1000 * 60 * 60 * 24));
+            const cards = document.querySelectorAll('.bijeenkomst-card[data-date]');
+            let nextEvent = null;
+            let nextEventTitle = '';
+            let nextEventDateStr = '';
             
-            if (daysUntil > 0) {
-                const urgencyElements = document.querySelectorAll('.urgency-text');
-                urgencyElements.forEach(el => {
-                    el.textContent = `⏰ Volgende bijeenkomst over ${daysUntil} dagen`;
-                });
+            // Find the next upcoming event
+            cards.forEach(card => {
+                const eventDate = new Date(card.dataset.date);
+                if (eventDate > today && (!nextEvent || eventDate < nextEvent)) {
+                    nextEvent = eventDate;
+                    nextEventTitle = card.dataset.title || '';
+                    // Extract the readable date from the card
+                    const datumEl = card.querySelector('.bijeenkomst-datum');
+                    if (datumEl) {
+                        nextEventDateStr = datumEl.textContent.replace('📅 ', '');
+                    }
+                }
+            });
+            
+            const urgencyEl = document.getElementById('urgencyText');
+            const bannerEl = document.getElementById('nextEventDate');
+            
+            if (nextEvent) {
+                const daysUntil = Math.ceil((nextEvent - today) / (1000 * 60 * 60 * 24));
+                
+                if (daysUntil > 0) {
+                    if (urgencyEl) {
+                        if (daysUntil === 1) {
+                            urgencyEl.textContent = `⏰ Volgende bijeenkomst morgen!`;
+                        } else {
+                            urgencyEl.textContent = `⏰ Volgende bijeenkomst over ${daysUntil} dagen`;
+                        }
+                    }
+                    if (bannerEl) {
+                        bannerEl.textContent = `🗓️ Eerstvolgende bijeenkomst: ${nextEventDateStr.split(',')[0]}`;
+                    }
+                } else if (daysUntil === 0) {
+                    if (urgencyEl) urgencyEl.textContent = `⏰ Volgende bijeenkomst is vandaag!`;
+                    if (bannerEl) bannerEl.textContent = `🗓️ Vandaag: ${nextEventDateStr}`;
+                }
+            } else {
+                // No upcoming events found
+                if (urgencyEl) urgencyEl.textContent = `📅 Nieuwe data worden binnenkort aangekondigd`;
+                if (bannerEl) bannerEl.textContent = `🗓️ Nieuwe bijeenkomsten worden gepland`;
             }
         }
 
