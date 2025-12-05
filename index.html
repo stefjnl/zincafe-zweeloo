@@ -934,45 +934,24 @@
 
         /* Newsletter form feedback */
         .form-feedback {
-            margin-top: 1.5rem;
-            padding: 1.2rem 1.5rem;
-            border-radius: 8px;
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 6px;
             text-align: center;
-            font-size: 1rem;
-            font-weight: 500;
+            font-size: 0.9rem;
             display: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
         }
 
         .form-feedback.success {
-            background: linear-gradient(135deg, rgba(156, 169, 134, 0.15) 0%, rgba(156, 169, 134, 0.25) 100%);
+            background: rgba(156, 169, 134, 0.2);
             color: var(--sage);
-            border-color: var(--sage);
-            box-shadow: 0 4px 15px rgba(156, 169, 134, 0.3);
+            border: 1px solid var(--sage);
         }
 
         .form-feedback.error {
-            background: linear-gradient(135deg, rgba(212, 117, 110, 0.15) 0%, rgba(212, 117, 110, 0.25) 100%);
+            background: rgba(212, 117, 110, 0.2);
             color: var(--accent-red);
-            border-color: var(--accent-red);
-            box-shadow: 0 4px 15px rgba(212, 117, 110, 0.3);
-        }
-
-        .form-feedback.show {
-            animation: feedbackSlideIn 0.4s ease-out;
-        }
-
-        @keyframes feedbackSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+            border: 1px solid var(--accent-red);
         }
 
         /* Back to top button */
@@ -1480,13 +1459,13 @@
     }
   </style></head>
 <body>
-    <header>
+    <header data-section-id="header-1">
         <img src="image.jpg" alt="Zincafé Zweeloo - Filosofische Gesprekken Logo" class="logo" loading="eager" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex'">
         <div class="logo-fallback" style="display:none;">☕</div>
-        <h1>Zincafé Zweeloo</h1>
-        <p>Gesprekken die ertoe doen</p>
+        <h1 data-field="heading">Zincafé Zweeloo</h1>
+        <p data-field="subtitle">Gesprekken die ertoe doen</p>
         <div class="hero-cta">
-            <a href="#newsletter" class="btn-primary-large">Meld je aan</a>
+            <a href="#newsletter" class="btn-primary-large">Blijf op de hoogte</a>
             <p class="urgency-text">⏰ Volgende bijeenkomst over 17 dagen</p>
         </div>
     </header>
@@ -1494,13 +1473,13 @@
     <div class="container">
         <!-- Next Event Banner -->
         <div class="next-event-banner">
-            <strong>🗓️ Eerstvolgende bijeenkomst: 18 december 2025</strong>
-            <p class="countdown">Start tweede groep: er zijn nog plekken vrij.</p>
+            <strong>🗓️ Eerstvolgende bijeenkomst: 27 november 2025</strong>
+            <p class="countdown">Nog beperkt aantal plaatsen beschikbaar</p>
         </div>
 
         <!-- Intro Section -->
-        <section class="intro">
-            <h2>Waarom een Zincafé in Zweeloo?</h2>
+        <section class="intro" data-section-id="section-1">
+            <h2 data-field="heading">Waarom een Zincafé?</h2>
             <p>In een wereld die steeds sneller lijkt te draaien, is het waardevol om stil te staan bij vragen die er echt toe doen. Wat betekent het om 'goed' te leven? Hoe verhoud je je tot anderen, tot de tijd, tot jezelf?</p>
             
             <p>Met dat idee starten we in Zweeloo het Zincafé – een reeks toegankelijke bijeenkomsten waarin we als dorpsgenoten in gesprek gaan over zingeving in de brede zin van het woord. Denk aan thema's als zingeving, vergankelijkheid, levenslust of zinvol werk. Geen debat of discussie, maar een open en respectvol gesprek waarin luisteren, denken en delen centraal staan.</p>
@@ -1509,9 +1488,7 @@
             
             <p style="font-style: italic; padding-left: 1.5rem; border-left: 3px solid var(--soft-ochre); color: var(--text-dark); margin-top: 1rem;">"Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen." — Sjoerd</p>
             
-            <p style="margin-top: 1.5rem;">Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt.
-
-In verband met de grote belangstelling starten we een extra groep op. Deze start op 18 december en loopt parallel aan de eerste groep.</p>
+            <p style="margin-top: 1.5rem;">Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt.</p>
         </section>
 
         <!-- Section Divider -->
@@ -1522,13 +1499,13 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
 
         <!-- Facilitators -->
         <section class="facilitators">
-            <h2>De begeleiders</h2>
+            <h2>Jouw begeleiders</h2>
             <div class="facilitator-grid">
                 <div class="facilitator">
                     <img src="sjoerd.jpg" alt="Sjoerd Slagter - Filosoof en Gespreksbegeleider bij Zincafé Zweeloo" class="facilitator-photo" loading="lazy">
                     <h3>Sjoerd Slagter</h3>
                     <p class="facilitator-role">Filosoof &amp; Gespreksbegeleider</p>
-                    <p class="facilitator-bio">Sjoerd doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) en begeleidt al jaren filosofische dialogen. Hij helpt groepen om samen na te denken over de grote vragen en nodigt iedereen uit om mee te denken, ongeacht achtergrond.</p>
+                    <p class="facilitator-bio">Sjoerd begeleidt al jaren filosofische dialogen en helpt groepen om samen na te denken over de grote vragen. Zijn aanpak is wars van jargon en nodigt iedereen uit om mee te denken, ongeacht achtergrond.</p>
                 </div>
                 <div class="facilitator">
                     <img src="nathalie.jpg" alt="Nathalie van Hooff - Trainer en Gespreksbegeleider bij Zincafé Zweeloo" class="facilitator-photo" loading="lazy">
@@ -1549,22 +1526,23 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
 
         <!-- Bijeenkomsten -->
         <section class="bijeenkomsten">
-            <h2>Vijf bijeenkomsten in de herfst en winter</h2>            
+            <h2>Vijf bijeenkomsten</h2>
+            
             <div class="bijeenkomst-card featured">
                 <span class="featured-badge">Volgende</span>
-                <h3>Start nieuwe groep: wat is een zinvol leven?</h3>
-                <div class="bijeenkomst-datum">📅 Donderdag 18 december 2025, 19:30</div>
-                <span class="availability" style="background: rgba(212, 117, 110, 0.1); color: var(--accent-red);">Nog plekken beschikbaar</span>
+                <h3>1. Wat is een goed leven?</h3>
+                <div class="bijeenkomst-datum">📅 Donderdag 27 november 2025, 19:30</div>
+                <span class="availability">🔥 Nog 7 plaatsen beschikbaar</span>
                 <br>
-                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven" class="btn-reserve">Reserveer je plek →</a>
+                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een goed leven" class="btn-reserve">Reserveer je plek →</a>
             </div>
 
             <div class="bijeenkomst-card">
-                <h3>Bijeenkomst 2 van groep 1: de vrije wil</h3>
-                <div class="bijeenkomst-datum">📅 Vrijdag 19 december 2025, 19:30</div>
-                                <span class="availability">🔥 VOL! Aanmelden NIET meer mogelijk.</span>                
+                <h3>2. Vrijheid &amp; verantwoordelijkheid</h3>
+                <div class="bijeenkomst-datum">📅 Donderdag 1 december 2025, 19:30</div>
+                <span class="availability">✓ Plaatsen beschikbaar</span>
                 <br>
-                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid &amp; verantwoordelijkheid" class="btn-reserve" style="background: var(--text-light); cursor: not-allowed; pointer-events: none;" title="Deze bijeenkomst is volgeboekt">Volgeboekt</a>
+                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid &amp; verantwoordelijkheid" class="btn-reserve">Reserveer je plek →</a>
             </div>
 
             <div class="bijeenkomst-card">
@@ -1589,6 +1567,30 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
         <!-- Section Divider -->
         <div class="section-divider">
             <div class="divider-line"></div>
+            <div class="divider-icon">☕</div>
+        </div>
+
+        <!-- Newsletter -->
+        <section class="newsletter" id="newsletter">
+            <h2 data-field="heading">Blijf op de hoogte via onze nieuwsbrief</h2>
+            <p>Ontvang een seintje wanneer nieuwe data bekend zijn en mis geen enkele bijeenkomst</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" name="email" placeholder="jouw@email.nl" required="" aria-label="Je e-mailadres">
+                <button type="submit" aria-label="Inschrijven voor de nieuwsbrief">Inschrijven</button>
+            </form>
+            <div class="gdpr-checkbox-wrapper">
+                <label>
+                    <input type="checkbox" name="gdpr-consent" required="" aria-label="Ik ga akkoord met het privacybeleid">
+                    Ik ga akkoord met het <a href="#" class="privacy-link" aria-label="Privacybeleid openen">privacybeleid</a>
+                </label>
+            </div>
+            <div class="form-feedback" id="newsletterFeedback"></div>
+            <p class="privacy-note">We mailen maximaal 1x per maand. Geen spam, uitschrijven altijd mogelijk.</p>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
             <div class="divider-icon">✦</div>
         </div>
 
@@ -1598,22 +1600,20 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
             <div class="praktisch-grid">
                 <div class="praktisch-item">
                     <strong>📍 Locatie</strong>
-                    <p>De bijeenkomsten vinden plaats in De Kapschuur. Deze vind je op Klooster 4 in Zweeloo (zie hieronder het kaartje).</p>
+                    <p>Klooster 4<br>De Kapschuur, Zweeloo</p>
                 </div>
                 <div class="praktisch-item">
                     <strong>🕐 Tijd</strong>
-                    <p>Elke bijeenkomst duurt van 19.30 tot 21.30 uur.<br>Inloop vanaf 19:15 uur.</p>
+                    <p>19:30 – 21:30 uur<br>Inloop vanaf 19:15</p>
                 </div>
                 <div class="praktisch-item">
                     <strong>☕ Voorzieningen</strong>
-                    <p>Koffie, thee en water staan klaar.</p>
+                    <p>Koffie, thee en water staan klaar</p>
                 </div>
                 <div class="praktisch-item">
-                    <strong>💶 Groepsgrootte en kosten</strong>
-                    <p>We werken bewust in kleine groepen van maximaal 10 deelnemers, zodat er ruimte is voor aandacht, rust en echte gesprekken.<br><br>Deelname is gratis.<br>Een vrijwillige bijdrage voor koffie/thee is welkom, maar niet nodig.</p>
+                    <strong>💶 Toegang</strong>
+                    <p>Vrij<br>(Vrije gift welkom)</p>
                 </div>
-                
-                
             </div>
 
             <div class="location-details">
@@ -1622,6 +1622,10 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5!2d6.697!3d52.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1f0d3d3d3d3d3%3A0x0!2sKlooster%204%2C%207241%20CT%20Zweeloo!5e0!3m2!1snl!2snl!4v1730000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Locatie van Zincafé Zweeloo op Google Maps">
                     </iframe>
+                </div>
+                <div class="directions">
+                    <strong>🚗 Parkeren:</strong>
+                    Je kunt parkeren voor de deur, maar op de fiets of lopend is eenvoudiger.
                 </div>
             </div>
         </section>
@@ -1637,40 +1641,33 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
             <h2>Veelgestelde vragen</h2>
             
             <div class="faq-item">
-                <div class="faq-question">Wat is het Zincafé Zweeloo precies?</div>
-                <div class="faq-answer">Het Zincafé is een kleinschalige ontmoetingsplek waar we samen vertragen en de tijd nemen voor vragen die ertoe doen. In een open gesprek onderzoeken we ervaringen, overtuigingen en thema's die raken aan de zin van het leven. Geen debat, maar dialoog — met aandacht voor elkaar.</div>
+                <div class="faq-question">Moet ik filosofie kennen om mee te doen?</div>
+                <div class="faq-answer">Absoluut niet! Het Zincafé is juist bedoeld voor iedereen. Je hoeft geen voorkennis te hebben. We praten over thema's die ons allemaal aangaan, in gewone mensentaal.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Voor wie zijn de bijeenkomsten bedoeld – en moet ik veel van filosofie weten?</div>
-                <div class="faq-answer">Iedereen uit Zweeloo en omgeving is welkom. Je hoeft geen filosofische achtergrond te hebben; nieuwsgierigheid is genoeg. Je hoeft niets "te kunnen" of "te weten" voordat je komt – bereidheid om te luisteren, te onderzoeken en in gesprek te gaan is het belangrijkste.</div>
+                <div class="faq-question">Hoeveel mensen nemen er deel?</div>
+                <div class="faq-answer">We streven naar een intieme setting met 15-25 deelnemers per avond. Zo blijft er ruimte voor iedereen om zijn of haar gedachten te delen en krijgen gesprekken de diepgang die we zoeken.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Hoe verloopt een bijeenkomst – hoeveel mensen zijn er en moet ik de hele avond praten?</div>
-                <div class="faq-answer">We werken met kleine groepen van maximaal 10 deelnemers, zodat er rust en aandacht is. Je bepaalt zelf hoeveel je wilt inbrengen: luisteren mag net zo goed als spreken. Er is geen verplichting om de hele avond actief mee te praten.</div>
+                <div class="faq-question">Moet ik de hele avond praten?</div>
+                <div class="faq-answer">Nee hoor! Luisteren is net zo waardevol als spreken. Je bepaalt zelf wanneer en hoeveel je deelt. Sommige mensen vinden het prettig om veel te zeggen, anderen luisteren vooral. Beide zijn prima.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Hoe vaak komt een groep samen en wat als ik een bijeenkomst mis?</div>
-                <div class="faq-answer">Tijdens de herfst- en wintermaanden organiseren we een reeks van vijf bijeenkomsten.
-Voor een deel van deze avonden is het thema vooraf gekozen. Voor de laatste bijeenkomst kiest de groep samen een eigen thema.
-
-Kun je een keer niet? Dat is geen probleem: elke bijeenkomst staat op zichzelf, je kunt de draad bij een volgende avond weer oppakken.</div>
+                <div class="faq-question">Wat als ik een bijeenkomst mis?</div>
+                <div class="faq-answer">Geen probleem. Elke bijeenkomst staat op zichzelf met een eigen thema. Je kunt dus gewoon bij de volgende aansluiten. Wel leuk om te weten: veel deelnemers komen vaker, wat de verbinding tussen mensen versterkt.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Hoe kan ik me aanmelden, is dat verplicht en wat kost deelname?</div>
-                <div class="faq-answer">Aanmelden is nodig omdat we met kleine groepen werken. Dat kan via zincafezweeloo@gmail.com .
-Je ontvangt daarna een bevestiging en zo nodig extra praktische informatie.
-
-Deelname is gratis. Wie wil, mag een vrijwillige bijdrage doen voor koffie of thee, maar dat is volledig optioneel.</div>
+                <div class="faq-question">Is aanmelden verplicht?</div>
+                <div class="faq-answer">Vrije inloop is mogelijk, maar aanmelden helpt ons om goed voorbereid te zijn met genoeg stoelen, koffie en thee. Ook kunnen we je dan op de hoogte houden van eventuele wijzigingen.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Kan ik iemand meenemen – en kan ik meedoen als de groepen vol zijn?</div>
-                <div class="faq-answer">Je kunt zeker iemand meenemen, als er nog plek is. Laat het ons vooraf even weten bij je aanmelding.
-Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent. Bij voldoende aanmeldingen starten we een nieuwe groep, en je krijgt bericht zodra er weer plek of een nieuwe datum is.</div>
+                <div class="faq-question">Kan ik iemand meenemen?</div>
+                <div class="faq-answer">Jazeker! Vrienden, partners of familieleden zijn van harte welkom. Hoe meer zielen, hoe meer vreugd. Wel fijn als je even doorgeeft dat je iemand meeneemt.</div>
             </div>
         </section>
 
@@ -1722,8 +1719,8 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent. Bij 
         <a href="#newsletter">📬 Blijf op de hoogte</a>
     </div>
 
-    <footer>
-        <p>Zincafé Zweeloo – Gesprekken over zingeving in Zweeloo</p>
+    <footer data-section-id="footer-1" class="">
+        <p>Zincafé Zweeloo – Gesprekken over zingeving in Zweeloo en omgevingg</p>
         <p style="margin-top: 0.5rem; font-size: 0.85rem;">✉️ zincafezweeloo@gmail.com</p>
     </footer>
 
@@ -1942,11 +1939,6 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent. Bij 
             element.textContent = message;
             element.className = `form-feedback ${type}`;
             element.style.display = 'block';
-            
-            // Add show class for animation
-            setTimeout(() => {
-                element.classList.add('show');
-            }, 10);
         }
 
         // Initialize all features when DOM is loaded
