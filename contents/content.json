@@ -27,7 +27,7 @@
       "selector": ".next-event-banner",
       "content": {
         "heading": "🗓️ Eerstvolgende bijeenkomst: 18 december 2025",
-        "subtitle": "Start tweede groep: er zijn nog plekken vrij."
+        "subtitle": "Start tweede groep: vol!"
       }
     },
     {
@@ -93,7 +93,7 @@
             "title": "Start nieuwe groep: wat is een zinvol leven?",
             "date": "Donderdag 18 december 2025, 19:30",
             "dateRaw": "2025-12-15T19:30",
-            "availability": "Nog plekken beschikbaar",
+            "availability": "🔥 VOL! Aanmelden NIET meer mogelijk.",
             "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven",
             "featured": true
           },
