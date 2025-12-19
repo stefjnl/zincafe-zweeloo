@@ -90,8 +90,8 @@
         "events": [
           {
             "id": "event-1",
-            "title": "Start nieuwe groep: wat is een zinvol leven?",
-            "date": "Donderdag 18 december 2025, 19:30",
+            "title": "Bijeenkomst 2 van groep 1: de vrije wil",
+            "date": "Vrijdag 19 december 2025, 19:30",
             "dateRaw": "2025-12-15T19:30",
             "availability": "🔥 VOL! Aanmelden NIET meer mogelijk.",
             "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven",
@@ -99,10 +99,10 @@
           },
           {
             "id": "event-2",
-            "title": "Bijeenkomst 2 van groep 1: de vrije wil",
-            "date": "Vrijdag 19 december 2025, 19:30",
+            "title": "2. Vrijheid & verantwoordelijkheid: groep 2",
+            "date": "Woensdag 21 januari, 19.30",
             "dateRaw": "2025-12-18T19:30",
-            "availability": "🔥 VOL! Aanmelden NIET meer mogelijk.",
+            "availability": "",
             "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid",
             "featured": false
           },
