@@ -100,9 +100,9 @@
           {
             "id": "event-2",
             "title": "Bijeenkomst 3 van groep 1: Verlangen",
-            "date": "Woensdag 21 januari, 19.30",
+            "date": "Vrijdag 23 januari 2026, 19.30 uur",
             "dateRaw": "2025-12-18T19:30",
-            "availability": "",
+            "availability": "🔥 VOL! Aanmelden NIET meer mogelijk",
             "reserveLink": "mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid & verantwoordelijkheid",
             "featured": false
           },
@@ -126,7 +126,7 @@
           },
           {
             "id": "event-5",
-            "title": "5. Vergankelijkheid & herinnering",
+            "title": "Vergankelijkheid & herinnering",
             "date": "Datum 2026 nog bekend te maken",
             "dateRaw": null,
             "availability": "Binnenkort beschikbaar",
