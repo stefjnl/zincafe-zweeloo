@@ -109,8 +109,8 @@
           {
             "id": "event-3",
             "title": "Bijeenkomst 3 van groep 2: Verlangen, dwaallicht of kompas?",
-            "date": "Datum 2026 nog bekend te maken",
-            "dateRaw": null,
+            "date": "Vrijdag 23 januari 2026, 19.30 uur",
+            "dateRaw": "2026-01-23T19:30",
             "availability": "Binnenkort beschikbaar",
             "reserveLink": null,
             "featured": false
