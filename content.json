@@ -30,7 +30,7 @@
       "label": "Eerstvolgende Bijeenkomst Banner",
       "type": "content",
       "content": {
-        "heading": "🗓️ Eerstvolgende bijeenkomst: 27 november 2025",
+        "heading": "🗓️ Eerstvolgende bijeenkomst: 21 januari 2026",
         "subtext": "Nog beperkt aantal plaatsen beschikbaar"
       },
       "selector": ".next-event-banner"
