@@ -1878,24 +1878,6 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</div
             });
         }
 
-        // 7. Copy email functionality
-        function initCopyEmail() {
-            const copyBtn = document.getElementById('copyEmailBtn');
-            const feedback = document.getElementById('copyFeedback');
-            const email = 'zincafezweeloo@gmail.com';
-            
-            copyBtn.addEventListener('click', function() {
-                navigator.clipboard.writeText(email).then(() => {
-                    feedback.classList.add('show');
-                    setTimeout(() => {
-                        feedback.classList.remove('show');
-                    }, 2000);
-                }).catch(() => {
-                    alert('Kopiëren mislukt. Probeer het handmatig.');
-                });
-            });
-        }
-
         // 8. Parallax scrolling effect
         function initParallax() {
             const header = document.querySelector('header');
@@ -1953,7 +1935,6 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</div
             initBackToTop();
             initNewsletter();
             initPrivacyModal();
-            initCopyEmail();
             initParallax();
             initDividerAnimations();
         });
