@@ -23,7 +23,7 @@
       "@context": "https://schema.org",
       "@type": ["LocalBusiness", "CivicStructure"],
       "name": "Zincafé Zweeloo",
-      "description": "Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.",
+      "description": "Filosofische gesprekken over zingeving in Zweeloo. Vijf  per jaar begeleid door ervaren facilitators.",
       "url": "https://zincafe-zweeloo.nl",
       "email": "zincafezweeloo@gmail.com",
       "address": {
@@ -43,7 +43,7 @@
       "@context": "https://schema.org",
       "@type": "Series",
       "name": "Zincafé Zweeloo - Filosofische Gesprekken",
-      "description": "Een reeks van vijf bijeenkomsten over zaken zoals zingeving, vergankelijkheid, vrijheid en betekenis van het leven.",
+      "description": "Een reeks van vijf  over zaken zoals zingeving, vergankelijkheid, vrijheid en betekenis van het leven.",
       "creator": {
         "@type": "Person",
         "name": "Sjoerd Slagter"
@@ -173,6 +173,30 @@
         .hero-cta {
             margin-top: 2rem;
         }
+        .btn-header-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  color: var(--warm-beige);
+  text-decoration: none;
+  border: 1px solid rgba(245, 241, 232, 0.6);
+  border-radius: 999px;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+        html {
+  scroll-behavior: smooth;
+}
+
+
+.btn-header-cta:hover {
+  opacity: 1;
+  background: rgba(245, 241, 232, 0.12);
+  transform: translateY(-1px);
+}
+
 
         .btn-primary-large {
             display: inline-block;
@@ -1472,8 +1496,13 @@
         <h1 data-field="heading">Zincafé Zweeloo</h1>
         <p data-field="subtitle">Gesprekken die ertoe doen</p>
         <div class="hero-cta">
-            <p class="urgency-text" id="urgencyText">⏰ Volgende bijeenkomst over 17 dagen</p>
-        </div>
+    <p class="urgency-text" id="urgencyText">⏰ Nog 25 dagen tot ons volgende gesprek</p>
+
+    <a href="#bijeenkomsten" class="btn-header-cta">
+        → Bekijk de komende bijeenkomsten
+    </a>
+</div>
+
     </header>
 
     <div class="container">
@@ -1533,7 +1562,7 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
         <p style="font-style: italic; padding-left: 1.5rem; border-left: 3px solid var(--soft-ochre); color: var(--text-dark); text-align: center; max-width: 700px; margin: 2rem auto; font-size: 1.05rem;">Ieder mens wil ervaren dat zijn leven zinvol is, dat hij met zijn handelen iets bereikt of dat zijn handelen bijdraagt aan iets dat nastrevenswaardig is</p>
 
         <!-- Bijeenkomsten -->
-        <section class="bijeenkomsten">
+       <section class="bijeenkomsten" id="bijeenkomsten">
             <h2>Vijf bijeenkomsten in de herfst en winter</h2>
             
             <div class="bijeenkomst-card featured" data-date="2026-01-21T19:30:00" data-title="Start nieuwe groep: wat is een zinvol leven?">
