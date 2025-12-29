@@ -1867,30 +1867,26 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</div
     <!-- Comprehensive JavaScript for all features -->
     <script>
         // 1. Calculate days until next event - dynamically from meeting cards
-        function updateCountdown() {
-            const today = new Date();
-            const cards = document.querySelectorAll('.bijeenkomst-card[data-date]');
-            let nextEvent = null;
-            let nextEventTitle = '';
-            let nextEventDateStr = '';
-            
-            // Find the next upcoming event
-            cards.forEach(card => {
-                const eventDate = new Date(card.dataset.date);
-                if (eventDate > today && (!nextEvent || eventDate < nextEvent)) {
-                    nextEvent = eventDate;
-                    nextEventTitle = card.dataset.title || '';
-                    // Extract the readable date from the card
-                    const datumEl = card.querySelector('.bijeenkomst-datum');
-                    if (datumEl) {
-                        nextEventDateStr = datumEl.textContent.replace('📅 ', '');
-                    }const titleEl = card.querySelector('h3');
-if (titleEl) {
-    nextEventTitle = titleEl.textContent;
-}
+        cards.forEach(card => {
+    const eventDate = new Date(card.dataset.date);
 
-                }
-            });
+    if (eventDate > today && (!nextEvent || eventDate < nextEvent)) {
+        nextEvent = eventDate;
+
+        // pak de titel van deze (eerstvolgende) kaart
+        const titleEl = card.querySelector('h3');
+        if (titleEl) {
+            nextEventTitle = titleEl.textContent.trim();
+        }
+
+        // pak leesbare datum (als je die nog gebruikt)
+        const datumEl = card.querySelector('.bijeenkomst-datum');
+        if (datumEl) {
+            nextEventDateStr = datumEl.textContent.replace('📅 ', '');
+        }
+    }
+});
+
             
             const urgencyEl = document.getElementById('urgencyText');
             const bannerEl = document.getElementById('nextEventDate');
