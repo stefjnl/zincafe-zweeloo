@@ -255,6 +255,27 @@
             opacity: 0.9;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
+        .next-event-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.25rem;
+}
+
+.next-event-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.next-event-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
 
         /* Social Proof */
         .social-proof {
@@ -1559,10 +1580,12 @@
 
     <div class="container">
         <!-- Next Event Banner -->
-        <div class="next-event-banner">
-            <strong id="nextEventDate">🗓️ Eerstvolgende bijeenkomst: woensdag 21 januari 2026</strong>
-            <p class="countdown">Groep 2 over de Vrije Wil</p>
-        </div>
+       <div class="next-event-banner">
+    <div class="next-event-label">Het volgende gesprek</div>
+    <div class="next-event-title" id="nextEventTitle">De vrije wil</div>
+    <div class="next-event-meta" id="nextEventDate">Woensdag 21 januari · 19.30 uur</div>
+</div>
+
 
         <!-- Intro Section -->
         <section class="intro" data-section-id="section-1">
@@ -1622,7 +1645,9 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
 
     <h3>De vrije wil</h3>
     <p class="bijeenkomst-thema-uitleg">Over keuze, verantwoordelijkheid en toeval.</p>
-
+<div class="next-event-title" id="nextEventTitle">
+        Over keuze, verantwoordelijkheid en toeval.
+    </div>
     <ul class="bijeenkomst-momenten">
         <li>
             📅 <strong>Groep 2</strong> · woensdag 21 januari 2026 · 19.30 uur
@@ -1859,7 +1884,11 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</div
                     const datumEl = card.querySelector('.bijeenkomst-datum');
                     if (datumEl) {
                         nextEventDateStr = datumEl.textContent.replace('📅 ', '');
-                    }
+                    }const titleEl = card.querySelector('h3');
+if (titleEl) {
+    nextEventTitle = titleEl.textContent;
+}
+
                 }
             });
             
@@ -1878,8 +1907,14 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</div
                         }
                     }
                     if (bannerEl) {
-                        bannerEl.textContent = `🗓️ Eerstvolgende bijeenkomst: ${nextEventDateStr.split(',')[0]}`;
-                    }
+    bannerEl.textContent = nextEventDateStr.split(',')[0];
+}
+
+const titleBannerEl = document.getElementById('nextEventTitle');
+if (titleBannerEl && nextEventTitle) {
+    titleBannerEl.textContent = nextEventTitle;
+}
+
                 } else if (daysUntil === 0) {
                     if (urgencyEl) urgencyEl.textContent = `⏰ Volgende bijeenkomst is vandaag!`;
                     if (bannerEl) bannerEl.textContent = `🗓️ Vandaag: ${nextEventDateStr}`;
