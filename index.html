@@ -479,6 +479,36 @@
             background: var(--soft-ochre);
             transform: translateY(-2px);
         }
+.bijeenkomst-thema-uitleg {
+  margin: 0.25rem 0 1rem;
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.bijeenkomst-momenten {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.bijeenkomst-momenten li {
+  margin: 0.4rem 0;
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+}
+
+.status {
+  margin-left: 0.6rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+.status.vol {
+  color: var(--text-light);
+}
 
         /* Newsletter Signup */
         .newsletter {
@@ -1565,14 +1595,31 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
        <section class="bijeenkomsten" id="bijeenkomsten">
             <h2>Vijf bijeenkomsten in de herfst en winter</h2>
             
-            <div class="bijeenkomst-card featured" data-date="2026-01-21T19:30:00" data-title="Start nieuwe groep: wat is een zinvol leven?">
-                <span class="featured-badge">Volgende</span>
-                <h3>Bijeenkomst 2 van groep 2: de vrije wil</h3>
-                <div class="bijeenkomst-datum">📅 Woensdag 21 januari 2026, 19.30 uur</div>
-                <span class="availability">Volgeboekt</span>
-                <br>
-                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven" class="btn-reserve" style="background: var(--text-light); cursor: not-allowed; pointer-events: none;" title="Deze bijeenkomst is volgeboekt">Volgeboekt</a>
-            </div>
+            <div class="bijeenkomst-card featured" data-date="2026-01-21T19:30:00" data-title="De vrije wil">
+    <span class="featured-badge">Volgende</span>
+
+    <h3>De vrije wil</h3>
+    <p class="bijeenkomst-thema-uitleg">Over keuze, verantwoordelijkheid en toeval.</p>
+
+    <ul class="bijeenkomst-momenten">
+        <li>
+            📅 <strong>Groep 2</strong> · woensdag 21 januari 2026 · 19.30 uur
+            <span class="status vol">Volgeboekt</span>
+        </li>
+        <li>
+            📅 <strong>Groep 1</strong> · vrijdag 23 januari 2026 · 19.30 uur
+            <span class="status vol">Volgeboekt</span>
+        </li>
+    </ul>
+
+    <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: De vrije wil"
+       class="btn-reserve"
+       style="background: var(--text-light); cursor: not-allowed; pointer-events: none;"
+       title="Deze bijeenkomst is volgeboekt">
+       Volgeboekt
+    </a>
+</div>
+
 
             <div class="bijeenkomst-card" data-date="2026-01-23T19:30:00" data-title="Bijeenkomst 2 van groep 1: de vrije wil">
                 <h3>Bijeenkomst 3 van groep 1: Verlangen, dwaallicht of kompas?</h3>
