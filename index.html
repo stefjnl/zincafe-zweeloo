@@ -1643,11 +1643,9 @@ In verband met de grote belangstelling starten we een extra groep op. Deze start
             <div class="bijeenkomst-card featured" data-date="2026-01-21T19:30:00" data-title="De vrije wil">
     <span class="featured-badge">Volgende</span>
 
-    <h3>De vrije wil</h3>
-    <p class="bijeenkomst-thema-uitleg">Over keuze, verantwoordelijkheid en toeval.</p>
-<div class="next-event-title" id="nextEventTitle">
-        Over keuze, verantwoordelijkheid en toeval.
-    </div>
+<h3>De vrije wil</h3>
+<p class="bijeenkomst-thema-uitleg">Over keuze, verantwoordelijkheid en toeval.</p>
+
     <ul class="bijeenkomst-momenten">
         <li>
             📅 <strong>Groep 2</strong> · woensdag 21 januari 2026 · 19.30 uur
@@ -1867,61 +1865,62 @@ Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</div
     <!-- Comprehensive JavaScript for all features -->
     <script>
         // 1. Calculate days until next event - dynamically from meeting cards
-        cards.forEach(card => {
-    const eventDate = new Date(card.dataset.date);
+function updateCountdown() {
+    const today = new Date();
+    const cards = document.querySelectorAll('.bijeenkomst-card[data-date]');
+    let nextEvent = null;
+    let nextEventTitle = '';
+    let nextEventDateStr = '';
 
-    if (eventDate > today && (!nextEvent || eventDate < nextEvent)) {
-        nextEvent = eventDate;
+    cards.forEach(card => {
+        const eventDate = new Date(card.dataset.date);
 
-        // pak de titel van deze (eerstvolgende) kaart
-        const titleEl = card.querySelector('h3');
-        if (titleEl) {
-            nextEventTitle = titleEl.textContent.trim();
+        if (eventDate > today && (!nextEvent || eventDate < nextEvent)) {
+            nextEvent = eventDate;
+
+            const titleEl = card.querySelector('h3');
+            if (titleEl) nextEventTitle = titleEl.textContent.trim();
+
+            // Gebruik data-title als fallback (handig)
+            if (!nextEventTitle && card.dataset.title) nextEventTitle = card.dataset.title.trim();
+
+            // Vind datumtekst: bij jouw nieuwe kaarten staat geen .bijeenkomst-datum meer
+            // Dus we maken er zelf één van de ISO datum
+            nextEventDateStr = eventDate.toLocaleDateString('nl-NL', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            }) + ' · ' + eventDate.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) + ' uur';
+        }
+    });
+
+    const urgencyEl = document.getElementById('urgencyText');
+    const bannerDateEl = document.getElementById('nextEventDate');
+    const bannerTitleEl = document.getElementById('nextEventTitle');
+
+    if (nextEvent) {
+        const daysUntil = Math.ceil((nextEvent - today) / (1000 * 60 * 60 * 24));
+
+        if (urgencyEl) {
+            if (daysUntil === 0) urgencyEl.textContent = `⏰ Het volgende gesprek is vandaag`;
+            else if (daysUntil === 1) urgencyEl.textContent = `⏰ Morgen is er weer een gesprek`;
+            else urgencyEl.textContent = `⏰ Nog ${daysUntil} dagen tot ons volgende gesprek`;
         }
 
-        // pak leesbare datum (als je die nog gebruikt)
-        const datumEl = card.querySelector('.bijeenkomst-datum');
-        if (datumEl) {
-            nextEventDateStr = datumEl.textContent.replace('📅 ', '');
-        }
+        if (bannerTitleEl && nextEventTitle) bannerTitleEl.textContent = nextEventTitle;
+        if (bannerDateEl && nextEventDateStr) bannerDateEl.textContent = nextEventDateStr;
+
+    } else {
+        if (urgencyEl) urgencyEl.textContent = `📅 Nieuwe data worden binnenkort aangekondigd`;
+        if (bannerTitleEl) bannerTitleEl.textContent = `Binnenkort nieuw gesprek`;
+        if (bannerDateEl) bannerDateEl.textContent = `Data volgen`;
     }
-});
-
-            
-            const urgencyEl = document.getElementById('urgencyText');
-            const bannerEl = document.getElementById('nextEventDate');
-            
-            if (nextEvent) {
-                const daysUntil = Math.ceil((nextEvent - today) / (1000 * 60 * 60 * 24));
-                
-                if (daysUntil > 0) {
-                    if (urgencyEl) {
-                        if (daysUntil === 1) {
-                            urgencyEl.textContent = `⏰ Volgende bijeenkomst morgen!`;
-                        } else {
-                            urgencyEl.textContent = `⏰ Volgende bijeenkomst over ${daysUntil} dagen`;
-                        }
-                    }
-                    if (bannerEl) {
-    bannerEl.textContent = nextEventDateStr.split(',')[0];
 }
 
-const titleBannerEl = document.getElementById('nextEventTitle');
-if (titleBannerEl && nextEventTitle) {
-    titleBannerEl.textContent = nextEventTitle;
-}
 
-                } else if (daysUntil === 0) {
-                    if (urgencyEl) urgencyEl.textContent = `⏰ Volgende bijeenkomst is vandaag!`;
-                    if (bannerEl) bannerEl.textContent = `🗓️ Vandaag: ${nextEventDateStr}`;
-                }
-            } else {
-                // No upcoming events found
-                if (urgencyEl) urgencyEl.textContent = `📅 Nieuwe data worden binnenkort aangekondigd`;
-                if (bannerEl) bannerEl.textContent = `🗓️ Nieuwe bijeenkomsten worden gepland`;
-            }
-        }
-
+            
+            
         // 2. FAQ Accordion functionality
         function initFAQ() {
             const faqItems = document.querySelectorAll('.faq-item');
