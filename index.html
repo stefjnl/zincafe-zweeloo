@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+    <link rel="icon" type="image/png" href="image.jpg">
     <meta name="description" content="Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
     <title>Zincafé Zweeloo - Gesprekken die ertoe doen</title>
     
@@ -23,38 +22,93 @@
             --text-dark: #2d2a26;
             --text-light: #6b665d;
             --accent-red: #d4756e;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
             line-height: 1.7;
             color: var(--text-dark);
             background: var(--warm-beige);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         h1, h2, h3 {
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
         }
 
         /* Header */
         header {
             background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
             color: var(--warm-beige);
-            padding: 2rem 2rem 3rem;
+            padding: 3rem 2rem 4rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(200, 155, 95, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .header-logo {
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: var(--radius-md);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-logo-placeholder {
+            max-width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(10px);
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-style: italic;
-            opacity: 0.9;
+            opacity: 0.85;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
 
         .container {
@@ -67,32 +121,59 @@
         .next-event-banner {
             background: linear-gradient(135deg, var(--accent-red) 0%, #c26660 100%);
             color: white;
-            padding: 1.5rem 2rem;
-            border-radius: 8px;
+            padding: 2rem 2.5rem;
+            border-radius: var(--radius-lg);
             margin-bottom: 3rem;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(212, 117, 110, 0.2);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-event-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .next-event-banner strong {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             display: block;
             margin-bottom: 0.5rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .next-event-banner > div {
+            position: relative;
+            z-index: 1;
         }
 
         /* Section styling */
         section {
             background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: var(--shadow-md);
         }
 
         section h2 {
             color: var(--deep-brown);
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -101,21 +182,23 @@
             margin-bottom: 1.2rem;
             color: var(--text-light);
             font-size: 1.05rem;
+            line-height: 1.8;
         }
 
         /* NIEUWE: Groepen uitleg box */
         .groepen-uitleg {
-            background: linear-gradient(135deg, rgba(156, 169, 134, 0.1) 0%, rgba(156, 169, 134, 0.05) 100%);
-            border-left: 4px solid var(--sage);
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-bottom: 2rem;
+            background: linear-gradient(135deg, rgba(156, 169, 134, 0.08) 0%, rgba(156, 169, 134, 0.03) 100%);
+            border-left: 3px solid var(--sage);
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2.5rem;
         }
 
         .groepen-uitleg h3 {
             color: var(--sage);
             font-size: 1.2rem;
             margin-bottom: 0.75rem;
+            font-weight: 600;
         }
 
         .groepen-uitleg p {
@@ -127,23 +210,39 @@
         /* VERBETERD: Bijeenkomsten met duidelijke groepsindeling */
         .bijeenkomst-card {
             background: white;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--soft-ochre);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 2.25rem;
+            margin-bottom: 2rem;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--soft-ochre);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .bijeenkomst-card.geweest {
+            opacity: 0.7;
+            border-left-color: var(--text-light);
         }
 
         .bijeenkomst-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-left-width: 4px;
+        }
+
+        .bijeenkomst-card.geweest:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .bijeenkomst-card h3 {
             color: var(--deep-brown);
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .bijeenkomst-card.geweest h3 {
+            color: var(--text-light);
         }
 
         .thema-beschrijving {
@@ -155,17 +254,18 @@
         }
 
         .groep-momenten {
-            background: var(--warm-beige);
-            padding: 1rem;
-            border-radius: 6px;
-            margin-top: 1rem;
+            background: rgba(245, 241, 232, 0.5);
+            padding: 1.25rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1.25rem;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .groep-moment {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 0.75rem 0;
+            gap: 1rem;
+            padding: 0.5rem 0;
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
@@ -178,43 +278,54 @@
             color: var(--deep-brown);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-size: 0.9rem;
+            min-width: 70px;
         }
 
         .moment-datum {
             color: var(--text-dark);
             font-size: 0.95rem;
+            flex: 1;
         }
 
         .moment-status {
             display: inline-block;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            margin-left: 1rem;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         .status-vol {
-            background: rgba(212, 117, 110, 0.15);
+            background: rgba(212, 117, 110, 0.12);
             color: var(--accent-red);
         }
 
         .status-beschikbaar {
-            background: rgba(156, 169, 134, 0.15);
+            background: rgba(156, 169, 134, 0.12);
             color: var(--sage);
         }
 
         .status-binnenkort {
-            background: rgba(200, 155, 95, 0.15);
+            background: rgba(200, 155, 95, 0.12);
             color: var(--soft-ochre);
         }
 
+        .status-geweest {
+            background: rgba(107, 102, 93, 0.12);
+            color: var(--text-light);
+        }
+
+
+
         /* NIEUW: Aanmeldformulier */
         .aanmeld-form {
-            background: var(--warm-beige);
-            padding: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(245, 241, 232, 0.6) 0%, rgba(245, 241, 232, 0.3) 100%);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
             margin-top: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .aanmeld-form h3 {
@@ -224,7 +335,7 @@
         }
 
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .form-group label {
@@ -233,17 +344,28 @@
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-sm);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-size: 0.95rem;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage);
+            box-shadow: 0 0 0 3px rgba(156, 169, 134, 0.1);
         }
 
         .form-group textarea {
@@ -254,19 +376,25 @@
         .btn-submit {
             background: var(--deep-brown);
             color: white;
-            padding: 0.9rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 6px;
+            border-radius: var(--radius-sm);
             font-size: 1rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
         }
 
         .btn-submit:hover {
             background: var(--soft-ochre);
             transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
         }
 
         /* Facilitators */
@@ -287,6 +415,20 @@
             object-fit: cover;
             margin: 0 auto 1rem;
             border: 3px solid var(--soft-ochre);
+            display: block;
+        }
+
+        .facilitator-photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--soft-ochre);
+            background: linear-gradient(135deg, var(--soft-ochre) 0%, var(--sage) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
         }
 
         .facilitator h3 {
@@ -332,6 +474,15 @@
             text-align: center;
         }
 
+        .contact h2 {
+            color: var(--warm-beige);
+        }
+
+        .contact p {
+            color: var(--warm-beige);
+            opacity: 0.9;
+        }
+
         .contact-buttons {
             display: flex;
             gap: 1rem;
@@ -342,21 +493,23 @@
 
         .btn {
             display: inline-block;
-            padding: 0.9rem 2rem;
+            padding: 1rem 2.25rem;
             background: white;
             color: var(--deep-brown);
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: var(--radius-sm);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-size: 0.95rem;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
         }
 
         .btn:hover {
             background: var(--soft-ochre);
             color: white;
             transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
 
         footer {
@@ -387,16 +540,23 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
+                padding: 0.75rem 0;
+            }
+
+            .groep-label {
+                min-width: auto;
             }
 
             .moment-status {
-                margin-left: 0;
+                align-self: flex-start;
             }
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="header-logo-placeholder" style="display: none;">☕</div>
         <h1>Zincafé Zweeloo</h1>
         <p>Gesprekken die ertoe doen</p>
     </header>
@@ -405,7 +565,7 @@
         <!-- Next Event Banner -->
         <div class="next-event-banner">
             <strong>🗓️ Eerstvolgende bijeenkomst: woensdag 21 januari 2026</strong>
-            <div>Groep 2 over de Vrije Wil · 19.30 uur</div>
+            <div>Groep 2 over Vrijheid & Verantwoordelijkheid · 19.30 uur</div>
         </div>
 
         <!-- Intro -->
@@ -425,13 +585,15 @@
             <h2>De begeleiders</h2>
             <div class="facilitator-grid">
                 <div class="facilitator">
-                    <img src="https://raw.githubusercontent.com/user/repo/main/sjoerd.jpg" alt="Sjoerd Slagter" class="facilitator-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22><rect fill=%22%23c89b5f%22 width=%22150%22 height=%22150%22/><text x=%2250%%22 y=%2250%%22 font-size=%2260%22 text-anchor=%22middle%22 dy=%22.3em%22>👨</text></svg>'">
+                    <img src="sjoerd.jpg" alt="Sjoerd Slagter" class="facilitator-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="facilitator-photo-placeholder" style="display: none;">👨‍🏫</div>
                     <h3>Sjoerd Slagter</h3>
                     <p class="facilitator-role">Filosoof & Gespreksbegeleider</p>
-                    <p>Sjoerd doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) en begeleidt al jaren filosofische dialogen.</p>
+                    <p>Sjoerd is bioloog en filosoof. Hij doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) en begeleidt al jaren filosofische dialogen.</p>
                 </div>
                 <div class="facilitator">
-                    <img src="https://raw.githubusercontent.com/user/repo/main/nathalie.jpg" alt="Nathalie van Hooff" class="facilitator-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22><rect fill=%22%23c89b5f%22 width=%22150%22 height=%22150%22/><text x=%2250%%22 y=%2250%%22 font-size=%2260%22 text-anchor=%22middle%22 dy=%22.3em%22>👩</text></svg>'">
+                    <img src="nathalie.jpg" alt="Nathalie van Hooff" class="facilitator-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="facilitator-photo-placeholder" style="display: none;">👩‍🏫</div>
                     <h3>Nathalie van Hooff</h3>
                     <p class="facilitator-role">Trainer & Gespreksbegeleider</p>
                     <p>Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken.</p>
@@ -441,101 +603,108 @@
 
         <!-- Bijeenkomsten - VERBETERD -->
         <section>
-            <h2>Komende bijeenkomsten</h2>
+            <h2>Vijf bijeenkomsten in de herfst en winter</h2>
             
             <div class="groepen-uitleg">
                 <h3>💡 Hoe werken de groepen?</h3>
                 <p>We hebben twee parallelle groepen die hetzelfde programma doorlopen. Beide groepen bespreken dezelfde thema's, maar op verschillende data. Zo kan iedereen een moment kiezen dat het beste past.</p>
             </div>
 
-            <!-- Bijeenkomst 1 -->
-            <div class="bijeenkomst-card">
+            <!-- Bijeenkomst 1 - GEWEEST -->
+            <div class="bijeenkomst-card geweest">
                 <h3>1. De vrije wil</h3>
+                <p class="thema-beschrijving">
+                    Bestaat er zoiets als vrije wil? Maak je die zelf of krijg je die aangereikt van familie, opvoeding, cultuur of van iets hogers?
+                </p>
+                
+                <div class="groep-momenten">
+                    <div class="groep-moment">
+                        <span class="groep-label">Groep 1</span>
+                        <span class="moment-datum">Woensdag 27 november 2025, 19:30 uur</span>
+                        <span class="moment-status status-geweest">Geweest</span>
+                    </div>
+                    <div class="groep-moment">
+                        <span class="groep-label">Groep 2</span>
+                        <span class="moment-datum">Donderdag 18 december 2025, 19:30 uur</span>
+                        <span class="moment-status status-geweest">Geweest</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bijeenkomst 2 - VOL -->
+            <div class="bijeenkomst-card">
+                <h3>2. Vrijheid & verantwoordelijkheid</h3>
                 <p class="thema-beschrijving">
                     Over keuzes die je leven bepalen. Hoe vrij zijn we werkelijk in onze beslissingen? En wat betekent dat voor verantwoordelijkheid?
                 </p>
                 
                 <div class="groep-momenten">
                     <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Groep 1</span>
-                            <span class="moment-datum">Vrijdag 19 december 2025, 19:30</span>
-                        </div>
-                        <span class="moment-status status-vol">Vol</span>
+                        <span class="groep-label">Groep 1</span>
+                        <span class="moment-datum">Vrijdag 19 december 2025, 19:30 uur</span>
+                        <span class="moment-status status-geweest">Geweest</span>
                     </div>
                     <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Groep 2</span>
-                            <span class="moment-datum">Woensdag 21 januari 2026, 19:30</span>
-                        </div>
+                        <span class="groep-label">Groep 2</span>
+                        <span class="moment-datum">Woensdag 21 januari 2026, 19:30 uur</span>
                         <span class="moment-status status-vol">Vol</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bijeenkomst 2 -->
-            <div class="bijeenkomst-card">
-                <h3>2. Verlangen, dwaallicht of kompas?</h3>
-                <p class="thema-beschrijving">
-                    Over verlangen als richtingaanwijzer — of als dwaalspoor. Wanneer leiden verlangens ons op het goede pad, en wanneer juist niet?
-                </p>
-                
-                <div class="groep-momenten">
-                    <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Groep 1</span>
-                            <span class="moment-datum">Vrijdag 23 januari 2026, 19:30</span>
-                        </div>
-                        <span class="moment-status status-vol">Vol</span>
-                    </div>
-                    <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Groep 2</span>
-                            <span class="moment-datum">Datum volgt</span>
-                        </div>
-                        <span class="moment-status status-binnenkort">Binnenkort</span>
                     </div>
                 </div>
             </div>
 
             <!-- Bijeenkomst 3 -->
             <div class="bijeenkomst-card">
-                <h3>3. Hoe ver rijkt jouw verantwoordelijkheid?</h3>
+                <h3>3. Verlangen, dwaallicht of kompas?</h3>
                 <p class="thema-beschrijving">
-                    Over verantwoordelijkheid, grenzen, en wat je wel en niet kunt (of hoeft te) dragen. Waar ligt de grens tussen zorg voor anderen en zorg voor jezelf?
+                    Over verlangen als richtingaanwijzer — of als dwaalspoor. Wanneer leiden verlangens ons op het goede pad, en wanneer juist niet?
                 </p>
                 
                 <div class="groep-momenten">
                     <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Groep 1</span>
-                            <span class="moment-datum">Datum volgt</span>
-                        </div>
-                        <span class="moment-status status-binnenkort">Binnenkort</span>
+                        <span class="groep-label">Groep 1</span>
+                        <span class="moment-datum">Vrijdag 23 januari 2026, 19:30 uur</span>
+                        <span class="moment-status status-vol">Vol</span>
                     </div>
                     <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Groep 2</span>
-                            <span class="moment-datum">Datum volgt</span>
-                        </div>
+                        <span class="groep-label">Groep 2</span>
+                        <span class="moment-datum">Datum volgt</span>
                         <span class="moment-status status-binnenkort">Binnenkort</span>
                     </div>
                 </div>
             </div>
 
             <!-- Bijeenkomst 4 -->
+            <div class="bijeenkomst-card">
+                <h3>4. Hoe ver rijkt jouw verantwoordelijkheid?</h3>
+                <p class="thema-beschrijving">
+                    Over verantwoordelijkheid, grenzen, en wat je wel en niet kunt (of hoeft te) dragen. Waar ligt de grens tussen zorg voor anderen en zorg voor jezelf?
+                </p>
+                
+                <div class="groep-momenten">
+                    <div class="groep-moment">
+                        <span class="groep-label">Groep 1</span>
+                        <span class="moment-datum">Datum volgt</span>
+                        <span class="moment-status status-binnenkort">Binnenkort</span>
+                    </div>
+                    <div class="groep-moment">
+                        <span class="groep-label">Groep 2</span>
+                        <span class="moment-datum">Datum volgt</span>
+                        <span class="moment-status status-binnenkort">Binnenkort</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bijeenkomst 5 -->
             <div class="bijeenkomst-card" style="border-left-color: var(--sage);">
-                <h3>4. Vergankelijkheid & herinnering</h3>
+                <h3>5. Vergankelijkheid & herinnering</h3>
                 <p class="thema-beschrijving">
                     Een gezamenlijke slotavond waarin beide groepen samenkomen. Over het loslaten van wat voorbij is en het koesteren van wat blijft.
                 </p>
                 
                 <div class="groep-momenten">
                     <div class="groep-moment">
-                        <div>
-                            <span class="groep-label">Beide groepen samen</span>
-                            <span class="moment-datum">Datum volgt · Locatie: De Spil, Zweeloo</span>
-                        </div>
+                        <span class="groep-label">Beide groepen</span>
+                        <span class="moment-datum">Datum volgt · Locatie: De Spil, Zweeloo</span>
                     </div>
                 </div>
             </div>
@@ -549,7 +718,7 @@
             </p>
             
             <div class="aanmeld-form">
-                <form id="aanmeldForm">
+                <form id="aanmeldForm" action="https://formspree.io/f/mwpakbbq" method="POST">
                     <div class="form-group">
                         <label for="naam">Naam *</label>
                         <input type="text" id="naam" name="naam" required>
@@ -583,6 +752,8 @@
                     </div>
                     
                     <button type="submit" class="btn-submit">Aanmelding versturen</button>
+                    
+                    <div id="formStatus" style="margin-top: 1rem; padding: 1rem; border-radius: 6px; display: none;"></div>
                 </form>
             </div>
         </section>
@@ -637,7 +808,6 @@
             <p>We horen graag van je!</p>
             <div class="contact-buttons">
                 <a href="mailto:zincafezweeloo@gmail.com" class="btn">✉️ Stuur een e-mail</a>
-                <a href="tel:0612345678" class="btn">📞 Bel ons</a>
             </div>
         </section>
     </div>
@@ -648,19 +818,111 @@
     </footer>
 
     <script>
-        // Formulier handling
-        document.getElementById('aanmeldForm').addEventListener('submit', function(e) {
+        // Formspree formulier handling
+        const form = document.getElementById('aanmeldForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            const submitBtn = form.querySelector('.btn-submit');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Bezig met versturen...';
             
-            // Hier zou normaal een AJAX call naar je server komen
-            // Voor nu simuleren we een succesvolle verzending
-            
-            alert('Bedankt voor je aanmelding! We nemen zo snel mogelijk contact met je op.');
-            this.reset();
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formStatus.style.display = 'block';
+                    formStatus.style.background = 'rgba(156, 169, 134, 0.2)';
+                    formStatus.style.color = 'var(--sage)';
+                    formStatus.textContent = '✓ Bedankt voor je aanmelding! We nemen zo snel mogelijk contact met je op.';
+                    form.reset();
+                } else {
+                    throw new Error('Formulier verzending mislukt');
+                }
+            } catch (error) {
+                formStatus.style.display = 'block';
+                formStatus.style.background = 'rgba(212, 117, 110, 0.2)';
+                formStatus.style.color = 'var(--accent-red)';
+                formStatus.textContent = '✗ Er ging iets mis. Probeer het opnieuw of mail naar zincafezweeloo@gmail.com';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Aanmelding versturen';
+            }
         });
+        
+        // Google Calendar integratie
+        function addToGoogleCalendar(title, startDate, endDate) {
+            const event = {
+                text: title + ' - Zincafé Zweeloo',
+                dates: formatGoogleDate(startDate) + '/' + formatGoogleDate(endDate),
+                details: 'Filosofisch gesprek bij Zincafé Zweeloo. Meer info: https://zincafe-zweeloo.nl',
+                location: 'De Kapschuur, Klooster 4, 7851 AJ Zweeloo',
+                ctz: 'Europe/Amsterdam'
+            };
+            
+            const params = new URLSearchParams(event);
+            window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&${params}`, '_blank');
+        }
+        
+        // Apple Calendar integratie (.ics bestand)
+        function addToAppleCalendar(title, startDate, endDate) {
+            const event = generateICS(title, startDate, endDate);
+            const blob = new Blob([event], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'zincafe-zweeloo.ics';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        // Helper functies
+        function formatGoogleDate(dateString) {
+            const date = new Date(dateString);
+            return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        }
+        
+        function formatICSDate(dateString) {
+            const date = new Date(dateString);
+            return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        }
+        
+        function generateICS(title, startDate, endDate) {
+            const start = formatICSDate(startDate);
+            const end = formatICSDate(endDate);
+            const timestamp = formatICSDate(new Date().toISOString());
+            
+            return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Zincafé Zweeloo//NONSGML Event//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:${timestamp}@zincafe-zweeloo.nl
+DTSTAMP:${timestamp}
+DTSTART:${start}
+DTEND:${end}
+SUMMARY:${title} - Zincafé Zweeloo
+DESCRIPTION:Filosofisch gesprek bij Zincafé Zweeloo.\\nMeer informatie: https://zincafe-zweeloo.nl
+LOCATION:De Kapschuur, Klooster 4, 7851 AJ Zweeloo
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: ${title} morgen om 19:30
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
+        }
     </script>
 </body>
 </html>
