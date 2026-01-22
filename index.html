@@ -6,12 +6,15 @@
     <link rel="icon" type="image/png" href="image.jpg">
     <meta name="description" content="Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
     <title>Zincafé Zweeloo - Gesprekken die ertoe doen</title>
-
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
-            /* Basiskleuren (jouw palette blijft, maar vormtaal verandert) */
             --warm-beige: #f5f1e8;
             --deep-brown: #4a3f35;
             --soft-ochre: #c89b5f;
@@ -19,64 +22,40 @@
             --text-dark: #2d2a26;
             --text-light: #6b665d;
             --accent-red: #d4756e;
-
-            /* Lijnen i.p.v. schaduw als primaire structuur (minder “corporate”) */
-            --line: rgba(45, 42, 38, 0.10);
-            --line-strong: rgba(45, 42, 38, 0.18);
-
-            /* Schaduw: heel subtiel, alleen waar nodig */
-            --shadow-sm: 0 2px 10px rgba(0,0,0,0.04);
-            --shadow-md: 0 6px 18px rgba(0,0,0,0.06);
-
-            /* Minder uniforme afronding (net niet perfect) */
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
             --radius-sm: 12px;
             --radius-md: 16px;
             --radius-lg: 24px;
-
-            /* Typografie: serif voor inhoud, sans voor UI/labels */
-            --font-serif: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
-            --font-hand: ui-rounded, "Bradley Hand", "Segoe Print", "Snell Roundhand", cursive;
         }
 
         body {
-            font-family: var(--font-serif);
-            line-height: 1.75;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            line-height: 1.7;
             color: var(--text-dark);
             background: var(--warm-beige);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-
-            /* Subtiele “papier”-gloed, geen extra assets */
-            background-image:
-                radial-gradient(circle at 18% 10%, rgba(200,155,95,0.12), transparent 42%),
-                radial-gradient(circle at 85% 30%, rgba(156,169,134,0.10), transparent 45%),
-                radial-gradient(circle at 40% 95%, rgba(212,117,110,0.10), transparent 46%);
-        }
-
-        /* UI tekst (labels, knoppen, status-badges) */
-        .ui {
-            font-family: var(--font-sans);
-            letter-spacing: 0.01em;
         }
 
         h1, h2, h3 {
-            font-weight: 600;
+            font-weight: 500;
             letter-spacing: -0.02em;
             line-height: 1.2;
-            color: var(--deep-brown);
-            font-family: var(--font-serif);
         }
 
-        h2 { font-size: 2rem; }
+        h2 {
+            font-size: 2rem;
+        }
 
-        /* Header: minder “corporate hero”, meer plek */
+        /* Header */
         header {
-            background: linear-gradient(145deg, var(--deep-brown) 0%, #5a4d41 100%);
+            background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
             color: var(--warm-beige);
-            padding: 3rem 2rem 3.25rem;
-            text-align: left;
-            box-shadow: var(--shadow-md);
+            padding: 3rem 2rem 4rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
             position: relative;
             overflow: hidden;
         }
@@ -84,89 +63,77 @@
         header::before {
             content: '';
             position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at top right, rgba(200, 155, 95, 0.14) 0%, transparent 60%),
-                repeating-linear-gradient(
-                    0deg,
-                    rgba(255,255,255,0.04) 0px,
-                    rgba(255,255,255,0.04) 1px,
-                    transparent 1px,
-                    transparent 8px
-                );
-            opacity: 0.7;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(200, 155, 95, 0.1) 0%, transparent 60%);
             pointer-events: none;
-        }
-
-        .header-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 1.75rem;
-            align-items: center;
         }
 
         .header-logo {
             max-width: 180px;
             height: auto;
+            margin: 0 auto 2rem;
             display: block;
-            border-radius: 12px 16px 10px 18px;
-            box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+            border-radius: var(--radius-md);
+            position: relative;
+            z-index: 1;
         }
 
         header h1 {
-            font-size: 2.6rem;
-            margin-bottom: 0.6rem;
-            font-weight: 650;
-            color: var(--warm-beige);
+            font-size: 2.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-style: italic;
-            opacity: 0.9;
+            opacity: 0.85;
             font-weight: 400;
-            color: rgba(245,241,232,0.95);
-            max-width: 40ch;
+            position: relative;
+            z-index: 1;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2.75rem 2rem 3.25rem;
+            padding: 3rem 2rem;
         }
 
-        /* Next Event Banner: uitnodigend, minder “buttony” */
+        /* Next Event Banner - Automatisch bijgewerkt */
         .next-event-banner {
             background: linear-gradient(135deg, var(--accent-red) 0%, #c26660 100%);
             color: white;
-            padding: 1.75rem 2rem;
-            border-radius: 16px 22px 14px 18px;
-            margin: -2.1rem 0 2.75rem;
-            text-align: left;
-            box-shadow: var(--shadow-md);
+            padding: 2rem 2.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.18);
         }
 
         .next-event-banner::before {
             content: '';
             position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at bottom left, rgba(255,255,255,0.12) 0%, transparent 55%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
 
         .next-event-banner strong {
-            font-size: 1.15rem;
+            font-size: 1.4rem;
             display: block;
-            margin-bottom: 0.35rem;
-            font-family: var(--font-sans);
-            font-weight: 650;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
             position: relative;
             z-index: 1;
         }
@@ -174,386 +141,400 @@
         .next-event-banner > div {
             position: relative;
             z-index: 1;
-            font-style: italic;
-            opacity: 0.95;
         }
 
-        /* Secties: weg van strakke cards -> rand + papier-vlak */
+        /* Section styling */
         section {
-            background: rgba(255,255,255,0.55);
-            padding: 2.75rem 2.25rem 2.35rem;
-            border-radius: 14px 18px 12px 20px;
-            margin-bottom: 2.25rem;
-            border: 1px solid rgba(0,0,0,0.03);
-            box-shadow: none;
-            border-left: 4px solid var(--line-strong);
+            background: white;
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: box-shadow 0.3s ease;
         }
 
-        /* Geen hover-lift (rustiger) */
-        section:hover { box-shadow: none; }
+        section:hover {
+            box-shadow: var(--shadow-md);
+        }
 
         section h2 {
             color: var(--deep-brown);
-            margin-bottom: 1.35rem;
-            text-align: left;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         section p {
-            margin-bottom: 1.15rem;
+            margin-bottom: 1.2rem;
             color: var(--text-light);
-            font-size: 1.06rem;
-            line-height: 1.85;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
-        /* Handwritten “onaf” element */
-        .handwritten-note {
-            margin: 1.75rem 0 0.25rem;
-            padding: 1.1rem 1.2rem;
-            border-radius: 14px 18px 12px 20px;
-            background: rgba(245,241,232,0.55);
-            border: 1px dashed rgba(74,63,53,0.22);
-            transform: rotate(-0.25deg);
-        }
-
-        .handwritten-note .label {
-            font-family: var(--font-sans);
-            font-size: 0.82rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: rgba(74,63,53,0.70);
-            margin-bottom: 0.55rem;
-        }
-
-        .handwritten-note .quote {
-            font-family: var(--font-hand);
-            font-size: 1.22rem;
-            color: rgba(45,42,38,0.92);
-            line-height: 1.45;
-        }
-
-        /* Groepen uitleg box: kader i.p.v. gradient-card */
+        /* Groepen uitleg box */
         .groepen-uitleg {
-            background: rgba(156, 169, 134, 0.08);
+            background: linear-gradient(135deg, rgba(156, 169, 134, 0.08) 0%, rgba(156, 169, 134, 0.03) 100%);
             border-left: 3px solid var(--sage);
-            padding: 1.4rem 1.35rem;
-            border-radius: 14px 18px 12px 20px;
-            margin: 1.25rem 0 2.25rem;
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2.5rem;
         }
 
         .groepen-uitleg h3 {
-            color: var(--deep-brown);
-            font-size: 1.15rem;
-            margin-bottom: 0.6rem;
-            font-weight: 650;
-            font-family: var(--font-sans);
+            color: var(--sage);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
 
         .groepen-uitleg p {
             color: var(--text-dark);
             margin-bottom: 0;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
-        /* Bijeenkomsten: minder “product cards” */
+        /* Bijeenkomsten met automatische status updates */
         .bijeenkomst-card {
-            background: rgba(255,255,255,0.70);
-            padding: 1.95rem 1.7rem;
-            margin-bottom: 1.5rem;
-            border-radius: 14px 18px 12px 20px;
-            border-left: 4px solid var(--soft-ochre);
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: none;
-            transition: none;
+            background: white;
+            padding: 2.25rem;
+            margin-bottom: 2rem;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--soft-ochre);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
         }
 
         .bijeenkomst-card.geweest {
-            opacity: 0.72;
-            border-left-color: rgba(107,102,93,0.55);
-            background: rgba(255,255,255,0.50);
+            opacity: 0.7;
+            border-left-color: var(--text-light);
         }
 
         .bijeenkomst-card:hover {
-            transform: none;
-            box-shadow: none;
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
             border-left-width: 4px;
+        }
+
+        .bijeenkomst-card.geweest:hover {
+            transform: translateY(-2px);
         }
 
         .bijeenkomst-card h3 {
             color: var(--deep-brown);
-            font-size: 1.45rem;
-            margin-bottom: 0.65rem;
-            font-weight: 650;
-            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
 
-        .bijeenkomst-card.geweest h3 { color: var(--text-light); }
+        .bijeenkomst-card.geweest h3 {
+            color: var(--text-light);
+        }
 
         .thema-beschrijving {
-            color: rgba(107,102,93,0.95);
+            color: var(--text-light);
             font-style: italic;
-            margin-bottom: 1.05rem;
+            margin-bottom: 1.25rem;
             padding-left: 1rem;
-            border-left: 2px solid rgba(245,241,232,1);
+            border-left: 2px solid var(--warm-beige);
         }
 
         .groep-momenten {
-            background: rgba(245, 241, 232, 0.55);
-            padding: 1.05rem 1rem;
-            border-radius: 12px 16px 10px 18px;
-            margin-top: 1.1rem;
-            border: 1px solid rgba(0,0,0,0.05);
+            background: rgba(245, 241, 232, 0.5);
+            padding: 1.25rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1.25rem;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .groep-moment {
             display: flex;
-            align-items: flex-start;
-            gap: 0.9rem;
-            padding: 0.55rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .groep-moment:last-child { border-bottom: none; }
+
+        .groep-moment:last-child {
+            border-bottom: none;
+        }
 
         .groep-label {
-            font-weight: 650;
+            font-weight: 600;
             color: var(--deep-brown);
-            font-family: var(--font-sans);
-            font-size: 0.88rem;
-            min-width: 78px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            min-width: 70px;
         }
 
         .moment-datum {
             color: var(--text-dark);
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             flex: 1;
         }
 
         .moment-status {
             display: inline-block;
-            padding: 0.22rem 0.7rem;
-            border-radius: 999px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
             font-size: 0.75rem;
-            font-family: var(--font-sans);
-            font-weight: 650;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
             white-space: nowrap;
-            border: 1px solid rgba(0,0,0,0.06);
         }
 
-        .status-vol { background: rgba(212, 117, 110, 0.14); color: #b85e58; }
-        .status-beschikbaar { background: rgba(156, 169, 134, 0.16); color: #6c7b5e; }
-        .status-binnenkort { background: rgba(200, 155, 95, 0.16); color: #9a733f; }
-        .status-geweest { background: rgba(107, 102, 93, 0.14); color: rgba(107,102,93,0.95); }
+        .status-vol {
+            background: rgba(212, 117, 110, 0.12);
+            color: var(--accent-red);
+        }
 
-        /* Aanmeldformulier: briefpapier-gevoel, minder app-form */
+        .status-beschikbaar {
+            background: rgba(156, 169, 134, 0.12);
+            color: var(--sage);
+        }
+
+        .status-binnenkort {
+            background: rgba(200, 155, 95, 0.12);
+            color: var(--soft-ochre);
+        }
+
+        .status-geweest {
+            background: rgba(107, 102, 93, 0.12);
+            color: var(--text-light);
+        }
+
+        /* Aanmeldformulier */
         .aanmeld-form {
-            background: rgba(245, 241, 232, 0.55);
-            padding: 2rem 1.6rem;
-            border-radius: 14px 18px 12px 20px;
-            margin-top: 1.25rem;
-            border: 1px solid rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, rgba(245, 241, 232, 0.6) 0%, rgba(245, 241, 232, 0.3) 100%);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            margin-top: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
         .aanmeld-form h3 {
             color: var(--deep-brown);
-            font-size: 1.15rem;
-            margin-bottom: 0.85rem;
-            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        .form-group { margin-bottom: 1.05rem; }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
 
         .form-group label {
             display: block;
             color: var(--text-dark);
             font-size: 0.9rem;
-            margin-bottom: 0.45rem;
-            font-family: var(--font-sans);
-            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 0.8rem 0.9rem;
-            border: 1.5px solid rgba(0,0,0,0.10);
-            border-radius: 12px 16px 10px 18px;
-            font-size: 0.98rem;
-            background: rgba(255,255,255,0.9);
-            font-family: var(--font-serif);
-            transition: border-color 0.2s ease;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-sm);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            background: white;
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: rgba(156, 169, 134, 0.9);
-            box-shadow: none;
+            border-color: var(--sage);
+            box-shadow: 0 0 0 3px rgba(156, 169, 134, 0.1);
         }
 
-        .form-group textarea { min-height: 110px; resize: vertical; }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
 
         .btn-submit {
             background: var(--deep-brown);
             color: white;
-            padding: 0.95rem 1.8rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 12px 16px 10px 18px;
+            border-radius: var(--radius-sm);
             font-size: 1rem;
-            font-family: var(--font-sans);
-            font-weight: 650;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s ease;
-            box-shadow: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
         }
 
-        .btn-submit:hover { background: #5a4d41; transform: none; box-shadow: none; }
-        .btn-submit:active { transform: none; }
+        .btn-submit:hover {
+            background: var(--soft-ochre);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
 
-        /* Facilitators: organische vorm */
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Facilitators */
         .facilitator-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.75rem;
+            gap: 2rem;
         }
 
-        .facilitator { text-align: left; }
+        .facilitator {
+            text-align: center;
+        }
 
         .facilitator-photo {
-            width: 140px;
-            height: 140px;
-            border-radius: 46% 54% 48% 52% / 52% 44% 56% 48%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             object-fit: cover;
-            margin: 0 0 1rem;
-            border: 3px solid rgba(200,155,95,0.85);
+            margin: 0 auto 1rem;
+            border: 3px solid var(--soft-ochre);
             display: block;
         }
 
         .facilitator h3 {
             color: var(--deep-brown);
-            font-size: 1.25rem;
-            margin-bottom: 0.35rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
         }
 
         .facilitator-role {
-            color: rgba(200,155,95,0.95);
+            color: var(--soft-ochre);
             font-size: 0.9rem;
-            font-family: var(--font-sans);
-            margin-bottom: 0.85rem;
-            font-weight: 650;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin-bottom: 1rem;
         }
 
-        /* FAQ: rustiger */
+        /* FAQ */
         .faq-item {
-            margin-bottom: 1.4rem;
-            padding-bottom: 1.4rem;
-            border-bottom: 1px solid rgba(245,241,232,1);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--warm-beige);
         }
 
         .faq-question {
             color: var(--deep-brown);
-            font-size: 1.08rem;
-            font-weight: 700;
-            margin-bottom: 0.55rem;
-            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
 
         .faq-answer {
             color: var(--text-light);
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
-        /* Contact: minder CTA-blok, meer “plek” */
+        /* Contact */
         .contact {
-            background: rgba(255,255,255,0.55);
-            color: var(--text-dark);
-            padding: 2.35rem 2rem;
-            border-radius: 14px 18px 12px 20px;
-            text-align: left;
-            border: 1px solid rgba(0,0,0,0.03);
-            border-left: 4px solid rgba(74,63,53,0.28);
+            background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
+            color: var(--warm-beige);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
         }
 
-        .contact h2 { color: var(--deep-brown); }
-        .contact p { color: var(--text-light); opacity: 1; }
+        .contact h2 {
+            color: var(--warm-beige);
+        }
+
+        .contact p {
+            color: var(--warm-beige);
+            opacity: 0.9;
+        }
 
         .contact-buttons {
             display: flex;
-            gap: 0.85rem;
-            justify-content: flex-start;
+            gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 1.35rem;
+            margin-top: 2rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.85rem 1.4rem;
-            background: rgba(255,255,255,0.85);
+            padding: 1rem 2.25rem;
+            background: white;
             color: var(--deep-brown);
             text-decoration: none;
-            border-radius: 12px 16px 10px 18px;
-            font-family: var(--font-sans);
+            border-radius: var(--radius-sm);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-size: 0.95rem;
-            font-weight: 650;
-            border: 1px solid rgba(0,0,0,0.06);
-            transition: background 0.2s ease;
-            box-shadow: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
         }
 
         .btn:hover {
-            background: rgba(245,241,232,0.9);
-            color: var(--deep-brown);
-            transform: none;
-            box-shadow: none;
+            background: var(--soft-ochre);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
 
         footer {
-            background: transparent;
-            color: rgba(45,42,38,0.75);
+            background: var(--deep-brown);
+            color: var(--warm-beige);
             text-align: center;
-            padding: 1.75rem 1rem;
-            margin-top: 2.25rem;
-            font-size: 0.92rem;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         /* Responsive */
-        @media (max-width: 860px) {
-            header { text-align: left; }
-            .header-inner { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.15rem; }
-            .container { padding: 2.25rem 1.5rem 3rem; }
-            section { padding: 2.25rem 1.65rem 2rem; }
-            .next-event-banner { margin-top: -1.65rem; }
-        }
-
         @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
             .groep-moment {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 0.35rem;
+                gap: 0.5rem;
                 padding: 0.75rem 0;
             }
 
-            .groep-label { min-width: auto; }
-            .moment-status { align-self: flex-start; }
+            .groep-label {
+                min-width: auto;
+            }
+
+            .moment-status {
+                align-self: flex-start;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-inner">
-            <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
-            <div>
-                <h1>Zincafé Zweeloo</h1>
-                <p>Gesprekken die ertoe doen</p>
-            </div>
-        </div>
+        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
+        <h1>Zincafé Zweeloo</h1>
+        <p>Gesprekken die ertoe doen</p>
     </header>
 
     <div class="container">
         <!-- Next Event Banner - Automatisch bijgewerkt via JavaScript -->
         <div class="next-event-banner" id="nextEventBanner">
-            <strong id="nextEventTitle" class="ui">Laden...</strong>
+            <strong id="nextEventTitle">Laden...</strong>
             <div id="nextEventDetails"></div>
         </div>
 
@@ -561,18 +542,12 @@
         <section>
             <h2>Waarom een Zincafé in Zweeloo?</h2>
             <p>In een wereld die steeds sneller lijkt te draaien, is het waardevol om stil te staan bij vragen die er echt toe doen. Wat betekent het om 'goed' te leven? Hoe verhoud je je tot anderen, tot de tijd, tot jezelf?</p>
-
+            
             <p>Met dat idee starten we in Zweeloo het Zincafé — een reeks toegankelijke bijeenkomsten waarin we als dorpsgenoten in gesprek gaan over zingeving in de brede zin van het woord.</p>
-
-            <p style="font-style: italic; padding-left: 1.1rem; border-left: 3px solid var(--soft-ochre);">
+            
+            <p style="font-style: italic; padding-left: 1.5rem; border-left: 3px solid var(--soft-ochre);">
                 "Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen." — Sjoerd
             </p>
-
-            <!-- bewust “niet-af”: handgeschreven noot -->
-            <div class="handwritten-note">
-                <div class="label ui">Een losse notitie uit de voorbereiding</div>
-                <div class="quote">“Soms helpt het al om hardop te denken — met een ander erbij.”</div>
-            </div>
         </section>
 
         <!-- Facilitators -->
@@ -582,13 +557,13 @@
                 <div class="facilitator">
                     <img src="sjoerd.jpg" alt="Sjoerd Slagter" class="facilitator-photo">
                     <h3>Sjoerd Slagter</h3>
-                    <p class="facilitator-role">Filosoof &amp; Gespreksbegeleider</p>
+                    <p class="facilitator-role">Filosoof & Gespreksbegeleider</p>
                     <p>Sjoerd is bioloog en filosoof. Hij doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) en begeleidt al jaren filosofische dialogen.</p>
                 </div>
                 <div class="facilitator">
                     <img src="nathalie.jpg" alt="Nathalie van Hooff" class="facilitator-photo">
                     <h3>Nathalie van Hooff</h3>
-                    <p class="facilitator-role">Trainer &amp; Gespreksbegeleider</p>
+                    <p class="facilitator-role">Trainer & Gespreksbegeleider</p>
                     <p>Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken.</p>
                 </div>
             </div>
@@ -597,7 +572,7 @@
         <!-- Bijeenkomsten - Met automatische status updates -->
         <section>
             <h2>Vijf bijeenkomsten in de herfst en winter</h2>
-
+            
             <div class="groepen-uitleg">
                 <h3>💡 Hoe werken de groepen?</h3>
                 <p>We hebben twee parallelle groepen die hetzelfde programma doorlopen. Beide groepen bespreken dezelfde thema's, maar op verschillende data. Zo kan iedereen een moment kiezen dat het beste past.</p>
@@ -610,42 +585,42 @@
         <!-- Aanmeldformulier -->
         <section>
             <h2>Aanmelden voor een bijeenkomst</h2>
-            <p style="text-align: left; margin-bottom: 1.5rem;">
+            <p style="text-align: center; margin-bottom: 2rem;">
                 Wil je meedoen? Vul onderstaand formulier in en we nemen zo snel mogelijk contact met je op.
             </p>
-
+            
             <div class="aanmeld-form">
                 <form id="aanmeldForm" action="https://formspree.io/f/mwpakbbq" method="POST">
                     <div class="form-group">
                         <label for="naam">Naam *</label>
                         <input type="text" id="naam" name="naam" required>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="email">E-mailadres *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="telefoon">Telefoonnummer (optioneel)</label>
                         <input type="tel" id="telefoon" name="telefoon">
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="bijeenkomst">Interesse in welke bijeenkomst?</label>
                         <select id="bijeenkomst" name="bijeenkomst" required>
                             <!-- Opties worden automatisch gegenereerd -->
                         </select>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="opmerking">Eventuele vragen of opmerkingen</label>
                         <textarea id="opmerking" name="opmerking" placeholder="Bijv. iemand meenemen, eerste keer, etc."></textarea>
                     </div>
-
+                    
                     <button type="submit" class="btn-submit">Aanmelding versturen</button>
-
-                    <div id="formStatus" style="margin-top: 1rem; padding: 1rem; border-radius: 12px; display: none;"></div>
+                    
+                    <div id="formStatus" style="margin-top: 1rem; padding: 1rem; border-radius: 6px; display: none;"></div>
                 </form>
             </div>
         </section>
@@ -653,7 +628,7 @@
         <!-- FAQ -->
         <section>
             <h2>Veelgestelde vragen</h2>
-
+            
             <div class="faq-item">
                 <div class="faq-question">Wat is het Zincafé Zweeloo precies?</div>
                 <div class="faq-answer">
@@ -664,10 +639,10 @@
             <div class="faq-item">
                 <div class="faq-question">Hoe verloopt een bijeenkomst?</div>
                 <div class="faq-answer">
-                    <span class="ui"><strong>19:15</strong></span> - Inloop met koffie/thee<br>
-                    <span class="ui"><strong>19:30</strong></span> - Welkom en korte introductie op het thema<br>
-                    <span class="ui"><strong>19:45-21:15</strong></span> - Gesprek in de groep<br>
-                    <span class="ui"><strong>21:15-21:30</strong></span> - Afsluiting en napraten<br><br>
+                    <strong>19:15</strong> - Inloop met koffie/thee<br>
+                    <strong>19:30</strong> - Welkom en korte introductie op het thema<br>
+                    <strong>19:45-21:15</strong> - Gesprek in de groep<br>
+                    <strong>21:15-21:30</strong> - Afsluiting en napraten<br><br>
                     Je bepaalt zelf hoeveel je wilt inbrengen: luisteren mag net zo goed als spreken.
                 </div>
             </div>
@@ -697,7 +672,7 @@
         <!-- Contact -->
         <section class="contact">
             <h2>Vragen of contact?</h2>
-            <p>We horen graag van je.</p>
+            <p>We horen graag van je!</p>
             <div class="contact-buttons">
                 <a href="mailto:zincafezweeloo@gmail.com" class="btn">✉️ Stuur een e-mail</a>
             </div>
@@ -706,7 +681,7 @@
 
     <footer>
         <p>Zincafé Zweeloo — Gesprekken over zingeving in Zweeloo</p>
-        <p style="margin-top: 0.5rem; font-size: 0.85rem;" class="ui">✉️ zincafezweeloo@gmail.com</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">✉️ zincafezweeloo@gmail.com</p>
     </footer>
 
     <script>
@@ -770,17 +745,17 @@
         // FUNCTIE: Formatteer datum naar leesbare tekst
         function formateerDatum(datumString) {
             if (!datumString) return "Datum volgt";
-
+            
             const datum = new Date(datumString);
             const dagen = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
-            const maanden = ['januari', 'februari', 'maart', 'april', 'mei', 'juni',
+            const maanden = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 
                            'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
-
+            
             const dag = dagen[datum.getDay()];
             const dagNummer = datum.getDate();
             const maand = maanden[datum.getMonth()];
             const jaar = datum.getFullYear();
-
+            
             return `${dag.charAt(0).toUpperCase() + dag.slice(1)} ${dagNummer} ${maand} ${jaar}, 19:30 uur`;
         }
 
@@ -835,14 +810,14 @@
         // FUNCTIE: Genereer HTML voor alle bijeenkomsten
         function renderBijeenkomsten() {
             const container = document.getElementById('bijeenkomstenContainer');
-
+            
             bijeenkomsten.forEach(bijeenkomst => {
                 // Bepaal of ALLE momenten geweest zijn
                 const alleGeweest = bijeenkomst.momenten.every(m => isDatumGeweest(m.datum));
-
+                
                 const card = document.createElement('div');
                 card.className = `bijeenkomst-card${alleGeweest ? ' geweest' : ''}`;
-
+                
                 let momentenHTML = bijeenkomst.momenten.map(moment => {
                     const status = getStatus(moment);
                     const statusLabels = {
@@ -851,7 +826,7 @@
                         'binnenkort': 'Binnenkort',
                         'geweest': 'Geweest'
                     };
-
+                    
                     return `
                         <div class="groep-moment">
                             <span class="groep-label">Groep ${moment.groep}</span>
@@ -860,7 +835,7 @@
                         </div>
                     `;
                 }).join('');
-
+                
                 card.innerHTML = `
                     <h3>${bijeenkomst.nummer}. ${bijeenkomst.titel}</h3>
                     <p class="thema-beschrijving">${bijeenkomst.beschrijving}</p>
@@ -868,7 +843,7 @@
                         ${momentenHTML}
                     </div>
                 `;
-
+                
                 container.appendChild(card);
             });
         }
@@ -877,7 +852,7 @@
         function vulAanmeldOpties() {
             const select = document.getElementById('bijeenkomst');
             select.innerHTML = '<option value="">-- Maak een keuze --</option>';
-
+            
             bijeenkomsten.forEach(bijeenkomst => {
                 bijeenkomst.momenten.forEach(moment => {
                     const status = getStatus(moment);
@@ -890,7 +865,7 @@
                     }
                 });
             });
-
+            
             // Voeg wachtlijst optie toe
             const wachtlijstOption = document.createElement('option');
             wachtlijstOption.value = 'wachtlijst';
@@ -902,25 +877,27 @@
         function initFormulier() {
             const form = document.getElementById('aanmeldForm');
             const formStatus = document.getElementById('formStatus');
-
+            
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
-
+                
                 const submitBtn = form.querySelector('.btn-submit');
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Bezig met versturen...';
-
+                
                 try {
                     const response = await fetch(form.action, {
                         method: 'POST',
                         body: new FormData(form),
-                        headers: { 'Accept': 'application/json' }
+                        headers: {
+                            'Accept': 'application/json'
+                        }
                     });
-
+                    
                     if (response.ok) {
                         formStatus.style.display = 'block';
-                        formStatus.style.background = 'rgba(156, 169, 134, 0.18)';
-                        formStatus.style.color = 'rgba(74,63,53,0.95)';
+                        formStatus.style.background = 'rgba(156, 169, 134, 0.2)';
+                        formStatus.style.color = 'var(--sage)';
                         formStatus.textContent = '✓ Bedankt voor je aanmelding! We nemen zo snel mogelijk contact met je op.';
                         form.reset();
                     } else {
@@ -928,8 +905,8 @@
                     }
                 } catch (error) {
                     formStatus.style.display = 'block';
-                    formStatus.style.background = 'rgba(212, 117, 110, 0.18)';
-                    formStatus.style.color = 'rgba(184,94,88,1)';
+                    formStatus.style.background = 'rgba(212, 117, 110, 0.2)';
+                    formStatus.style.color = 'var(--accent-red)';
                     formStatus.textContent = '✗ Er ging iets mis. Probeer het opnieuw of mail naar zincafezweeloo@gmail.com';
                 } finally {
                     submitBtn.disabled = false;
