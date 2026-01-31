@@ -120,20 +120,21 @@
 
         /* Teruglink naar homepage */
         .back-link {
-            display: inline-block;
-            color: var(--warm-beige);
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-            transition: opacity 0.2s ease;
-        }
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.5rem;
+    color: var(--warm-beige);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+}
 
-        .back-link:hover {
-            opacity: 1;
-        }
+.back-link:hover {
+    opacity: 1;
+}
 
         /* Terracotta label boven de titel */
         .header-label {
@@ -405,13 +406,18 @@
 <body>
     <!-- Header met logo, zelfde als homepage -->
     <header>
-        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
-        <a href="index.html" class="back-link">← Terug naar Zincafé Zweeloo</a>
-        <div class="header-label">Nieuwe activiteit</div>
-        <h1>Filosofie in vogelvlucht</h1>
-        <p>Van Aristoteles tot Žižek</p>
-    </header>
+    <!-- Teruglink: links uitgelijn, bovenaan -->
+    <a href="index.html" class="back-link">← Terug naar Zincafé Zweeloo</a>
 
+    <!-- Logo gecentreerd -->
+    <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
+
+    <!-- Label en titel gecentreerd onder logo -->
+    <div class="header-label">Nieuwe activiteit</div>
+    <h1>Filosofie in vogelvlucht</h1>
+    <p>Van Aristoteles tot Žižek</p>
+</header>
+    
     <div class="container">
 
         <!-- Intro -->
