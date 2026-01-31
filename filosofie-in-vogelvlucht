@@ -1,70 +1,331 @@
-<!-- Extra activiteit: Filosofie in vogelvlucht -->
-<!-- Plaats deze code VOOR de bijeenkomsten sectie op de homepage -->
-<section style="
-  background: linear-gradient(135deg, var(--terracotta) 0%, #b86a4f 100%);
-  padding: 3rem;
-  border-radius: 6px;
-  box-shadow: 0 8px 32px rgba(184, 106, 79, 0.3);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 2.5rem;
-">
-  <!-- Subtiele achtergrond textuur -->
-  <div style="
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top right, rgba(255,255,255,0.08) 0%, transparent 60%);
-    pointer-events: none;
-  "></div>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Inhoud -->
-  <div style="position: relative; z-index: 1; text-align: center; color: var(--cream);">
-    <p style="
+  <!-- SEO -->
+  <title>Filosofie in vogelvlucht – Zincafé Zweeloo</title>
+  <meta name="description" content="Filosofie in vogelvlucht bij Zincafé Zweeloo. Twee avonden over de grote vragen van de westerse filosofie: van Aristoteles tot Žižek. Gratis, voor iedereen.">
+  <link rel="canonical" href="https://zincafe-zweeloo.nl/filosofie-in-vogelvlucht.html">
+
+  <!-- Open Graph voor sociale media deling -->
+  <meta property="og:title" content="Filosofie in vogelvlucht – Zincafé Zweeloo">
+  <meta property="og:description" content="Twee avonden over de grote vragen van de westerse filosofie. Van Aristoteles tot Žižek. Gratis, voor iedereen. De Kapschuur, Zweeloo.">
+  <meta property="og:type" content="event">
+  <meta property="og:url" content="https://zincafe-zweeloo.nl/filosofie-in-vogelvlucht.html">
+  <meta property="og:site_name" content="Zincafé Zweeloo">
+
+  <!-- Gestructureerde data voor Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Filosofie in vogelvlucht",
+    "description": "Twee avonden over de grote vragen van de westerse filosofie: van Aristoteles tot Žižek.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Zincafé Zweeloo",
+      "url": "https://zincafe-zweeloo.nl"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "De Kapschuur",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zweeloo",
+        "addressCountry": "NL"
+      }
+    },
+    "isFree": true,
+    "eventAttendanceMode": "OfflineEventAttendanceMode"
+  }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Zelfde variabelen als homepage */
+    :root {
+      --cream: #faf7f0;
+      --coffee: #3d2817;
+      --espresso: #2a1810;
+      --caramel: #d4a574;
+      --warm-brown: #8b6f47;
+      --terracotta: #c97d60;
+      --sage: #7a9b76;
+      --butter: #f9e5b8;
+      --text-dark: #2a1810;
+      --text-soft: #6b5d52;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --paper-texture: linear-gradient(180deg, #faf7f0 0%, #f5f0e8 100%);
+      --wood-texture: linear-gradient(135deg, #3d2817 0%, #4a3420 50%, #3d2817 100%);
+    }
+
+    body {
+      font-family: 'Georgia', 'Palatino', serif;
+      line-height: 1.75;
+      color: var(--text-dark);
+      background: var(--cream);
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(217, 157, 98, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(122, 155, 118, 0.03) 0%, transparent 50%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER - Terracotta thema passend bij de banner */
+    header {
+      background: linear-gradient(135deg, var(--terracotta) 0%, #b86a4f 100%);
+      color: var(--cream);
+      text-align: center;
+      padding: 3.5rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(184, 106, 79, 0.3);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .header-label {
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       color: var(--butter);
-      margin-bottom: 0.75rem;
-      font-family: Georgia, serif;
-    ">
-      Nieuwe activiteit
-    </p>
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
 
-    <h3 style="
-      font-size: 2rem;
-      font-family: Georgia, serif;
+    header h1 {
+      font-size: 3rem;
       margin-bottom: 0.75rem;
-      color: var(--cream);
       font-weight: 600;
-    ">
-      📚 Filosofie in vogelvlucht
-    </h3>
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
 
-    <p style="
-      font-size: 1.1rem;
+    header p {
       font-style: italic;
       opacity: 0.92;
-      max-width: 580px;
-      margin: 0 auto 0.5rem;
-      line-height: 1.7;
-      font-family: Georgia, serif;
-    ">
-      Twee avonden over de grote vragen van de westerse filosofie.
-      Van Aristoteles tot Žižek.
-    </p>
+      font-size: 1.3rem;
+      position: relative;
+      z-index: 1;
+    }
 
-    <p style="
+    /* Teruglink naar homepage */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--butter);
+      text-decoration: none;
       font-size: 0.95rem;
-      opacity: 0.8;
-      margin-bottom: 1.75rem;
-      font-family: Georgia, serif;
-    ">
-      De Kapschuur, Zweeloo · 19:30 – 21:30 uur
-    </p>
+      margin-bottom: 1.5rem;
+      opacity: 0.85;
+      position: relative;
+      z-index: 1;
+      transition: opacity 0.2s ease;
+    }
 
-    <a href="filosofie-in-vogelvlucht.html" style="
+    .back-link:hover {
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem;
+    }
+
+    /* SECTIES - Papier textuur, consistent met homepage */
+    section {
+      background: var(--paper-texture);
+      padding: 3.5rem 3rem;
+      border-radius: 3px;
+      margin-bottom: 3rem;
+      box-shadow: 
+        0 2px 8px rgba(61, 40, 23, 0.08),
+        0 8px 24px rgba(61, 40, 23, 0.06);
+      border: 1px solid rgba(139, 111, 71, 0.1);
+      position: relative;
+    }
+
+    section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, transparent 50%, rgba(61, 40, 23, 0.03) 50%);
+      border-radius: 0 0 3px 0;
+    }
+
+    h2 {
+      color: var(--coffee);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 3px;
+      background: var(--caramel);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-soft);
+      font-size: 1.1rem;
+      margin-bottom: 1.3rem;
+      line-height: 1.8;
+    }
+
+    /* QUOTE - Warme stijl */
+    .quote {
+      font-style: italic;
+      padding: 1.5rem 2rem;
+      border-left: 4px solid var(--caramel);
+      color: var(--coffee);
+      margin: 2rem 0;
+      background: rgba(249, 229, 184, 0.3);
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* VRAGEN BOX - Als sticky note, consistent met homepage */
+    .vragen {
+      background: linear-gradient(135deg, var(--butter) 0%, #f5e4a8 100%);
+      padding: 2rem 2.5rem;
+      border-radius: 2px;
+      margin: 2rem 0;
+      box-shadow: 
+        0 4px 12px rgba(212, 165, 116, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      transform: rotate(-0.3deg);
+      position: relative;
+    }
+
+    .vragen::before {
+      content: '📌';
+      position: absolute;
+      top: -8px;
+      right: 30px;
+      font-size: 1.5rem;
+      transform: rotate(15deg);
+    }
+
+    .vragen h3 {
+      color: var(--coffee);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .vragen ul {
+      padding-left: 1.5rem;
+      list-style-type: none;
+    }
+
+    .vragen li {
+      margin: 0.75rem 0;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      position: relative;
+      padding-left: 0.75rem;
+    }
+
+    .vragen li::before {
+      content: '→';
+      position: absolute;
+      left: -1rem;
+      color: var(--caramel);
+      font-weight: bold;
+    }
+
+    /* PRAKTISCH GRID - Café-achtige cards */
+    .praktisch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .praktisch-item {
+      background: white;
+      padding: 1.75rem 1.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(139, 111, 71, 0.1);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .praktisch-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .praktisch-item .icon {
+      font-size: 1.75rem;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .praktisch-item strong {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      color: var(--terracotta);
+      font-family: Georgia, serif;
+    }
+
+    .praktisch-item p {
+      font-size: 1rem;
+      margin-bottom: 0;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    /* CONTACT SECTIE */
+    .contact {
+      background: var(--wood-texture);
+      color: var(--cream);
+      padding: 4rem 3rem;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(61, 40, 23, 0.3);
+    }
+
+    .contact::after { display: none; }
+
+    .contact h2 { color: var(--cream); }
+    .contact h2::after { background: var(--caramel); }
+    .contact p { color: var(--cream); opacity: 0.9; }
+
+    .btn {
       display: inline-block;
-      padding: 0.85rem 2.25rem;
+      padding: 1.1rem 2.5rem;
       background: var(--butter);
       color: var(--coffee);
       text-decoration: none;
@@ -72,13 +333,152 @@
       font-family: Georgia, serif;
       font-size: 1.05rem;
       font-weight: 600;
+      margin-top: 1rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    "
-    onmouseover="this.style.background='white'; this.style.transform='translateY(-2px)';"
-    onmouseout="this.style.background='var(--butter)'; this.style.transform='translateY(0)';"
-    >
-      Meer over deze avonden →
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      background: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--espresso);
+      color: var(--cream);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    footer p { margin: 0.4rem 0; color: var(--cream); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      .container { padding: 2.5rem 1.5rem; }
+      section { padding: 2.5rem 2rem; }
+      .praktisch-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .praktisch-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="back-link">← Terug naar Zincafé</a>
+  <p class="header-label">Zincafé Zweeloo start binnenkort met </p>
+  <h1>Filosofie in vogelvlucht</h1>
+  <p>Van Aristoteles tot Žižek</p>
+</header>
+
+<div class="container">
+
+  <!-- Intro -->
+  <section>
+    <h2>Een andere ingang tot dezelfde vragen</h2>
+
+    <p>
+      In het Zincafé Zweeloo staan vragen centraal die raken aan hoe we leven,
+      kiezen en ons tot elkaar verhouden.
+    </p>
+
+    <p>
+      De vragen die daar worden gesteld, zijn dezelfde vragen die grote denkers
+      door de geschiedenis van de filosofie heen hebben onderzocht en beantwoord.
+      In deze reeks volgen we die denkbeweging.
+    </p>
+
+    <p>
+      <strong style="color: var(--coffee);">Filosofie in vogelvlucht</strong> is een compacte reeks van twee avonden
+      waarin we de grote lijnen van de westerse filosofie verkennen – van de oudheid
+      tot nu.
+    </p>
+
+    <p>
+      Deze opzet spreekt ook mensen aan voor wie het Zincafé minder passend was:
+      vanwege de vorm, het tijdstip, of omdat een meer gestructureerde aanpak beter
+      aansluit.
+    </p>
+  </section>
+
+  <!-- Vier vragen -->
+  <section>
+    <h2>Vier vragen als leidraad</h2>
+
+    <p>
+      Door de geschiedenis heen keren steeds dezelfde kernvragen terug.
+      Ze vormen het uitgangspunt van deze reeks:
+    </p>
+
+    <div class="vragen">
+      <h3>💡 De grote vragen</h3>
+      <ul>
+        <li>Wat kan ik weten?</li>
+        <li>Wat kan ik doen?</li>
+        <li>Wat kan ik hopen?</li>
+        <li>Wat is de mens? (of: wie ben ik?)</li>
+      </ul>
+    </div>
+
+    <p>
+      Langs deze vragen maken we een beweging door de filosofiegeschiedenis
+      en staan we stil bij denkers en ideeën die ons denken tot op vandaag
+      mede vormgeven.
+    </p>
+  </section>
+
+  <!-- Praktisch -->
+  <section>
+    <h2>Praktische informatie</h2>
+
+    <div class="praktisch-grid">
+      <div class="praktisch-item">
+        <span class="icon">📖</span>
+        <strong>Opzet</strong>
+        <p>Twee avonden</p>
+      </div>
+      <div class="praktisch-item">
+        <span class="icon">🕣</span>
+        <strong>Tijd</strong>
+        <p>19:30 – 21:30 uur</p>
+      </div>
+      <div class="praktisch-item">
+        <span class="icon">📍</span>
+        <strong>Locatie</strong>
+        <p>De Kapschuur, Zweeloo</p>
+      </div>
+      <div class="praktisch-item">
+        <span class="icon">🤝</span>
+        <strong>Voor wie</strong>
+        <p>Iedereen; voorkennis niet nodig</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Aanmelden of vragen</h2>
+    <p>Stuur ons gerust een mail als je wilt meedoen of meer wilt weten.</p>
+    <a class="btn" href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden%20Filosofie%20in%20vogelvlucht">
+      ✉️ Aanmelden per e-mail
     </a>
-  </div>
-</section>
+  </section>
+
+</div>
+
+<footer>
+  <p>Zincafé Zweeloo — Gesprekken over zingeving in Zweeloo</p>
+  <p style="font-size: 0.9rem; opacity: 0.7;">✉️ zincafezweeloo@gmail.com</p>
+</footer>
+
+</body>
+</html>
