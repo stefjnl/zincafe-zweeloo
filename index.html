@@ -1,731 +1,1048 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zincafé Zweeloo - Gesprekken die ertoe doen</title>
-  <meta name="description" content="Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
-  <meta property="og:title" content="Zincafé Zweeloo - Gesprekken die ertoe doen">
-  <meta property="og:description" content="Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
-  <meta property="og:image" content="image.jpg">
-  <meta property="og:url" content="https://zincafe-zweeloo.nl">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://zincafe-zweeloo.nl">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Zincafé Zweeloo - Gesprekken die ertoe doen">
-  <meta name="twitter:description" content="Filosofische gesprekken over zingeving in Zweeloo">
-  <meta name="twitter:image" content="image.jpg">
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image.jpg">
+    <meta name="description" content="Zincafé Zweeloo - Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.">
+    <title>Zincafé Zweeloo - Gesprekken die ertoe doen</title>
+    <link rel="canonical" href="https://zincafe-zweeloo.nl/" />
+<meta property="og:title" content="Zincafé Zweeloo - Gesprekken die ertoe doen" />
+<meta property="og:description" content="Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar, gratis, voor iedereen." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://zincafe-zweeloo.nl/" />
+<meta property="og:image" content="https://zincafe-zweeloo.nl/kapschuur.jpg" />
+<meta property="og:site_name" content="Zincafé Zweeloo" />
+
+    <script type="application/ld+json">
+{
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "CivicStructure"],
+    "@type": "Organization",
     "name": "Zincafé Zweeloo",
-    "description": "Filosofische gesprekken over zingeving in Zweeloo. Vijf bijeenkomsten per jaar begeleid door ervaren facilitators.",
     "url": "https://zincafe-zweeloo.nl",
     "email": "zincafezweeloo@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Klooster 4",
-      "addressLocality": "Zweeloo",
-      "postalCode": "7851 AJ",
-      "addressCountry": "NL"
-    },
-    "image": "https://zincafe-zweeloo.nl/image.jpg",
-    "priceRange": "Vrij"
-  }
-  </script>
-  <style>
-    :root {
-      --bg: #f7f5f2;
-      --surface: #ffffff;
-      --surface-soft: #fbfaf8;
-      --primary: #243447;
-      --primary-2: #2e4057;
-      --accent: #c2a46d;
-      --sage: #8fa39b;
-      --text: #2d2a26;
-      --muted: #6b665d;
-      --accent-2: #a85c4f;
-      --border: rgba(36, 52, 71, 0.12);
-      --shadow: 0 10px 30px rgba(36, 52, 71, 0.08);
-      --radius: 18px;
+    "description": "Filosofische gesprekken over zingeving in Zweeloo",
+    "location": {
+        "@type": "Place",
+        "name": "De Kapschuur",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Klooster 4",
+            "addressLocality": "Zweeloo",
+            "addressCountry": "NL"
+        }
     }
+}
+</script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #f3f0eb 0%, var(--bg) 25%, #f8f6f3 100%);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; }
+        :root {
+            --warm-beige: #f5f1e8;
+            --deep-brown: #4a3f35;
+            --soft-ochre: #c89b5f;
+            --sage: #9ca986;
+            --terracotta: #c0724f;
+--butter: #f0d98a;
+--cream: #fdf8f0;
+--coffee: #4a3f35;
+            --text-dark: #2d2a26;
+            --text-light: #6b665d;
+            --accent-red: #d4756e;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+        }
 
-    .page-shell {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 24px 56px;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--warm-beige);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    header {
-      position: relative;
-      overflow: hidden;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 55%, #395271 100%);
-      border-bottom-left-radius: 28px;
-      border-bottom-right-radius: 28px;
-      box-shadow: 0 20px 50px rgba(36, 52, 71, 0.18);
-      margin-bottom: 34px;
-    }
-    header::before,
-    header::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.05);
-      pointer-events: none;
-    }
-    header::before {
-      width: 340px;
-      height: 340px;
-      right: -80px;
-      top: -120px;
-    }
-    header::after {
-      width: 260px;
-      height: 260px;
-      left: -100px;
-      bottom: -120px;
-    }
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
 
-    .hero {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 54px 24px 62px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-    .logo {
-      max-width: 172px;
-      margin: 0 auto 24px;
-      border-radius: 12px;
-    }
-    .logo-fallback {
-      width: 130px;
-      height: 130px;
-      margin: 0 auto 24px;
-      border-radius: 18px;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.08);
-      font-size: 4rem;
-    }
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 7px 14px;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.92);
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      margin: 0;
-      color: var(--primary);
-    }
-    header h1 {
-      color: #fff;
-      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-      margin-bottom: 14px;
-    }
-    .subtitle {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: clamp(1.06rem, 1.8vw, 1.24rem);
-      color: rgba(255,255,255,0.88);
-    }
-    .urgency-text {
-      margin-top: 26px;
-      color: rgba(255,255,255,0.86);
-      font-size: 0.98rem;
-    }
+        h2 {
+            font-size: 2rem;
+        }
 
-    .banner {
-      margin-top: -20px;
-      margin-bottom: 26px;
-      background: linear-gradient(135deg, #fff 0%, #fbfaf8 100%);
-      border: 1px solid rgba(194, 164, 109, 0.24);
-      border-left: 5px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      box-shadow: var(--shadow);
-    }
-    .banner strong {
-      display: block;
-      color: var(--primary);
-      font-size: 1.1rem;
-      margin-bottom: 4px;
-    }
-    .banner p {
-      margin: 0;
-      color: var(--muted);
-    }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
+            color: var(--warm-beige);
+            padding: 3rem 2rem 4rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
 
-    .grid {
-      display: grid;
-      gap: 26px;
-    }
-    .card {
-      background: linear-gradient(180deg, var(--surface) 0%, var(--surface-soft) 100%);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 30px;
-    }
-    .card h2 {
-      font-size: clamp(1.55rem, 2.4vw, 2rem);
-      margin-bottom: 18px;
-    }
-    .card p {
-      margin: 0 0 16px;
-      color: var(--muted);
-    }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(200, 155, 95, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
 
-    .quote-block {
-      margin: 20px 0 0;
-      padding: 16px 18px;
-      border-left: 3px solid var(--accent);
-      background: rgba(194, 164, 109, 0.08);
-      border-radius: 0 14px 14px 0;
-      color: var(--text);
-      font-style: italic;
-    }
+        .header-logo {
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: var(--radius-md);
+            position: relative;
+            z-index: 1;
+        }
 
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(194,164,109,0.55) 18%, rgba(194,164,109,0.55) 82%, transparent 100%);
-      margin: 8px 0 2px;
-    }
+        header h1 {
+            font-size: 2.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
 
-    .facilitator-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-    .facilitator {
-      padding: 24px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.55);
-      border: 1px solid rgba(36, 52, 71, 0.08);
-      text-align: center;
-    }
-    .facilitator-photo {
-      width: 144px;
-      height: 144px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(194, 164, 109, 0.45);
-      background: #eef1f4;
-    }
-    .facilitator h3 {
-      font-size: 1.35rem;
-      margin-bottom: 6px;
-    }
-    .facilitator-role {
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-    .facilitator-bio {
-      color: var(--muted);
-      margin: 0;
-      font-size: 0.96rem;
-    }
+        header p {
+            font-size: 1.25rem;
+            font-style: italic;
+            opacity: 0.85;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
 
-    .theme-quote {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
-      color: var(--primary);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.24rem;
-      padding: 8px 0 0;
-    }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
 
-    .events {
-      display: grid;
-      gap: 16px;
-    }
-    .event-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--accent);
-      border-radius: 16px;
-      padding: 22px 24px;
-      box-shadow: 0 8px 24px rgba(36, 52, 71, 0.06);
-      position: relative;
-    }
-    .event-card.featured {
-      border-left-color: var(--accent-2);
-      background: linear-gradient(180deg, #fff 0%, #fcf8f6 100%);
-    }
-    .event-card h3 {
-      font-size: 1.32rem;
-      margin-bottom: 8px;
-    }
-    .event-date {
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .ntb { color: var(--muted); font-style: italic; }
-    .featured-badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 0.74rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      background: rgba(168, 92, 79, 0.12);
-      color: var(--accent-2);
-      border: 1px solid rgba(168, 92, 79, 0.2);
-    }
-    .availability {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(143, 163, 155, 0.15);
-      color: #5d776d;
-      font-size: 0.88rem;
-    }
-    .btn-reserve,
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      margin-top: 14px;
-      padding: 11px 18px;
-      border-radius: 12px;
-      background: var(--primary);
-      color: #fff;
-      border: 1px solid rgba(36, 52, 71, 0.12);
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
-      font-weight: 500;
-    }
-    .btn-reserve:hover,
-    .btn:hover {
-      transform: translateY(-1px);
-      background: #1d2a38;
-    }
+        /* Next Event Banner - Automatisch bijgewerkt */
+        .next-event-banner {
+            background: linear-gradient(135deg, var(--accent-red) 0%, #c26660 100%);
+            color: white;
+            padding: 2rem 2.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
 
-    .practical-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-bottom: 22px;
-    }
-    .practical-item {
-      border-radius: 14px;
-      padding: 18px;
-      background: rgba(36, 52, 71, 0.03);
-      border: 1px solid rgba(36, 52, 71, 0.06);
-    }
-    .practical-item strong {
-      display: block;
-      color: var(--primary);
-      margin-bottom: 8px;
-      font-size: 0.96rem;
-    }
-    .practical-item p {
-      margin: 0;
-      font-size: 0.96rem;
-    }
-    .location-image {
-      border-radius: 16px;
-      margin-bottom: 18px;
-      box-shadow: 0 10px 28px rgba(36, 52, 71, 0.1);
-    }
-    .map-wrap {
-      overflow: hidden;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      background: #eef2f6;
-    }
+        .next-event-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
 
-    .faq-item {
-      border-top: 1px solid rgba(36, 52, 71, 0.08);
-      padding: 16px 0;
-    }
-    .faq-item:first-of-type { border-top: 0; padding-top: 0; }
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      border: 0;
-      background: transparent;
-      padding: 0;
-      font: inherit;
-      color: var(--primary);
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .faq-question span:last-child {
-      font-size: 1.4rem;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .28s ease;
-      color: var(--muted);
-    }
-    .faq-item.active .faq-answer {
-      max-height: 220px;
-      margin-top: 10px;
-    }
-    .faq-answer p { margin: 0; }
+        .next-event-banner strong {
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
 
-    .contact-card {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
-      color: #fff;
-    }
-    .contact-card h2 { color: #fff; }
-    .contact-card p { color: rgba(255,255,255,0.84); }
-    .contact-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-    .contact-card .btn {
-      background: rgba(255,255,255,0.96);
-      color: var(--primary);
-      border-color: transparent;
-      margin-top: 0;
-    }
-    .contact-card .btn:hover {
-      background: #fff;
-    }
-    .share-row {
-      margin-top: 18px;
-    }
-    .share-btn {
-      display: inline-block;
-      text-decoration: none;
-      color: rgba(255,255,255,0.9);
-      border-bottom: 1px solid rgba(255,255,255,0.35);
-      padding-bottom: 2px;
-    }
+        .next-event-banner > div {
+            position: relative;
+            z-index: 1;
+        }
 
-    footer {
-      max-width: 1180px;
-      margin: 30px auto 0;
-      padding: 0 24px 36px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.95rem;
-    }
+        /* Section styling */
+        section {
+            background: white;
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: box-shadow 0.3s ease;
+        }
 
-    .back-to-top {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 48px;
-      height: 48px;
-      border: 0;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #fff;
-      cursor: pointer;
-      box-shadow: 0 12px 28px rgba(36, 52, 71, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
-    }
-    .back-to-top.show { opacity: 1; visibility: visible; }
-    .back-to-top:hover { transform: translateY(-2px); }
+        section:hover {
+            box-shadow: var(--shadow-md);
+        }
 
-    @media (max-width: 860px) {
-      .facilitator-grid,
-      .practical-grid { grid-template-columns: 1fr; }
-      .card { padding: 24px; }
-      .hero { padding: 46px 24px 54px; }
-      .featured-badge { position: static; display: inline-block; margin-bottom: 12px; }
-    }
+        section h2 {
+            color: var(--deep-brown);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
-    @media (max-width: 640px) {
-      .page-shell { padding: 0 16px 40px; }
-      header { border-bottom-left-radius: 22px; border-bottom-right-radius: 22px; }
-      .hero { padding: 36px 16px 46px; }
-      .card { padding: 22px 18px; border-radius: 16px; }
-      .contact-buttons { flex-direction: column; }
-      .contact-card .btn { text-align: center; }
-      .banner { padding: 18px; }
-      .back-to-top { right: 16px; bottom: 16px; }
-    }
-  </style>
+        section p {
+            margin-bottom: 1.2rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Groepen uitleg box */
+        .groepen-uitleg {
+            background: linear-gradient(135deg, rgba(156, 169, 134, 0.08) 0%, rgba(156, 169, 134, 0.03) 100%);
+            border-left: 3px solid var(--sage);
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2.5rem;
+        }
+
+        .groepen-uitleg h3 {
+            color: var(--sage);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .groepen-uitleg p {
+            color: var(--text-dark);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Bijeenkomsten met automatische status updates */
+        .bijeenkomst-card {
+            background: white;
+            padding: 2.25rem;
+            margin-bottom: 2rem;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--soft-ochre);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .bijeenkomst-card.geweest {
+            opacity: 0.7;
+            border-left-color: var(--text-light);
+        }
+
+        .bijeenkomst-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-left-width: 4px;
+        }
+
+        .bijeenkomst-card.geweest:hover {
+            transform: translateY(-2px);
+        }
+
+        .bijeenkomst-card h3 {
+            color: var(--deep-brown);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .bijeenkomst-card.geweest h3 {
+            color: var(--text-light);
+        }
+
+        .thema-beschrijving {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1.25rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--warm-beige);
+        }
+
+        .groep-momenten {
+            background: rgba(245, 241, 232, 0.5);
+            padding: 1.25rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1.25rem;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .groep-moment {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .groep-moment:last-child {
+            border-bottom: none;
+        }
+
+        .groep-label {
+            font-weight: 600;
+            color: var(--deep-brown);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            min-width: 70px;
+        }
+
+        .moment-datum {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .moment-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .status-vol {
+            background: rgba(212, 117, 110, 0.12);
+            color: var(--accent-red);
+        }
+
+        .status-beschikbaar {
+            background: rgba(156, 169, 134, 0.12);
+            color: var(--sage);
+        }
+
+        .status-binnenkort {
+            background: rgba(200, 155, 95, 0.12);
+            color: var(--soft-ochre);
+        }
+
+        .status-geweest {
+            background: rgba(107, 102, 93, 0.12);
+            color: var(--text-light);
+        }
+
+        /* Aanmeldformulier */
+        .aanmeld-form {
+            background: linear-gradient(135deg, rgba(245, 241, 232, 0.6) 0%, rgba(245, 241, 232, 0.3) 100%);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            margin-top: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .aanmeld-form h3 {
+            color: var(--deep-brown);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-sm);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage);
+            box-shadow: 0 0 0 3px rgba(156, 169, 134, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: var(--deep-brown);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-submit:hover {
+            background: var(--soft-ochre);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Facilitators */
+        .facilitator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .facilitator {
+            text-align: center;
+        }
+
+        .facilitator-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--soft-ochre);
+            display: block;
+        }
+
+        .facilitator h3 {
+            color: var(--deep-brown);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .facilitator-role {
+            color: var(--soft-ochre);
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--warm-beige);
+        }
+
+        .faq-question {
+            color: var(--deep-brown);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
+            color: var(--warm-beige);
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: var(--warm-beige);
+        }
+
+        .contact p {
+            color: var(--warm-beige);
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.25rem;
+            background: white;
+            color: var(--deep-brown);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background: var(--soft-ochre);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        footer {
+            background: var(--deep-brown);
+            color: var(--warm-beige);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            .groep-moment {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 0.75rem 0;
+            }
+
+            .groep-label {
+                min-width: auto;
+            }
+
+            .moment-status {
+                align-self: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="hero">
-      <img src="image.jpg" alt="Zincafé Zweeloo - Filosofische Gesprekken Logo" class="logo" loading="eager" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex'">
-      <div class="logo-fallback">☕</div>
-      <div class="eyebrow">Gesprekken die ertoe doen</div>
-      <h1>Zincafé Zweeloo</h1>
-      <p class="subtitle">Filosofische gesprekken over zingeving, vergankelijkheid, vrijheid en verantwoordelijkheid — in een warme, kleinschalige setting in Zweeloo.</p>
-      <p class="urgency-text" id="urgencyText">Nieuwe bijeenkomsten worden binnenkort aangekondigd</p>
+    <header>
+        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
+        <h1>Zincafé Zweeloo</h1>
+        <p>Gesprekken die ertoe doen</p>
+    </header>
+
+    <div class="container">
+        <!-- Next Event Banner - Automatisch bijgewerkt via JavaScript -->
+        <div class="next-event-banner" id="nextEventBanner">
+            <strong id="nextEventTitle">Eerstvolgende bijeenkomst</strong>
+            <div id="nextEventDetails"></div>
+        </div>
+
+        
+<!-- Extra activiteit: Filosofie van A tot Z: van Artistotel tot Zizek -->
+<!-- Plaats deze code VOOR de bijeenkomsten sectie op de homepage -->
+<section style="
+  background: linear-gradient(135deg, var(--terracotta) 0%, #b86a4f 100%);
+  padding: 3rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(184, 106, 79, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+">
+  <!-- Subtiele achtergrond textuur -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  "></div>
+
+  <!-- Inhoud -->
+  <div style="position: relative; z-index: 1; text-align: center; color: var(--cream);">
+    <p style="
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--butter);
+      margin-bottom: 0.75rem;
+      font-family: Georgia, serif;
+    ">
+      Nieuwe activiteit
+    </p>
+
+    <h3 style="
+      font-size: 2rem;
+      font-family: Georgia, serif;
+      margin-bottom: 0.75rem;
+      color: var(--cream);
+      font-weight: 600;
+    ">
+      Filosofie van A tot Z
+    </h3>
+
+    <p style="
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.92;
+      max-width: 580px;
+      margin: 0 auto 0.5rem;
+      line-height: 1.7;
+      font-family: Georgia, serif;
+    ">
+      Twee avonden over de grote vragen van de westerse filosofie.
+      Van Aristoteles tot Žižek.
+    </p>
+
+    <p style="
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin-bottom: 1.75rem;
+      font-family: Georgia, serif;
+    ">
+      De Kapschuur, Zweeloo · 19:30 – 21:30 uur
+    </p>
+
+    <a href="filosofie-van-a-tot-z.html" style="
+      display: inline-block;
+      padding: 0.85rem 2.25rem;
+      background: var(--butter);
+      color: var(--coffee);
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    "
+    onmouseover="this.style.background='white'; this.style.transform='translateY(-2px)';"
+    onmouseout="this.style.background='var(--butter)'; this.style.transform='translateY(0)';"
+    >
+      Meer over deze avonden →
+    </a>
+  </div>
+</section>
+
+        <!-- Intro -->
+        <section>
+            <h2>Waarom een Zincafé in Zweeloo?</h2>
+            <p>In een wereld die steeds sneller lijkt te draaien, is het waardevol om stil te staan bij vragen die er echt toe doen. Wat betekent het om 'goed' te leven? Hoe verhoud je je tot anderen, tot de tijd, tot jezelf?</p>
+            
+            <p>Met dat idee starten we in Zweeloo het Zincafé — een reeks toegankelijke bijeenkomsten waarin we als dorpsgenoten in gesprek gaan over zingeving in de brede zin van het woord.</p>
+            
+            <p style="font-style: italic; padding-left: 1.5rem; border-left: 3px solid var(--soft-ochre);">
+                "Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen." — Sjoerd
+            </p>
+        </section>
+
+        <!-- Facilitators -->
+        <section>
+            <h2>De begeleiders</h2>
+            <div class="facilitator-grid">
+                <div class="facilitator">
+                    <img src="sjoerd.jpg" alt="Sjoerd Slagter" class="facilitator-photo">
+                    <h3>Sjoerd Slagter</h3>
+                    <p class="facilitator-role">Filosoof & Gespreksbegeleider</p>
+                    <p>Sjoerd is bioloog en filosoof. Hij doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) Sjoerd is gespecialiseerd in toegepaste filosofie, bestuur en onderwijs, en is mede-auteur van de methode Leren Filosoferen.</p>
+                </div>
+                <div class="facilitator">
+                    <img src="nathalie.jpg" alt="Nathalie van Hooff" class="facilitator-photo">
+                    <h3>Nathalie van Hooff</h3>
+                    <p class="facilitator-role">Trainer & Gespreksbegeleider</p>
+                    <p>Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+        <!-- Bijeenkomsten - Met automatische status updates -->
+        <section>
+            <h2>Vijf bijeenkomsten in de herfst en winter</h2>
+            
+            <div class="groepen-uitleg">
+                <h3>💡 Hoe werken de groepen?</h3>
+                <p>We hebben twee parallelle groepen die hetzelfde programma doorlopen. Beide groepen bespreken dezelfde thema's, maar op verschillende data. Zo kan iedereen een moment kiezen dat het beste past.</p>
+            </div>
+
+            <!-- Bijeenkomsten worden automatisch bijgewerkt via JavaScript -->
+            <div id="bijeenkomstenContainer"></div>
+        </section>
+
+        <!-- Aanmeldformulier -->
+        <section>
+            <h2>Aanmelden voor een bijeenkomst</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Wil je meedoen? Vul onderstaand formulier in en we nemen zo snel mogelijk contact met je op.
+            </p>
+            
+            <div class="aanmeld-form">
+                <form id="aanmeldForm" action="https://formspree.io/f/mwpakbbq" method="POST">
+                    <div class="form-group">
+                        <label for="naam">Naam *</label>
+                        <input type="text" id="naam" name="naam" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mailadres *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefoon">Telefoonnummer (optioneel)</label>
+                        <input type="tel" id="telefoon" name="telefoon">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bijeenkomst">Interesse in welke bijeenkomst?</label>
+                        <select id="bijeenkomst" name="bijeenkomst" required>
+                            <!-- Opties worden automatisch gegenereerd -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="opmerking">Eventuele vragen of opmerkingen</label>
+                        <textarea id="opmerking" name="opmerking" placeholder="Bijv. iemand meenemen, eerste keer, etc."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Aanmelding versturen</button>
+                    
+                    <div id="formStatus" style="margin-top: 1rem; padding: 1rem; border-radius: 6px; display: none;"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section>
+            <h2>Veelgestelde vragen</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Wat is het Zincafé Zweeloo precies?</div>
+                <div class="faq-answer">
+                    Het Zincafé is een kleinschalige ontmoetingsplek waar we samen vertragen en de tijd nemen voor vragen die ertoe doen. In een open gesprek onderzoeken we ervaringen en thema's die raken aan de zin van het leven.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Hoe verloopt een bijeenkomst?</div>
+                <div class="faq-answer">
+                    <strong>19:15</strong> - Inloop met koffie/thee<br>
+                    <strong>19:30</strong> - Welkom en korte introductie op het thema<br>
+                    <strong>19:45-21:15</strong> - Gesprek in de groep<br>
+                    <strong>21:15-21:30</strong> - Afsluiting en napraten<br><br>
+                    Je bepaalt zelf hoeveel je wilt inbrengen: luisteren mag net zo goed als spreken.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Moet ik filosofie kennen om mee te doen?</div>
+                <div class="faq-answer">
+                    Absoluut niet! Het Zincafé is juist bedoeld voor iedereen. Je hoeft geen voorkennis te hebben. Nieuwsgierigheid en bereidheid om te luisteren en na te denken is het belangrijkste.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Wat kost deelname?</div>
+                <div class="faq-answer">
+                    Deelname is gratis. Een vrijwillige bijdrage voor koffie of thee is welkom, maar volledig optioneel.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan ik iemand meenemen?</div>
+                <div class="faq-answer">
+                    Ja, dat kan zeker! Laat het ons wel even weten bij je aanmelding, zodat we rekening kunnen houden met het aantal deelnemers.
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <h2>Vragen of contact?</h2>
+            <p>We horen graag van je!</p>
+            <div class="contact-buttons">
+                <a href="mailto:zincafezweeloo@gmail.com" class="btn">✉️ Stuur een e-mail</a>
+            </div>
+        </section>
     </div>
-  </header>
 
-  <main class="page-shell">
-    <section class="banner">
-      <strong id="nextEventDate">Eerstvolgende bijeenkomst: woensdag 21 januari 2026</strong>
-      <p>Groep 2 over de vrije wil</p>
-    </section>
+    <footer>
+        <p>Zincafé Zweeloo — Gesprekken over zingeving in Zweeloo</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">✉️ zincafezweeloo@gmail.com</p>
+    </footer>
 
+    <script>
+        // DATA: Alle bijeenkomsten gedefinieerd op één plek
+        const bijeenkomsten = [
+            {
+                nummer: 1,
+                titel: "De vrije wil",
+                beschrijving: "Bestaat er zoiets als vrije wil? Maak je die zelf of krijg je die aangereikt van familie, opvoeding, cultuur of van iets hogers?",
+                momenten: [
+                    { groep: 1, datum: "2025-11-27T19:30", status: "vol" },
+                    { groep: 2, datum: "2025-12-18T19:30", status: "vol" }
+                ]
+            },
+            {
+                nummer: 2,
+                titel: "Vrijheid",
+                beschrijving: "Over keuzes die je leven bepalen. Hoe vrij zijn we werkelijk in onze beslissingen?",
+                momenten: [
+                    { groep: 1, datum: "2025-12-19T19:30", status: "vol" },
+                    { groep: 2, datum: "2026-01-21T19:30", status: "vol" }
+                ]
+            },
+            {
+                nummer: 3,
+                titel: "Verlangen, dwaallicht of kompas?",
+                beschrijving: "Over sterke verlangens als richtingaanwijzer — of als dwaalspoor. Wanneer leiden verlangens ons op het goede pad, en wanneer juist niet?",
+                momenten: [
+                    { groep: 1, datum: "2026-01-23T19:30", status: "vol" },
+                    { groep: 2, datum: "2026-02-25T19:30", status: "vol" }
+                ]
+            },
+            {
+                nummer: 4,
+                titel: "Hoe ver rijkt jouw verantwoordelijkheid?",
+                beschrijving: "Over verantwoordelijkheid, grenzen, en wat je wel en niet kunt (of hoeft te) dragen. Wat is het verschil tussen opgelegde en zelfgekozen verantwoordelijkheden?",
+                momenten: [
+                    { groep: 1, datum: "2026-02-27T19:30", status: "vol" },
+                    { groep: 2, datum: "2026-03-25T19:30", status: "vol" }
+                ]
+            },
+            {
+                nummer: 5,
+                titel: "Vergankelijkheid & herinnering",
+                beschrijving: "Over het loslaten van wat voorbij is en het koesteren van wat blijft.",
+                momenten: [
+                    { groep: 1, datum: "2026-03-27T19:30", status: "vol" },
+                    { groep: 2, datum: "2026-04-22T19:30", status: "vol"}
+                ]
+            }
+        ];
 
-    <section class="card" style="margin-bottom: 26px; border-top: 4px solid var(--accent);">
-      <div class="eyebrow" style="background: rgba(36,52,71,0.05); border-color: rgba(36,52,71,0.10); color: var(--primary);">Nieuwe activiteit</div>
-      <h2>Filosofie van A tot Z</h2>
-      <p><strong>Van Aristoteles tot Žižek.</strong> In deze compacte reeks van twee avonden volgen we de grote lijnen van de westerse filosofie — van de oudheid tot nu.</p>
-      <p>De vragen die in het Zincafé centraal staan, zijn dezelfde vragen die grote denkers door de geschiedenis heen hebben onderzocht. In deze reeks volgen we die denkers. Niet om definitieve antwoorden te geven, maar om zicht te krijgen op hoe mensen in verschillende tijden met dezelfde vragen zijn omgegaan.</p>
-      <p><strong>Twee maandagavonden: 1 en 8 juni 2026</strong><br>19:30 – 21:30 uur · De Kapschuur, Zweeloo</p>
-      <a href="https://zincafe-zweeloo.nl/filosofie-van-a-tot-z.html" class="btn">Meer over deze avonden</a>
-    </section>
-
-    <section class="grid">
-      <article class="card">
-        <h2>Waarom een Zincafé in Zweeloo?</h2>
-        <p>In een wereld die steeds sneller lijkt te draaien, is het waardevol om stil te staan bij vragen die er echt toe doen. Wat betekent het om 'goed' te leven? Hoe verhoud je je tot anderen, tot de tijd, tot jezelf?</p>
-        <p>Met dat idee starten we in Zweeloo het Zincafé – een reeks toegankelijke bijeenkomsten waarin we als dorpsgenoten in gesprek gaan over zingeving in de brede zin van het woord. Denk aan thema's als zingeving, vergankelijkheid, levenslust of zinvol werk. Geen debat of discussie, maar een open en respectvol gesprek waarin luisteren, denken en delen centraal staan.</p>
-        <div class="quote-block">"Bij onze aanvraag voor het dorpsbudget kregen we dertien stemmen. Dat is een prachtige basis. Met vier tot zes mensen heb je al een waardevol gesprek." — Nathalie</div>
-        <div class="quote-block">"Iedereen denkt wel eens na over wat ertoe doet. Dat hoeft niet groot of ingewikkeld — soms helpt het om gewoon met elkaar te praten, met een beetje hulp van filosofen." — Sjoerd</div>
-        <p style="margin-top:18px;">Het Zincafé Zweeloo biedt ruimte voor ontmoeting en verdieping. Het nodigt uit tot reflectie over vragen die je bezighouden en waar je graag eens met anderen over spreekt.</p>
-        <p>In verband met de grote belangstelling starten we een extra groep op. Deze start op 18 december en loopt parallel aan de eerste groep.</p>
-      </article>
-
-      <div class="divider"></div>
-
-      <article class="card">
-        <h2>De begeleiders</h2>
-        <div class="facilitator-grid">
-          <div class="facilitator">
-            <img src="sjoerd.jpg" alt="Sjoerd Slagter - Filosoof en Gespreksbegeleider bij Zincafé Zweeloo" class="facilitator-photo" loading="lazy">
-            <h3>Sjoerd Slagter</h3>
-            <div class="facilitator-role">Filosoof &amp; Gespreksbegeleider</div>
-            <p class="facilitator-bio">Sjoerd doceert aan de Hogeschool voor Toegepaste Filosofie (HTF) en begeleidt al jaren filosofische dialogen. Hij helpt groepen om samen na te denken over de grote vragen en nodigt iedereen uit om mee te denken, ongeacht achtergrond.</p>
-          </div>
-          <div class="facilitator">
-            <img src="nathalie.jpg" alt="Nathalie van Hooff - Trainer en Gespreksbegeleider bij Zincafé Zweeloo" class="facilitator-photo" loading="lazy">
-            <h3>Nathalie van Hooff</h3>
-            <div class="facilitator-role">Trainer &amp; Gespreksbegeleider</div>
-            <p class="facilitator-bio">Nathalie brengt rust en diepgang in gesprekken. Ze creëert een veilige ruimte waarin mensen zich durven uit te spreken en samen ontdekken wat er echt toe doet in het leven.</p>
-          </div>
-        </div>
-      </article>
-
-      <p class="theme-quote">Ieder mens wil ervaren dat zijn leven zinvol is, dat hij met zijn handelen iets bereikt of dat zijn handelen bijdraagt aan iets dat nastrevenswaardig is</p>
-
-      <article class="card">
-        <h2>Vijf bijeenkomsten in de herfst en winter</h2>
-        <div class="events">
-          <div class="event-card featured" data-date="2026-01-21T19:30:00" data-title="Start nieuwe groep: wat is een zinvol leven?">
-            <span class="featured-badge">Volgende</span>
-            <h3>Bijeenkomst 2 van groep 2: de vrije wil</h3>
-            <div class="event-date">Woensdag 21 januari 2026, 19.30 uur</div>
-            <span class="availability">Volgeboekt</span><br>
-            <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Wat is een zinvol leven" class="btn-reserve" style="background:#6b665d; pointer-events:none;">Volgeboekt</a>
-          </div>
-
-          <div class="event-card" data-date="2026-01-23T19:30:00" data-title="Bijeenkomst 2 van groep 1: de vrije wil">
-            <h3>Bijeenkomst 3 van groep 1: Verlangen, dwaallicht of kompas?</h3>
-            <div class="event-date">Vrijdag 23 januari 2026, 19.30 uur</div>
-            <span class="availability">VOL! Aanmelden niet meer mogelijk</span><br>
-            <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden: Vrijheid &amp; verantwoordelijkheid" class="btn-reserve" style="background:#6b665d; pointer-events:none;">Volgeboekt</a>
-          </div>
-
-          <div class="event-card">
-            <h3>Bijeenkomst 3 van groep 2: Verlangen, dwaallicht of kompas?</h3>
-            <div class="event-date">Vrijdag 23 januari 2026, 19.30 uur</div>
-            <span class="availability">Binnenkort beschikbaar</span>
-          </div>
-
-          <div class="event-card">
-            <h3>Hoe ver rijkt jouw verantwoordelijkheid</h3>
-            <div class="event-date ntb">Datum 2026 nog bekend te maken</div>
-            <span class="availability">Binnenkort beschikbaar</span>
-          </div>
-
-          <div class="event-card">
-            <h3>Vergankelijkheid &amp; herinnering</h3>
-            <div class="event-date ntb">Datum 2026 nog bekend te maken</div>
-            <span class="availability">Binnenkort beschikbaar</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Praktische informatie</h2>
-        <div class="practical-grid">
-          <div class="practical-item">
-            <strong>Locatie</strong>
-            <p>De bijeenkomsten vinden plaats in De Kapschuur. Deze vind je op Klooster 4 in Zweeloo.</p>
-          </div>
-          <div class="practical-item">
-            <strong>Tijd</strong>
-            <p>Elke bijeenkomst duurt van 19.30 tot 21.30 uur. Inloop vanaf 19.15 uur.</p>
-          </div>
-          <div class="practical-item">
-            <strong>Voorzieningen</strong>
-            <p>Koffie, thee en water staan klaar.</p>
-          </div>
-          <div class="practical-item">
-            <strong>Groepsgrootte en kosten</strong>
-            <p>We werken bewust in kleine groepen van maximaal 10 deelnemers, zodat er ruimte is voor aandacht, rust en echte gesprekken. Deelname is gratis. Een vrijwillige bijdrage voor koffie/thee is welkom, maar niet nodig.</p>
-          </div>
-        </div>
-        <img src="kapschuur.jpg" alt="De Kapschuur in Zweeloo - Locatie van Zincafé Zweeloo bijeenkomsten" class="location-image">
-        <h3 style="margin-bottom:14px;">Hoe vind je ons?</h3>
-        <div class="map-wrap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5!2d6.697!3d52.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1f0d3d3d3d3d3%3A0x0!2sKlooster%204%2C%207241%20CT%20Zweeloo!5e0!3m2!1snl!2snl!4v1730000000000" width="100%" height="320" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Locatie van Zincafé Zweeloo op Google Maps"></iframe>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Veelgestelde vragen</h2>
-
-        <div class="faq-item active">
-          <button class="faq-question"><span>Wat is het Zincafé Zweeloo precies?</span><span>+</span></button>
-          <div class="faq-answer"><p>Het Zincafé is een kleinschalige ontmoetingsplek waar we samen vertragen en de tijd nemen voor vragen die ertoe doen. In een open gesprek onderzoeken we ervaringen, overtuigingen en thema's die raken aan de zin van het leven.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question"><span>Voor wie zijn de bijeenkomsten bedoeld – en moet ik veel van filosofie weten?</span><span>+</span></button>
-          <div class="faq-answer"><p>Iedereen uit Zweeloo en omgeving is welkom. Je hoeft geen filosofische achtergrond te hebben; nieuwsgierigheid is genoeg. Je hoeft niets "te kunnen" of "te weten" voordat je komt – bereidheid om te luisteren, te onderzoeken en in gesprek te gaan is het belangrijkste.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question"><span>Hoe verloopt een bijeenkomst – hoeveel mensen zijn er en moet ik de hele avond praten?</span><span>+</span></button>
-          <div class="faq-answer"><p>We werken met kleine groepen van maximaal 10 deelnemers, zodat er rust en aandacht is. Je bepaalt zelf hoeveel je wilt inbrengen: luisteren mag net zo goed als spreken. Er is geen verplichting om de hele avond actief mee te praten.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question"><span>Hoe vaak komt een groep samen en wat als ik een bijeenkomst mis?</span><span>+</span></button>
-          <div class="faq-answer"><p>Tijdens de herfst- en wintermaanden organiseren we vijf bijeenkomsten. Het thema staat op de agenda hierboven. Kun je een keer niet? Dat is geen probleem: elke bijeenkomst staat op zichzelf, je kunt de draad bij een volgende avond weer oppakken.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question"><span>Hoe kan ik me aanmelden, is dat verplicht en wat kost deelname?</span><span>+</span></button>
-          <div class="faq-answer"><p>Aanmelden is nodig omdat we met kleine groepen werken. Dat kan via zincafezweeloo@gmail.com. Je ontvangt daarna een bevestiging en zo nodig extra praktische informatie. Deelname is gratis. Wie wil, mag een vrijwillige bijdrage doen voor koffie of thee, maar dat is volledig optioneel.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question"><span>Kan ik iemand meenemen – en kan ik meedoen als de groepen vol zijn?</span><span>+</span></button>
-          <div class="faq-answer"><p>Je kunt zeker iemand meenemen, als er nog plek is. Laat het ons vooraf even weten bij je aanmelding. Zijn de groepen vol? Laat dan via e-mail weten dat je geïnteresseerd bent.</p></div>
-        </div>
-      </article>
-
-      <article class="card contact-card">
-        <h2>Vragen of aanmelden?</h2>
-        <p>We horen graag van je. Stuur een mailtje of meld je direct aan voor één van de bijeenkomsten.</p>
-        <div class="contact-buttons">
-          <a href="mailto:zincafezweeloo@gmail.com" class="btn">Stel een vraag</a>
-          <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden Zincafé" class="btn">Aanmelden</a>
-          <button class="btn" id="copyEmailBtn" type="button">E-mail kopiëren</button>
-        </div>
-        <div class="share-row">
-          <a href="https://wa.me/?text=Zincafé%20Zweeloo%20-%20Gesprekken%20die%20ertoe%20doen%20https://zincafezweeloo.nl" class="share-btn">Delen via WhatsApp</a>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <p>Zincafé Zweeloo – Gesprekken over zingeving in Zweeloo</p>
-    <p style="margin-top:6px;">zincafezweeloo@gmail.com</p>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven">↑</button>
-
-  <script>
-    function updateCountdown() {
-      const now = new Date();
-      const cards = document.querySelectorAll('.event-card[data-date]');
-      let nextEvent = null;
-      let nextCard = null;
-
-      cards.forEach(card => {
-        const eventDate = new Date(card.dataset.date);
-        if (eventDate > now && (!nextEvent || eventDate < nextEvent)) {
-          nextEvent = eventDate;
-          nextCard = card;
+        // FUNCTIE: Controleer of een datum in het verleden ligt
+        function isDatumGeweest(datumString) {
+            if (!datumString) return false;
+            const datum = new Date(datumString);
+            const nu = new Date();
+            return datum < nu;
         }
-      });
 
-      const urgencyEl = document.getElementById('urgencyText');
-      const bannerEl = document.getElementById('nextEventDate');
-      if (!nextEvent || !nextCard) {
-        urgencyEl.textContent = 'Nieuwe bijeenkomsten worden binnenkort aangekondigd';
-        bannerEl.textContent = 'Nieuwe bijeenkomsten worden gepland';
-        return;
-      }
+        // FUNCTIE: Formatteer datum naar leesbare tekst
+        function formateerDatum(datumString) {
+            if (!datumString) return "Datum volgt";
+            
+            const datum = new Date(datumString);
+            const dagen = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+            const maanden = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 
+                           'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+            
+            const dag = dagen[datum.getDay()];
+            const dagNummer = datum.getDate();
+            const maand = maanden[datum.getMonth()];
+            const jaar = datum.getFullYear();
+            
+            return `${dag.charAt(0).toUpperCase() + dag.slice(1)} ${dagNummer} ${maand} ${jaar}, 19:30 uur`;
+        }
 
-      const diffDays = Math.ceil((nextEvent - now) / (1000 * 60 * 60 * 24));
-      const dateText = nextCard.querySelector('.event-date')?.textContent || '';
+        // FUNCTIE: Bepaal status van een moment (automatisch 'geweest' als datum verstreken)
+        function getStatus(moment) {
+            if (isDatumGeweest(moment.datum)) {
+                return 'geweest';
+            }
+            return moment.status;
+        }
 
-      if (diffDays === 0) urgencyEl.textContent = 'Volgende bijeenkomst is vandaag';
-      else if (diffDays === 1) urgencyEl.textContent = 'Volgende bijeenkomst is morgen';
-      else urgencyEl.textContent = `Volgende bijeenkomst over ${diffDays} dagen`;
+        // FUNCTIE: Vind de eerstvolgende bijeenkomst
+        function vindEerstvolgende() {
+            const nu = new Date();
+            let eerstvolgende = null;
+            let vroegsteDatum = null;
 
-      bannerEl.textContent = `Eerstvolgende bijeenkomst: ${dateText}`;
-    }
+            bijeenkomsten.forEach(bijeenkomst => {
+                bijeenkomst.momenten.forEach(moment => {
+                    if (moment.datum && !isDatumGeweest(moment.datum)) {
+                        const datum = new Date(moment.datum);
+                        if (!vroegsteDatum || datum < vroegsteDatum) {
+                            vroegsteDatum = datum;
+                            eerstvolgende = {
+                                titel: bijeenkomst.titel,
+                                datum: moment.datum,
+                                groep: moment.groep
+                            };
+                        }
+                    }
+                });
+            });
 
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const button = item.querySelector('.faq-question');
-      button.addEventListener('click', () => {
-        item.classList.toggle('active');
-      });
-    });
+            return eerstvolgende;
+        }
 
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) backToTop.classList.add('show');
-      else backToTop.classList.remove('show');
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        // FUNCTIE: Update de next event banner
+        function updateNextEventBanner() {
+            const nextEvent = vindEerstvolgende();
+            const titleEl = document.getElementById('nextEventTitle');
+            const detailsEl = document.getElementById('nextEventDetails');
 
-    document.getElementById('copyEmailBtn').addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText('zincafezweeloo@gmail.com');
-        const btn = document.getElementById('copyEmailBtn');
-        const old = btn.textContent;
-        btn.textContent = 'Gekopieerd';
-        setTimeout(() => btn.textContent = old, 1800);
-      } catch (e) {
-        alert('Kopiëren mislukt. Probeer het handmatig.');
-      }
-    });
+            if (nextEvent) {
+                titleEl.textContent = `🗓️ Eerstvolgende bijeenkomst: ${formateerDatum(nextEvent.datum).split(',')[0]}`;
+                detailsEl.textContent = `Groep ${nextEvent.groep} over ${nextEvent.titel} · 19:30 uur`;
+            } else {
+                titleEl.textContent = "Alle bijeenkomsten zijn geweest";
+                detailsEl.textContent = "Houd deze pagina in de gaten voor nieuwe data!";
+            }
+        }
 
-    updateCountdown();
-  </script>
+        // FUNCTIE: Genereer HTML voor alle bijeenkomsten
+        function renderBijeenkomsten() {
+            const container = document.getElementById('bijeenkomstenContainer');
+            
+            bijeenkomsten.forEach(bijeenkomst => {
+                // Bepaal of ALLE momenten geweest zijn
+                const alleGeweest = bijeenkomst.momenten.every(m => isDatumGeweest(m.datum));
+                
+                const card = document.createElement('div');
+                card.className = `bijeenkomst-card${alleGeweest ? ' geweest' : ''}`;
+                
+                let momentenHTML = bijeenkomst.momenten.map(moment => {
+                    const status = getStatus(moment);
+                    const statusLabels = {
+                        'vol': 'Vol',
+                        'beschikbaar': 'Beschikbaar',
+                        'binnenkort': 'Binnenkort',
+                        'geweest': 'Geweest'
+                    };
+                    
+                    return `
+                        <div class="groep-moment">
+                            <span class="groep-label">Groep ${moment.groep}</span>
+                            <span class="moment-datum">${formateerDatum(moment.datum)} · De Kapschuur, Zweeloo</span>
+                            <span class="moment-status status-${status}">${statusLabels[status]}</span>
+                        </div>
+                    `;
+                }).join('');
+                
+                card.innerHTML = `
+                    <h3>${bijeenkomst.nummer}. ${bijeenkomst.titel}</h3>
+                    <p class="thema-beschrijving">${bijeenkomst.beschrijving}</p>
+                    <div class="groep-momenten">
+                        ${momentenHTML}
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // FUNCTIE: Vul aanmeldformulier opties
+        function vulAanmeldOpties() {
+            const select = document.getElementById('bijeenkomst');
+            select.innerHTML = '<option value="">-- Maak een keuze --</option>';
+            
+            bijeenkomsten.forEach(bijeenkomst => {
+                bijeenkomst.momenten.forEach(moment => {
+                    const status = getStatus(moment);
+                    if (status !== 'geweest' && status !== 'vol') {
+                        const datum = moment.datum ? formateerDatum(moment.datum).split(' · ')[0] : 'datum volgt';
+                        const option = document.createElement('option');
+                        option.value = `groep${moment.groep}-${bijeenkomst.titel.toLowerCase().replace(/\s+/g, '-')}`;
+                        option.textContent = `Groep ${moment.groep}: ${bijeenkomst.titel} (${datum})`;
+                        select.appendChild(option);
+                    }
+                });
+            });
+            
+            // Voeg wachtlijst optie toe
+            const wachtlijstOption = document.createElement('option');
+            wachtlijstOption.value = 'wachtlijst';
+            wachtlijstOption.textContent = 'Wachtlijst (als groepen vol zijn)';
+            select.appendChild(wachtlijstOption);
+        }
+
+        // FUNCTIE: Formulier afhandeling
+        function initFormulier() {
+            const form = document.getElementById('aanmeldForm');
+            const formStatus = document.getElementById('formStatus');
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const submitBtn = form.querySelector('.btn-submit');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Bezig met versturen...';
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        formStatus.style.display = 'block';
+                        formStatus.style.background = 'rgba(156, 169, 134, 0.2)';
+                        formStatus.style.color = 'var(--sage)';
+                        formStatus.textContent = '✓ Bedankt voor je aanmelding! We nemen zo snel mogelijk contact met je op.';
+                        form.reset();
+                    } else {
+                        throw new Error('Formulier verzending mislukt');
+                    }
+                } catch (error) {
+                    formStatus.style.display = 'block';
+                    formStatus.style.background = 'rgba(212, 117, 110, 0.2)';
+                    formStatus.style.color = 'var(--accent-red)';
+                    formStatus.textContent = '✗ Er ging iets mis. Probeer het opnieuw of mail naar zincafezweeloo@gmail.com';
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Aanmelding versturen';
+                }
+            });
+        }
+
+        // INITIALISATIE: Alles starten bij laden van pagina
+        document.addEventListener('DOMContentLoaded', function() {
+            updateNextEventBanner();
+            renderBijeenkomsten();
+            vulAanmeldOpties();
+            initFormulier();
+        });
+    </script>
 </body>
 </html>
