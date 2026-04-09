@@ -4,97 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="image.jpg">
-
-    <!-- SEO -->
     <title>Filosofie van A tot Z – Zincafé Zweeloo</title>
     <meta name="description" content="Filosofie van A tot Z bij Zincafé Zweeloo. Twee avonden over de grote vragen van de westerse filosofie: van Aristoteles tot Žižek. Gratis, voor iedereen.">
     <link rel="canonical" href="https://zincafe-zweeloo.nl/filosofie-van-a-tot-z.html">
-
-    <!-- Open Graph voor sociale media -->
     <meta property="og:title" content="Filosofie van A tot Z – Zincafé Zweeloo">
     <meta property="og:description" content="Twee avonden over de grote vragen van de westerse filosofie. Van Aristoteles tot Žižek. Gratis, voor iedereen. De Kapschuur, Klooster 4, Zweeloo.">
     <meta property="og:type" content="event">
     <meta property="og:url" content="https://zincafe-zweeloo.nl/filosofie-van-a-tot-z.html">
     <meta property="og:site_name" content="Zincafé Zweeloo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Gestructureerde data voor Google -->
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Filosofie van A tot Z",
-    "description": "Twee avonden over de grote vragen van de westerse filosofie: van Aristoteles tot Žižek.",
-    "startDate": "2026-06-01",
-    "endDate": "2026-06-2",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "organizer": {
-        "@type": "Organization",
-        "name": "Zincafé Zweeloo",
-        "url": "https://zincafe-zweeloo.nl"
-    },
-    "location": {
-        "@type": "Place",
-        "name": "De Kapschuur",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Klooster 4",
-            "addressLocality": "Zweeloo",
-            "addressCountry": "NL"
-        }
-    },
-    "isAccessibleForFree": true,
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
-}
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Filosofie van A tot Z",
+        "description": "Twee avonden over de grote vragen van de westerse filosofie: van Aristoteles tot Žižek.",
+        "startDate": "2026-06-01",
+        "endDate": "2026-06-08",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "organizer": {
+            "@type": "Organization",
+            "name": "Zincafé Zweeloo",
+            "url": "https://zincafe-zweeloo.nl"
+        },
+        "location": {
+            "@type": "Place",
+            "name": "De Kapschuur",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Klooster 4",
+                "addressLocality": "Zweeloo",
+                "addressCountry": "NL"
+            }
+        },
+        "isAccessibleForFree": true,
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+    }
     </script>
 
-    <!-- ZELFDE CSS VARIABELEN EN STYLES ALS HOMEPAGE -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --warm-beige: #f5f1e8;
-            --deep-brown: #4a3f35;
-            --soft-ochre: #c89b5f;
-            --sage: #9ca986;
-            --text-dark: #2d2a26;
-            --text-light: #6b665d;
-            --accent-red: #d4756e;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
-            --radius-sm: 12px;
+            --warm-beige: #F6F3EE;
+            --white: #FFFFFF;
+            --text-dark: #1E2B3A;
+            --text-mid: #4A5568;
+            --text-light: #718096;
+
+            --blauw: #2E5B8A;
+            --blauw-donker: #1E3D5C;
+            --blauw-licht: #4A7BAB;
+            --blauw-tint: #EAF1F8;
+            --oranje: #E8834A;
+            --oranje-donker: #C4622A;
+            --oranje-licht: #F0A06E;
+            --oranje-tint: #FDF1EA;
+
+            --shadow-sm: 0 2px 8px rgba(46,91,138,0.06);
+            --shadow-md: 0 4px 20px rgba(46,91,138,0.10);
+            --shadow-lg: 0 8px 40px rgba(46,91,138,0.14);
+            --radius-sm: 10px;
             --radius-md: 16px;
             --radius-lg: 24px;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
             line-height: 1.7;
             color: var(--text-dark);
             background: var(--warm-beige);
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         h1, h2, h3 {
+            font-family: 'Playfair Display', Georgia, serif;
             font-weight: 500;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
         }
 
-        h2 {
-            font-size: 2rem;
+        h2 { font-size: 2rem; }
+
+        /* ── NAV ── */
+        nav {
+            background: var(--blauw-donker);
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
         }
 
-        /* Header - Zelfde als homepage maar met terracotta tint voor onderscheid */
+        nav a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 0.85rem 1.5rem;
+            transition: all 0.2s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.actief {
+            color: white;
+            border-bottom-color: var(--oranje);
+        }
+
+        /* ── HEADER ── */
         header {
-            background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
-            color: var(--warm-beige);
-            padding: 3rem 2rem 4rem;
+            background: linear-gradient(150deg, var(--blauw-donker) 0%, var(--blauw) 100%);
+            color: white;
+            padding: 3.5rem 2rem 4.5rem;
             text-align: center;
             box-shadow: var(--shadow-lg);
             position: relative;
@@ -104,135 +131,141 @@
         header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(200, 155, 95, 0.1) 0%, transparent 60%);
+            inset: 0;
+            background: radial-gradient(ellipse at top right, rgba(232,131,74,0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at bottom left, rgba(255,255,255,0.04) 0%, transparent 50%);
             pointer-events: none;
         }
 
+        .back-link {
+            position: absolute;
+            top: 1.25rem;
+            left: 1.5rem;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 0.875rem;
+            z-index: 2;
+            transition: color 0.2s ease;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .back-link:hover { color: white; }
+
         .header-logo {
-            max-width: 180px;
+            max-width: 160px;
             height: auto;
             margin: 0 auto 2rem;
             display: block;
             border-radius: var(--radius-md);
             position: relative;
             z-index: 1;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
-        /* Teruglink naar homepage */
-        .back-link {
-    display: block;
-    position: absolute;
-    top: 1.25rem;
-    left: 1.5rem;
-    color: var(--warm-beige);
-    text-decoration: none;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    z-index: 1;
-    transition: opacity 0.2s ease;
-}
-
-.back-link:hover {
-    opacity: 1;
-}
-
-        /* Terracotta label boven de titel */
         .header-label {
             display: inline-block;
-            background: var(--accent-red);
+            background: var(--oranje);
             color: white;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.12em;
-            padding: 0.4rem 1rem;
+            padding: 0.35rem 1rem;
             border-radius: 20px;
             margin-bottom: 1.25rem;
             position: relative;
             z-index: 1;
+            font-family: 'Source Sans 3', sans-serif;
         }
 
         header h1 {
             font-size: 2.75rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
+            margin-bottom: 0.6rem;
             position: relative;
             z-index: 1;
+            color: white;
         }
 
-        header p {
-            font-size: 1.25rem;
+        header .tagline {
+            font-family: 'Playfair Display', serif;
             font-style: italic;
+            font-size: 1.2rem;
             opacity: 0.85;
-            font-weight: 400;
             position: relative;
             z-index: 1;
         }
 
+        /* ── CONTAINER ── */
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
 
-        /* Secties - EXACT zelfde als homepage */
+        /* ── SECTIES ── */
         section {
             background: white;
             padding: 3.5rem;
             border-radius: var(--radius-lg);
             margin-bottom: 2.5rem;
             box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0,0,0,0.02);
+            border: 1px solid rgba(46,91,138,0.04);
             transition: box-shadow 0.3s ease;
         }
 
-        section:hover {
-            box-shadow: var(--shadow-md);
-        }
+        section:hover { box-shadow: var(--shadow-md); }
 
         section h2 {
-            color: var(--deep-brown);
-            font-size: 2rem;
+            color: var(--blauw-donker);
             margin-bottom: 2rem;
             text-align: center;
         }
 
         section p {
             margin-bottom: 1.2rem;
-            color: var(--text-light);
+            color: var(--text-mid);
             font-size: 1.05rem;
             line-height: 1.8;
         }
 
-        /* Groepen uitleg box - zelfde als homepage */
-        .groepen-uitleg {
-            background: linear-gradient(135deg, rgba(156, 169, 134, 0.08) 0%, rgba(156, 169, 134, 0.03) 100%);
-            border-left: 3px solid var(--sage);
+        /* ── VIER VRAGEN BOX ── */
+        .vragen {
+            background: var(--blauw-tint);
+            border-left: 3px solid var(--blauw);
             padding: 1.75rem;
             border-radius: var(--radius-md);
-            margin-bottom: 2.5rem;
+            margin: 2rem 0;
         }
 
-        .groepen-uitleg h3 {
-            color: var(--sage);
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
+        .vragen h3 {
+            color: var(--blauw-donker);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
             font-weight: 600;
+            font-family: 'Source Sans 3', sans-serif;
         }
 
-        .groepen-uitleg p {
+        .vragen ul { list-style: none; padding: 0; }
+
+        .vragen li {
+            padding: 0.5rem 0;
+            font-size: 1.05rem;
             color: var(--text-dark);
-            margin-bottom: 0;
-            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(46,91,138,0.1);
         }
 
-        /* Praktisch grid - witte cards op beige achtergrond */
+        .vragen li:last-child { border-bottom: none; }
+
+        .vragen li::before {
+            content: '→ ';
+            color: var(--oranje);
+            font-weight: 700;
+        }
+
+        /* ── PRAKTISCH GRID ── */
         .praktisch-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -241,7 +274,7 @@
             background: var(--warm-beige);
             padding: 1.75rem 1.5rem;
             border-radius: var(--radius-md);
-            border: 1px solid rgba(0,0,0,0.03);
+            border: 1px solid rgba(46,91,138,0.06);
             text-align: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -263,83 +296,40 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             margin-bottom: 0.5rem;
-            color: var(--deep-brown);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--blauw);
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
         }
 
         .praktisch-item p {
-            font-size: 1rem;
+            font-size: 0.975rem;
             margin-bottom: 0;
             color: var(--text-dark);
             text-align: center;
         }
 
-        /* Quote - zelfde stijl als homepage intro quote */
-        .quote {
+        /* ── QUOTE ── */
+        .quote-block {
             font-style: italic;
-            padding-left: 1.5rem;
-            border-left: 3px solid var(--soft-ochre);
+            padding: 1.25rem 1.5rem;
+            border-left: 3px solid var(--oranje);
+            background: var(--oranje-tint);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
             color: var(--text-dark);
             margin: 1.5rem 0;
             font-size: 1.05rem;
             line-height: 1.8;
         }
 
-        /* Vragen box - groepen uitleg stijl maar met ochre tint */
-        .vragen {
-            background: linear-gradient(135deg, rgba(200, 155, 95, 0.08) 0%, rgba(200, 155, 95, 0.03) 100%);
-            border-left: 3px solid var(--soft-ochre);
-            padding: 1.75rem;
-            border-radius: var(--radius-md);
-            margin: 2rem 0;
-        }
-
-        .vragen h3 {
-            color: var(--deep-brown);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .vragen ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .vragen li {
-            padding: 0.5rem 0;
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            border-bottom: 1px solid rgba(200, 155, 95, 0.15);
-        }
-
-        .vragen li:last-child {
-            border-bottom: none;
-        }
-
-        .vragen li::before {
-            content: '→ ';
-            color: var(--soft-ochre);
-            font-weight: 600;
-        }
-
-        /* Contact - zelfde als homepage */
+        /* ── CONTACT ── */
         .contact {
-            background: linear-gradient(135deg, var(--deep-brown) 0%, #5a4d41 100%);
-            color: var(--warm-beige);
-            padding: 3rem;
-            border-radius: var(--radius-lg);
+            background: linear-gradient(150deg, var(--blauw-donker) 0%, var(--blauw) 100%);
+            color: white;
             text-align: center;
         }
 
-        .contact h2 {
-            color: var(--warm-beige);
-        }
-
-        .contact p {
-            color: var(--warm-beige);
-            opacity: 0.9;
-        }
+        .contact h2 { color: white; }
+        .contact p { color: rgba(255,255,255,0.85); }
 
         .contact-buttons {
             display: flex;
@@ -351,131 +341,107 @@
 
         .btn {
             display: inline-block;
-            padding: 1rem 2.25rem;
+            padding: 0.9rem 2rem;
             background: white;
-            color: var(--deep-brown);
+            color: var(--blauw-donker);
             text-decoration: none;
             border-radius: var(--radius-sm);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
             box-shadow: var(--shadow-sm);
+            font-family: 'Source Sans 3', sans-serif;
         }
 
         .btn:hover {
-            background: var(--soft-ochre);
+            background: var(--oranje);
             color: white;
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
 
-        /* Footer - zelfde als homepage */
+        /* ── FOOTER ── */
         footer {
-            background: var(--deep-brown);
-            color: var(--warm-beige);
+            background: var(--blauw-donker);
+            color: rgba(255,255,255,0.7);
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            padding: 2.5rem 2rem;
+            font-size: 0.875rem;
+            line-height: 1.8;
         }
 
-        /* Responsive - zelfde als homepage */
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: var(--oranje); }
+
+        .footer-instituut {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.45);
+        }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 2rem 1.5rem;
-            }
-
-            section {
-                padding: 2rem;
-            }
-
-            .praktisch-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            header h1 { font-size: 2rem; }
+            .container { padding: 2rem 1.25rem; }
+            section { padding: 2rem 1.5rem; }
+            .praktisch-grid { grid-template-columns: repeat(2, 1fr); }
+            nav { overflow-x: auto; justify-content: flex-start; }
+            nav a { padding: 0.75rem 1rem; font-size: 0.8rem; white-space: nowrap; }
         }
 
         @media (max-width: 480px) {
-            .praktisch-grid {
-                grid-template-columns: 1fr;
-            }
+            .praktisch-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Header met logo, zelfde als homepage -->
+
+    <!-- ── NAVIGATIE ── -->
+    <nav>
+        <a href="index.html">Zincafé</a>
+        <a href="filosofie-van-a-tot-z.html" class="actief">Filosofie van A tot Z</a>
+        <a href="index.html#podcast">Podcast</a>
+        <a href="https://www.instituutvoortoegepastefilosofie.nl" target="_blank" rel="noopener">Ons Instituut ↗</a>
+    </nav>
+
+    <!-- ── HEADER ── -->
     <header>
-    <!-- Teruglink: links uitgelijn, bovenaan -->
-    <a href="index.html" class="back-link">← Terug naar Zincafé Zweeloo</a>
+        <a href="index.html" class="back-link">← Terug naar Zincafé Zweeloo</a>
+        <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
+        <div class="header-label">Nieuwe activiteit</div>
+        <h1>Filosofie van A tot Z</h1>
+        <p class="tagline">Van Aristoteles tot Žižek</p>
+    </header>
 
-    <!-- Logo gecentreerd -->
-    <img src="image.jpg" alt="Zincafé Zweeloo Logo" class="header-logo">
-
-    <!-- Label en titel gecentreerd onder logo -->
-    <div class="header-label">Nieuwe activiteit</div>
-    <h1>Filosofie van A tot Z</h1>
-    <p>Van Aristoteles tot Žižek</p>
-</header>
-    
     <div class="container">
 
-        <!-- Intro -->
+        <!-- ── INTRO ── -->
         <section>
             <h2>Over gewone dingen is het moeilijk nadenken</h2>
-
-            <p>
-                In het Zincafé Zweeloo staan vragen centraal die raken aan hoe we leven,
-                kiezen en ons tot elkaar verhouden.
-            </p>
-
-            <p>
-                De vragen die daar worden gesteld, zijn dezelfde vragen die grote denkers
-                door de geschiedenis van de filosofie heen hebben onderzocht en beantwoord.
-                In deze reeks volgen we die denkers.
-            </p>
-
-            <p>
-                <strong style="color: var(--deep-brown);">Filosofie van A tot Z</strong> is een compacte reeks van twee avonden
-                waarin we de grote lijnen van de westerse filosofie verkennen – van de oudheid
-                tot nu.
-            </p>
-
+            <p>In het Zincafé Zweeloo staan vragen centraal die raken aan hoe we leven, kiezen en ons tot elkaar verhouden.</p>
+            <p>De vragen die daar worden gesteld, zijn dezelfde vragen die grote denkers door de geschiedenis van de filosofie heen hebben onderzocht en beantwoord. In deze reeks volgen we die denkers.</p>
+            <p><strong style="color: var(--blauw-donker);">Filosofie van A tot Z</strong> is een compacte reeks van twee avonden waarin we de grote lijnen van de westerse filosofie verkennen — van de oudheid tot nu.</p>
         </section>
 
+        <!-- ── WAAROM ── -->
         <section>
-<h2>Waarom deze vragen blijven terugkomen</h2>
-            <p>
-Mensen hebben zich altijd afgevraagd hoe zij zich tot zichzelf, tot anderen en tot de wereld verhouden.
-Wat is werkelijk belangrijk? Waar laat ik mij door leiden? En hoe onderscheid ik wat van mij is, van wat
-mij wordt aangereikt?
-</p>
-
-<p>
-Door de geschiedenis heen keren deze vragen telkens terug. Soms in religieuze beelden, soms in
-filosofische begrippen, soms in verhalen over schijn en werkelijkheid. Steeds gaat het om oriëntatie:
-leren zien waar je staat en welke richting voor jou betekenisvol is.
-</p>
-
-<p>
-In <strong>Filosofie van A tot Z</strong> volgen we deze vragen langs de grote denklijnen van de
-westerse filosofie. Niet om tot definitieve antwoorden te komen, maar om zicht te krijgen op hoe mensen
-in verschillende tijden met dezelfde vragen zijn omgegaan.
-</p>            
+            <h2>Waarom deze vragen blijven terugkomen</h2>
+            <p>Mensen hebben zich altijd afgevraagd hoe zij zich tot zichzelf, tot anderen en tot de wereld verhouden. Wat is werkelijk belangrijk? Waar laat ik mij door leiden? En hoe onderscheid ik wat van mij is, van wat mij wordt aangereikt?</p>
+            <p>Door de geschiedenis heen keren deze vragen telkens terug. Soms in religieuze beelden, soms in filosofische begrippen, soms in verhalen over schijn en werkelijkheid. Steeds gaat het om oriëntatie: leren zien waar je staat en welke richting voor jou betekenisvol is.</p>
+            <p>In <strong>Filosofie van A tot Z</strong> volgen we deze vragen langs de grote denklijnen van de westerse filosofie. Niet om tot definitieve antwoorden te komen, maar om zicht te krijgen op hoe mensen in verschillende tijden met dezelfde vragen zijn omgegaan.</p>
         </section>
 
-        <!-- Vier vragen -->
+        <!-- ── VIER VRAGEN ── -->
         <section>
             <h2>Vier vragen als leidraad</h2>
-
-            <p>
-                Door de geschiedenis heen keren steeds dezelfde kernvragen terug.
-                Ze vormen het uitgangspunt van deze reeks:
-            </p>
+            <p>Door de geschiedenis heen keren steeds dezelfde kernvragen terug. Ze vormen het uitgangspunt van deze reeks:</p>
 
             <div class="vragen">
                 <h3>De grote vragen</h3>
@@ -487,17 +453,12 @@ in verschillende tijden met dezelfde vragen zijn omgegaan.
                 </ul>
             </div>
 
-            <p>
-                Langs deze vragen maken we een beweging door de filosofiegeschiedenis
-                en staan we stil bij denkers en ideeën die ons denken tot op vandaag
-                mede vormgeven.
-            </p>
+            <p>Langs deze vragen maken we een beweging door de filosofiegeschiedenis en staan we stil bij denkers en ideeën die ons denken tot op vandaag mede vormgeven.</p>
         </section>
 
-        <!-- Praktisch -->
+        <!-- ── PRAKTISCH ── -->
         <section>
             <h2>Praktische informatie</h2>
-
             <div class="praktisch-grid">
                 <div class="praktisch-item">
                     <span class="icon">📖</span>
@@ -517,26 +478,32 @@ in verschillende tijden met dezelfde vragen zijn omgegaan.
                 <div class="praktisch-item">
                     <span class="icon">🤝</span>
                     <strong>Voor wie</strong>
-                    <p>Iedereen, voorkennis of deelname aan Zincafe niet nodig</p>
+                    <p>Iedereen, voorkennis of deelname aan het Zincafé niet nodig</p>
                 </div>
             </div>
         </section>
 
-        
-        <!-- Contact - zelfde stijl als homepage -->
+        <!-- ── CONTACT ── -->
         <section class="contact">
             <h2>Aanmelden of vragen</h2>
             <p>Stuur ons gerust een mail als je wilt meedoen of meer wilt weten.</p>
             <div class="contact-buttons">
-                <a href="mailto:zincafezweeloo@gmail.com?subject=Aanmelden%20FilosofievanAtotZ" class="btn">✉️ Stuur een e-mail</a>
+                <a href="mailto:zincafezweeloo@gmail.com" class="btn">✉️ Stuur een e-mail</a>
+                <a href="index.html" class="btn">← Terug naar Zincafé</a>
             </div>
         </section>
 
     </div>
 
+    <!-- ── FOOTER ── -->
     <footer>
         <p>Zincafé Zweeloo — Gesprekken over zingeving in Zweeloo</p>
-        <p style="margin-top: 0.5rem; font-size: 0.85rem;">✉️ zincafezweeloo@gmail.com</p>
+        <p style="margin-top: 0.4rem;">✉️ <a href="mailto:zincafezweeloo@gmail.com">zincafezweeloo@gmail.com</a></p>
+        <div class="footer-instituut">
+            Sjoerd Slagter en Nathalie van Hooff zijn verbonden aan het
+            <a href="https://www.instituutvoortoegepastefilosofie.nl" target="_blank" rel="noopener">Instituut voor Toegepaste Filosofie</a>
+        </div>
     </footer>
+
 </body>
 </html>
